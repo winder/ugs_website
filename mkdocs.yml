@@ -1,0 +1,10 @@
+site_name: UGS
+theme: cosmo
+repo_url: https://github.com/winder/Universal-G-Code-Sender
+site_author: Will Winder
+site_description: "Cross platform G-Code sender with advanced features for GRBL based CNC machines."
+
+pages:
+- 'About': 'index.md'
+- 'Download' : 'download.md'
+- 'User Guide': 'user-guide.md'
