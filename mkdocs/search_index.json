@@ -1,0 +1,54 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Universal Gcode Sender\n\n\n\n\n\n\nA full featured gcode platform used for interfacing with advanced CNC controllers like \nGRBL\n\nand \nTinyG\n.\nUniversal Gcode Sender is a self-contained Java application which includes all external dependencies,\nthat means if you have the Java runtime environment setup UGS provides the rest.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDownloads\n\n\nSee the \nDownloads page\n.\n\n\n\n\nFeatures\n\n\n\n\nCross platform, tested on Windows, OSX, Linux, and Raspberry Pi.\n\n\nExecutable All-In-One JAR file - if you have java there is nothing to install. The JAR file includes native dependencies for all supported operating systems.\n\n\n3D Gcode Visualizer with color coded line segments and real time tool position feedback.\n\n\nDuration estimates.\n\n\nOver 3000 lines of unit test code, and another 1000 lines of comments documenting the tests.\n\n\nConfiguratble gcode optimization:\n\n\nRemove comments\n\n\nTruncate decimal precision to configurable amount\n\n\nConvert arcs (G2/G3) to line segments\n\n\nRemove whitespace\n\n\n\n\n\n\n\n\n\n\nScreenshots", 
+            "title": "About"
+        }, 
+        {
+            "location": "/#universal-gcode-sender", 
+            "text": "A full featured gcode platform used for interfacing with advanced CNC controllers like  GRBL \nand  TinyG .\nUniversal Gcode Sender is a self-contained Java application which includes all external dependencies,\nthat means if you have the Java runtime environment setup UGS provides the rest.", 
+            "title": "Universal Gcode Sender"
+        }, 
+        {
+            "location": "/#downloads", 
+            "text": "See the  Downloads page .", 
+            "title": "Downloads"
+        }, 
+        {
+            "location": "/#features", 
+            "text": "Cross platform, tested on Windows, OSX, Linux, and Raspberry Pi.  Executable All-In-One JAR file - if you have java there is nothing to install. The JAR file includes native dependencies for all supported operating systems.  3D Gcode Visualizer with color coded line segments and real time tool position feedback.  Duration estimates.  Over 3000 lines of unit test code, and another 1000 lines of comments documenting the tests.  Configuratble gcode optimization:  Remove comments  Truncate decimal precision to configurable amount  Convert arcs (G2/G3) to line segments  Remove whitespace", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/#screenshots", 
+            "text": "", 
+            "title": "Screenshots"
+        }, 
+        {
+            "location": "/download/", 
+            "text": "Releases\n\n\n\n\n\n\n\n\nVersion\n\n\nJava Version Required\n\n\n\n\n\n\n\n\n\n\n1.0.9\n\n\n7+\n\n\n\n\n\n\n1.0.8\n\n\n7+\n\n\n\n\n\n\n1.0.7\n\n\n7+\n\n\n\n\n\n\n1.0.6\n\n\n6+\n\n\n\n\n\n\n\n\nOlder releases can be found \non github\n\n\n\n\n\n\nNightly Builds\n\n\nThese builds are generated automatically and contain all changes since the last release.\nUGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClassic GUI\n\n\nThe classic UGS GUI.\n\n\n\n\n\n\nUGS Platform\n\n\nThe next generation platform-based GUI utilizing the UGS API.", 
+            "title": "Download"
+        }, 
+        {
+            "location": "/download/#releases", 
+            "text": "Version  Java Version Required      1.0.9  7+    1.0.8  7+    1.0.7  7+    1.0.6  6+     Older releases can be found  on github", 
+            "title": "Releases"
+        }, 
+        {
+            "location": "/download/#nightly-builds", 
+            "text": "These builds are generated automatically and contain all changes since the last release.\nUGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.            Classic GUI  The classic UGS GUI.    UGS Platform  The next generation platform-based GUI utilizing the UGS API.", 
+            "title": "Nightly Builds"
+        }, 
+        {
+            "location": "/user-guide/", 
+            "text": "Work in progress", 
+            "title": "User Guide"
+        }, 
+        {
+            "location": "/user-guide/#work-in-progress", 
+            "text": "", 
+            "title": "Work in progress"
+        }
+    ]
+}

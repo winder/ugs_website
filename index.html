@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Cross platform G-Code sender with advanced features for GRBL based CNC machines.">
+        <meta name="author" content="Will Winder">
+        
+        <link rel="shortcut icon" href="./img/favicon.ico">
+
+	<title>UGS</title>
+
+        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/highlight.css">
+        <link href="./css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href=".">UGS</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li class="active">
+                    <a href=".">About</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="download/">Download</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="user-guide/">User Guide</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="disabled">
+                    <a rel="next" >
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="download/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/winder/Universal-G-Code-Sender">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#universal-gcode-sender">Universal Gcode Sender</a></li>
+        
+    
+        <li class="main "><a href="#downloads">Downloads</a></li>
+        
+    
+        <li class="main "><a href="#features">Features</a></li>
+        
+    
+        <li class="main "><a href="#screenshots">Screenshots</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<p><center>
+<img src="img/screenshots/sending.png" alt="Screenshot" width="90%"/></p>
+<h2 id="universal-gcode-sender">Universal Gcode Sender</h2>
+<hr />
+<p></center></p>
+<p>A full featured gcode platform used for interfacing with advanced CNC controllers like <a href="https://github.com/grbl/grbl">GRBL</a>
+and <a href="https://github.com/synthetos/TinyG">TinyG</a>.
+Universal Gcode Sender is a self-contained Java application which includes all external dependencies,
+that means if you have the Java runtime environment setup UGS provides the rest.
+<br/>
+<!--
+<img alt="'Language'" src="https://img.shields.io/badge/Language-Java-brightgreen.svg" />
+<img alt="'License'" src="https://img.shields.io/badge/License-GPLv2-blue.svg" />
+<iframe src="https://ghbtns.com/github-btn.html?user=winder&repo=Universal-G-Code-Sender&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=winder&repo=Universal-G-Code-Sender&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+-->
+<center>
+<img alt="'Language'" src="./img/shields/Language-Java-brightgreen.svg" />
+<img alt="'License'" src="./img/shields/License-GPLv3-blue.svg" />
+<a href="https://travis-ci.org/winder/Universal-G-Code-Sender"><img alt="Build Status" src="https://travis-ci.org/winder/Universal-G-Code-Sender.svg?branch=master" /></a>
+</center></p>
+<hr />
+<h2 id="downloads">Downloads</h2>
+<p>See the <a href="download/">Downloads page</a>.</p>
+<hr />
+<h2 id="features">Features</h2>
+<ul>
+<li>Cross platform, tested on Windows, OSX, Linux, and Raspberry Pi.</li>
+<li>Executable All-In-One JAR file - if you have java there is nothing to install. The JAR file includes native dependencies for all supported operating systems.</li>
+<li>3D Gcode Visualizer with color coded line segments and real time tool position feedback.</li>
+<li>Duration estimates.</li>
+<li>Over 3000 lines of unit test code, and another 1000 lines of comments documenting the tests.</li>
+<li>Configuratble gcode optimization:<ul>
+<li>Remove comments</li>
+<li>Truncate decimal precision to configurable amount</li>
+<li>Convert arcs (G2/G3) to line segments</li>
+<li>Remove whitespace</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="screenshots">Screenshots</h2>
+<p><img src="img/screenshots/visualizer.png" alt="Screenshot" width="90%"/></p>
+<p><img src="img/screenshots/finished.png" alt="Screenshot" width="90%"/></p>
+<p><img src="img/screenshots/advanced_machine_control.png" alt="Screenshot" width="90%"/></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/bootstrap-3.0.3.min.js"></script>
+        <script src="./js/highlight.pack.js"></script>
+        <script src="./js/base.js"></script>
+    </body>
+</html>
