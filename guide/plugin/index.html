@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Will Winder">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Plugin - UGS</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">UGS</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../download/">Download</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Docs <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../user/">User</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../developer/">Developer</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">Plugin</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contributing <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../contrib/development/">Code</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../contrib/translation/">Translations</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../contrib/donation/">Donating</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../developer/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../../contrib/development/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/winder/Universal-G-Code-Sender">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#plugin-development">Plugin development</a></li>
+        
+    
+        <li class="main "><a href="#workflow-plugin-tutorial">Workflow Plugin Tutorial</a></li>
+        
+            <li><a href="#create-and-configure-project">Create and configure project</a></li>
+        
+            <li><a href="#add-ugs-dependencies">Add UGS dependencies</a></li>
+        
+            <li><a href="#create-window-class">Create window class</a></li>
+        
+            <li><a href="#build-the-gui">Build the GUI</a></li>
+        
+            <li><a href="#autogenerated-code">Autogenerated code</a></li>
+        
+            <li><a href="#annotated-code">Annotated code</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="plugin-development">Plugin development</h1>
+<p>The UGS Platform is built ontop of the NetBeans Platform. This gives us powerful
+tools to work with, including a robust plugin system. The heart of the UGS
+Platform is a module which wraps and exposes the Universal Gcode Sender JAR
+file - the same jar you could execute to run the Classic GUI! Other than using
+the UGSLib module, developing a plugin for the UGS Platform is exactly the same
+as developing any other NetBeans Platform plugin. And there is lots of great
+documentation for that! Here is the <a href="https://platform.netbeans.org/tutorials/nbm-google.html">NetBeans Platform Plugin Quick Start</a>
+guide.</p>
+<h1 id="workflow-plugin-tutorial">Workflow Plugin Tutorial</h1>
+<p>In this tutorial we're going to build a window to help manage jobs that use
+multiple tools which are split into multiple tools. The rough design idea will
+have a central table with four columns containing:
+<em> File name
+</em> Tool name (editable)
+* Finished flag</p>
+<p>There will be a pair of buttons to add and remove files from the table, and
+will also hook up a lifecycle event listener for other file open events.</p>
+<p>There will be another pair of buttons to move rows around in the table, so that
+if files were added out of order the order can be corrected.</p>
+<p>As with all good designs lets make a drawing of what we're going to attempt.</p>
+<h2 id="create-and-configure-project">Create and configure project</h2>
+<p>Universal Gcode Sender is developed with NetBeans, and plugins are no exception.
+Once you've cloned the Universal Gcode Sender project you should be able to open
+the UGSPlatform folder with NetBeans and it will discover a project that you can open.
+To start building your module expand the UGSPlatform section, right-click the
+modules directory and select <code>Add New...</code>.</p>
+<p><center><img src="../../img/tutorials/workflow_plugin/01.Create_Module.png" width="90%" /></center></p>
+<p>This will open up a wizard where you name the module, and declare the source
+path. For this example the module is named WorkflowModuleTutorial and the source
+path is com.willwinder.ugs.nbp.workflowmoduletutorial which is the convention
+used in the core modules.</p>
+<p><center><img src="../../img/tutorials/workflow_plugin/02.New_Module_Wizard_01.png" width="90%" /></center></p>
+<h2 id="add-ugs-dependencies">Add UGS dependencies</h2>
+<p>Your module should now be listed in the Modules section. If it doesn't you may
+need to restart NetBeans. Before we dive into the code there are a couple helper
+classes to import which will give you full access to the UGS API. Double click
+your module from the Modules section to open the code, then right-click the top
+level item which appeared and select the properties menu.</p>
+<p>Select <code>Add Dependency...</code>, here you should search for <code>UGSLib</code> and
+<code>CentralLookup</code> then add them to your plugin.</p>
+<p><center><img src="../../img/tutorials/workflow_plugin/03.Project_Properties.png" width="90%" /></center></p>
+<h2 id="create-window-class">Create window class</h2>
+<p>Now we're ready to build the module. In this tutorial we're building a window
+to manage a multi-job workflow, so we'll start by adding a window to customize.</p>
+<ol>
+<li>Open the new module and right click the new package, in the context menu go to
+<code>New</code> -&gt; <code>Window...</code>. To bring up the new window wizard.</li>
+<li>In the first screen of the wizard choose the default location your window
+will appear. Custom locations have been designed for UGS Platform, the largest
+is named <code>visualizer</code> because it is the Visualizer's default location. We'll
+use this location for our plugin.  This means that when our plugin opens it will
+be tabbed with the Visualizer module.</li>
+<li>Click next and choose a class name for your module, for this tutorial I'm
+going to call it <code>WorkflowModuleTutorial</code>.</li>
+</ol>
+<p><center><img src="../../img/tutorials/workflow_plugin/04.Create_Window_Class.png" width="90%" /></center></p>
+<h2 id="build-the-gui">Build the GUI</h2>
+<p>The NetBeans GUI builder makes it easy to make a custom user interface without
+writing a single line of code (which is the main reason UGS uses NetBeans!).
+Using the GUI builder we'll add some buttons and a table. This step can be as
+elaborate as you want. If you're a seasoned swing developer and prefer not to
+use the magic GUI builder, no worries, you can create the UI programatically as
+well - but that is a different tutorial.</p>
+<ul>
+<li>Take a look at the screenshot below. The <code>[TopComponent] - Navigator - Editor</code>
+  window shows all the objects that have been added with the GUI builder.</li>
+<li>There are four JButtons, a JTable nested inside a JScrollPane and a JPanel
+  which I used to make alignment a little easier (The GUI Builder is powerful,
+  but it can also be a bit quirky).</li>
+<li>Putting the JTable inside a JScrollPane makes it so that if too many items
+  get added to the table it will scroll rather than dissapear off the bottom.</li>
+<li><strong>Note:</strong> The name given to these components will be used in the code, so
+  be sure to use the names shown in the screenshot.</li>
+</ul>
+<p><center><img src="../../img/tutorials/workflow_plugin/05.GUI_Builder.png" width="90%" /></center></p>
+<h2 id="autogenerated-code">Autogenerated code</h2>
+<p>Before writing any code, lets take a look at what has already been automatically
+generated for us.</p>
+<ol>
+<li>
+<p>Just above the class there are a number of annotations. These are used by
+   the NetBeans platform, most of them were setup according to how you filled
+   in the Wizards earlier. They can also configure things like keyboard
+   shortcuts, and where things are put in the dropdown menus.</p>
+</li>
+<li>
+<p>Within the class there are several grayed out sections. This is code
+   generated by NetBeans which the IDE prevents you from modifying outside the
+   GUI builder or in some cases component properties. For example if you wanted
+   to use a custom JTable, you would configure the table in the GUI builder by
+   adding a custom constructor.</p>
+</li>
+<li>
+<p>At the end of the file is <code>componentOpened</code> and <code>componentClosed</code>, these are
+   lifecycle events that are called when the window has been opened or closed.</p>
+</li>
+<li>
+<p>Also at the end of the file is <code>writeProperties</code> and <code>readProperties</code>, these
+   are used to save the window state between runs.</p>
+</li>
+</ol>
+<h2 id="annotated-code">Annotated code</h2>
+<p>This is the longest section because it will explain every line of code added to
+the <code>WorkflowModuleTutorial</code> class. The most complicated code deals with Swing
+component manipulation, with just a smattering of UGS lifecycle events to push
+things along.</p>
+<h3 id="class-signature">Class signature</h3>
+<ul>
+<li>First there are a few class state object we'll need and two Listeners we'll
+  be implementing.</li>
+</ul>
+<pre><code class="java">/**
+ * ControlStateListener - this is how a plugin can listen to UGS lifecycle events.
+ * ListSelectionListener - listen for table selections.
+ */
+public final class WorkflowWindowTutorialTopComponent
+        extends TopComponent
+        implements ControlStateListener, ListSelectionListener {
+
+    // These are the UGS backend objects for interacting with the backend.
+    private final Settings settings;
+    private final BackendAPI backend;
+
+    // This is used to identify when a stream has completed.
+    private boolean wasSending;
+
+    // This is used in most methods, so cache it here.
+    DefaultTableModel model;
+</code></pre>
+
+<h3 id="constructor">Constructor</h3>
+<ul>
+<li>In the constructor we register the class with the UGS backend and also set
+  the class as a listener to table selection events.</li>
+</ul>
+<pre><code class="java">    public WorkflowWindowTopComponent() {
+        initComponents();
+        setName(Bundle.CTL_WorkflowWindowTopComponent());
+        setToolTipText(Bundle.HINT_WorkflowWindowTopComponent());
+
+        // This is how to access the UGS backend and register the listener.
+        // CentralLookup is used to get singleton instances of the UGS
+        // Settings and BackendAPI objects.
+        settings = CentralLookup.getDefault().lookup(Settings.class);
+        backend = CentralLookup.getDefault().lookup(BackendAPI.class);
+        backend.addControlStateListener(this);
+
+        // Allow contiguous ranges of selections and register a listener.
+        this.fileTable.setSelectionMode(
+            ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        ListSelectionModel cellSelectionModel =
+            this.fileTable.getSelectionModel();
+        cellSelectionModel.addListSelectionListener(this);
+
+        // Cache the model object.
+        model = (DefaultTableModel)this.fileTable.getModel();
+    }
+</code></pre>
+
+<h3 id="ugs-event-listener">UGS Event Listener</h3>
+<ul>
+<li>This is the event sent from the UGS Backend, when a file is loaded or the
+  state changes a notification will be sent.</li>
+<li>If the state switches from <code>COMM_SENDING</code> to <code>COMM_IDLE</code> we'll run a
+  <code>completeFile</code> method.</li>
+<li>If a file is loaded, we add it to the table.</li>
+</ul>
+<pre><code class="java">    @Override
+    public void ControlStateEvent(ControlStateEvent cse) {
+        switch (cse.getEventType()) {
+            case STATE_CHANGED:
+                if (wasSending &amp;&amp; cse.getState() == ControlState.COMM_IDLE)
+                   this.completeFile(backend.getGcodeFile());
+                wasSending = backend.isSending();
+                break;
+            case FILE_CHANGED:
+                this.addFileToWorkflow(backend.getGcodeFile());
+                break;
+            default:
+                throw new AssertionError(cse.getEventType().name());
+        }
+    }
+</code></pre>
+
+<h3 id="file-complete-handler">File Complete Handler</h3>
+<ul>
+<li>When a command is complete we'll update the JTable, select the next file that
+  needs to be sent and popup a notification informing the user what they should
+  do next. The selection event will be sent and handled in the selection
+  handler.</li>
+</ul>
+<pre><code class="java">    public void completeFile(File gcodeFile) {
+        if (gcodeFile == null) return;
+
+        // Make sure the file is loaded in the table.
+        int fileIndex = findFileIndex(gcodeFile);
+        if (fileIndex &lt; 0) return;
+
+        // Mark that it has been completed.
+        model.setValueAt(true, fileIndex, 3);
+
+        fileIndex++;
+        String message;
+
+        // Make sure there is another command left.
+        if (fileIndex &lt; fileTable.getRowCount()) {
+            String nextTool = (String) model.getValueAt(fileIndex, 1);
+            String messageTemplate =
+                   &quot;Finished sending '%s'.\n&quot;
+                 + &quot;The next file uses tool '%s'\n&quot;
+                 + &quot;Load tool and move machine to its zero location\n&quot;
+                 + &quot;and click send to continue this workflow.&quot;;
+            message = String.format(
+                messageTemplate, gcodeFile.getName(), nextTool);
+
+            // Select the next row, this will trigger a selection event.
+            fileTable.setRowSelectionInterval(fileIndex, fileIndex);
+
+        // Use a different message if we're finished.
+        } else {
+            message = &quot;Finished sending the last file!&quot;;
+        }
+
+        // Display a notification.
+        java.awt.EventQueue.invokeLater(() -&gt; {
+            JOptionPane.showMessageDialog(new JFrame(), message, 
+                    &quot;Workflow Event&quot;, JOptionPane.PLAIN_MESSAGE);
+        });
+    }
+</code></pre>
+
+<h3 id="jtable-selection-listener">JTable Selection Listener</h3>
+<ul>
+<li>This is the selection listener, when a file is selected load it in the backend.</li>
+</ul>
+<pre><code class="java">    @Override
+    public void valueChanged(ListSelectionEvent e) {
+        int[] selectedRow = fileTable.getSelectedRows();
+        // Only load files when there is a single selection.
+        if (selectedRow.length == 1) {
+            // Pull the file out of the table and set it in the backend.
+            String file = (String) model.getValueAt(selectedRow[0], 0);
+            try {
+                backend.setGcodeFile(new File(file));
+            } catch (Exception ex) {
+                Exceptions.printStackTrace(ex);
+            }
+        }
+    }
+</code></pre>
+
+<h3 id="jtable-helper">JTable Helper</h3>
+<ul>
+<li>Helper method to add a file to the JTable, first making sure that it isn't
+  already in the table.</li>
+</ul>
+<pre><code class="java">    public void addFileToWorkflow(File gcodeFile) {
+        if (gcodeFile == null) {
+            return;
+        }
+
+        int fileIndex = findFileIndex(gcodeFile);
+        // Don't re-add a file.
+        if (fileIndex &gt;= 0) {
+            return;
+        }
+
+        model.addRow(new Object[]{
+                gcodeFile.getAbsolutePath(),
+                &quot;default&quot;,
+                true,
+                false
+            });
+
+        // Fire off the selection event to load the file.
+        int lastRow = fileTable.getRowCount() - 1;
+        fileTable.setRowSelectionInterval(lastRow, lastRow);
+    }
+</code></pre>
+
+<h3 id="addremove-button-action-handlers">Add/Remove Button Action Handlers</h3>
+<ul>
+<li>Now we implement the button event methods. They are generated by double
+  clicking the buttons in the GUI Builder. This generates the swing code that
+  attaches the <code>ActionPerformed</code> events to the button click callbacks.</li>
+<li><code>addButtonActionPerformed</code> simply displays a file chooser (using some UGS
+  library built ins) and calls the <code>addFileToWorkflow</code> method defined earlier.</li>
+<li><code>removeButtonActoinPerformed</code> is even simpler, it uses standard JTable
+  functionality to remove any selected rows. The only thing clever here is that
+  rows are removed starting from the end to avoid having the index of later
+  selections change while deleting rows one at a time.</li>
+</ul>
+<pre><code class="java">    private void addButtonActionPerformed(ActionEvent evt) {                                          
+        JFileChooser fileChooser = GcodeFileTypeFilter.getGcodeFileChooser(
+            settings.getLastOpenedFilename());
+
+        int returnVal = fileChooser.showOpenDialog(this);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File gcodeFile = fileChooser.getSelectedFile();
+            addFileToWorkflow(gcodeFile);
+        }  
+    }                                         
+
+    private void removeButtonActionPerformed(ActionEvent evt) {                                             
+        int[] selectedRows = fileTable.getSelectedRows();
+        if (selectedRows.length == 0) return;
+
+        Arrays.sort(selectedRows);
+        for (int i = selectedRows.length - 1; i &gt;= 0; i--) {
+            int row = selectedRows[i]
+            this.model.removeRow(row);
+            this.model.fireTableRowsDeleted(row, row);
+        }
+    }                                            
+</code></pre>
+
+<h3 id="up-down-button-action-handlers">Up / Down Button Action Handlers</h3>
+<ul>
+<li>The up and down action buttons are pure java code. They don't do anything
+  you wouldn't do with any other Swing application. The code here deals strictly
+  with moving selections around. Although a little tricky, and not totally
+  relevant to UGS, they are included because the feature wouldn't be complete
+  without them.</li>
+</ul>
+<pre><code class="java">    private void upButtonActionPerformed(ActionEvent evt) {                                         
+        int[] selectedRows = fileTable.getSelectedRows();
+
+        // Exit early if nothing is selected.
+        if (selectedRows.length == 0) return;
+
+        Arrays.sort(selectedRows);
+
+        // Exit early if the selected range can't move.
+        if (selectedRows[0] == 0) return;
+
+        for (int i = 0; i &lt; selectedRows.length; i++) {
+            selectedRows[i] = this.moveRow(selectedRows[i], -1);
+        }
+
+        int first = selectedRows[0];
+        int last = selectedRows[selectedRows.length-1];
+        fileTable.setRowSelectionInterval(first, last);
+    }                                        
+
+    private void downButtonActionPerformed(ActionEvent evt) {                                           
+        int[] selectedRows = fileTable.getSelectedRows();
+
+        // Exit early if nothing is selected.
+        if (selectedRows.length == 0) return;
+
+        Arrays.sort(selectedRows);
+
+        // Exit early if the selected range can't move.
+        if (selectedRows[selectedRows.length-1]
+                == fileTable.getRowCount()) return;
+
+        for (int i = selectedRows.length - 1; i &gt;= 0; i--) {
+            selectedRows[i] = this.moveRow(selectedRows[i], 1);
+        }
+
+        int first = selectedRows[0];
+        int last = selectedRows[selectedRows.length-1];
+        fileTable.setRowSelectionInterval(first, last);
+    } 
+</code></pre>
+
+<h3 id="netbeans-platform-component-lifecycle-code">NetBeans Platform Component Lifecycle Code</h3>
+<ul>
+<li>Of the automatically generated methods, <code>componentOpened</code> is the only one
+  which needed some custom code. In case the component had been closed earlier
+  or wasn't loaded until after a file stream started, grab the <code>wasSending</code>
+  state and save it for later.</li>
+</ul>
+<pre><code class="java">    @Override
+    public void componentOpened() {
+        this.wasSending = backend.isSending();
+    }
+
+    @Override
+    public void componentClosed() {
+        // No special close handling.
+    }
+
+    void writeProperties(java.util.Properties p) {
+        // better to version settings since initial version as advocated at
+        // http://wiki.apidesign.org/wiki/PropertyFiles
+        p.setProperty(&quot;version&quot;, &quot;1.0&quot;);
+
+        // We could save the loaded files here
+    }
+
+    void readProperties(java.util.Properties p) {
+        String version = p.getProperty(&quot;version&quot;);
+
+        // We could load previously loaded files here
+    }
+</code></pre>
+
+<h3 id="helper-methods">Helper Methods</h3>
+<ul>
+<li>Finally, here are the helper methods used above.</li>
+</ul>
+<pre><code class="java">    /**
+     * Look for the provided file in the file table.
+     */
+    private int findFileIndex(File gcodeFile) {
+        if (gcodeFile == null) return -1;
+
+        for (int i = 0; i &lt; model.getRowCount(); i++) {
+            String file = (String) model.getValueAt(i, 0);
+            if (file != null &amp;&amp; gcodeFile.getAbsolutePath().equals(file)) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    /**
+     * Move a given row by some offset. If the offset would move the row outside
+     * of the current table size, the row is not moved.
+     */
+    private int moveRow(int row, int offset) {
+        int dest = row + offset;
+        if (dest &lt; 0 || dest &gt;= model.getRowCount()) {
+            return row;
+        }
+
+        model.moveRow(row, row, dest);
+        return dest;
+    }
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>
