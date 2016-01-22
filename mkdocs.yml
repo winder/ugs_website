@@ -5,6 +5,13 @@ site_author: Will Winder
 site_description: "Cross platform G-Code sender with advanced features for GRBL based CNC machines."
 
 pages:
-- 'About': 'index.md'
-- 'Download' : 'download.md'
-- 'User Guide': 'user-guide.md'
+- 'Home': 'index.md'
+- 'Download': 'download.md'
+- 'Docs':
+    - "User": 'guide/user.md'
+    - "Developer": 'guide/developer.md'
+    - "Plugin": 'guide/plugin.md'
+- 'Contributing':
+    - "Code": 'contrib/development.md'
+    - "Translations": 'contrib/translation.md'
+    - "Donating": 'contrib/donation.md'
