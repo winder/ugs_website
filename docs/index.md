@@ -8,7 +8,7 @@
 A full featured gcode platform used for interfacing with advanced CNC controllers like [GRBL](https://github.com/grbl/grbl)
 and [TinyG](https://github.com/synthetos/TinyG).
 Universal Gcode Sender is a self-contained Java application which includes all external dependencies,
-that means if you have the Java runtime environment setup UGS provides the rest.
+that means if you have the Java Runtime Environment setup UGS provides the rest.
 <br/>
 
 <center>
