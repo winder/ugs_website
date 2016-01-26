@@ -1,8 +1,16 @@
 # Compiling
 
+Development is done using NetBeans, but most of the code can be edited using any IDE that supports Maven.
+
 ## Classic GUI
 
 For development the [Maven](http://maven.apache.org/) tool is used. The `maven-shade-plugin` and `maven-assembly-plugin` are used to generate the self-executing JAR and distribution zip.
+
+### Running with NetBeans
+From NetBeans use the `Open Project...` dialog and navigate to the project
+folder. It should have a maven icon, select it and press `Open Project`.
+
+From the IDE you can run or debug the code similarly to any other IDE.
 
 ### Running from the command line
 ```
@@ -39,7 +47,16 @@ cp target/UniversalGcodeSender.jar "UGSPlatform/UGSLib/release/modules/ext/ugs/U
 cd UGSPlatform
 ```
 
-At this point you can use ant to run and build the project.
+At this point you can use ant or NetBeans to run and build the project.
+
+### Running with NetBeans
+From NetBeans use the `Open Project...` dialog and navigate to the project
+folder. Expand `Universal-G-Code-Sender` and select `UGSPlatform`. Now press
+`Open Project`.
+
+From the IDE you can run or debug the code similarly to any other IDE.
+
+<center><img src="../../img/dev/UGSPlatform_open.png" width="90%" /></center>
 
 ### Running from the command line
 ```
