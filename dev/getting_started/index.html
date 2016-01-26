@@ -165,8 +165,13 @@
             <div class="col-md-9" role="main">
 
 <h1 id="compiling">Compiling</h1>
+<p>Development is done using NetBeans, but most of the code can be edited using any IDE that supports Maven.</p>
 <h2 id="classic-gui">Classic GUI</h2>
 <p>For development the <a href="http://maven.apache.org/">Maven</a> tool is used. The <code>maven-shade-plugin</code> and <code>maven-assembly-plugin</code> are used to generate the self-executing JAR and distribution zip.</p>
+<h3 id="running-with-netbeans">Running with NetBeans</h3>
+<p>From NetBeans use the <code>Open Project...</code> dialog and navigate to the project
+folder. It should have a maven icon, select it and press <code>Open Project</code>.</p>
+<p>From the IDE you can run or debug the code similarly to any other IDE.</p>
 <h3 id="running-from-the-command-line">Running from the command line</h3>
 <pre><code>mvn exec:java -Dexec.mainClass=&quot;com.willwinder.universalgcodesender.MainWindow&quot;
 </code></pre>
@@ -193,7 +198,13 @@ cp target/UniversalGcodeSender.jar &quot;UGSPlatform/UGSLib/release/modules/ext/
 cd UGSPlatform
 </code></pre>
 
-<p>At this point you can use ant to run and build the project.</p>
+<p>At this point you can use ant or NetBeans to run and build the project.</p>
+<h3 id="running-with-netbeans_1">Running with NetBeans</h3>
+<p>From NetBeans use the <code>Open Project...</code> dialog and navigate to the project
+folder. Expand <code>Universal-G-Code-Sender</code> and select <code>UGSPlatform</code>. Now press
+<code>Open Project</code>.</p>
+<p>From the IDE you can run or debug the code similarly to any other IDE.</p>
+<p><center><img src="../../img/dev/UGSPlatform_open.png" width="90%" /></center></p>
 <h3 id="running-from-the-command-line_1">Running from the command line</h3>
 <pre><code>ant run
 </code></pre>
