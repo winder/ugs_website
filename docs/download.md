@@ -17,6 +17,8 @@ Older releases can be found [on github](https://github.com/winder/builds/tree/ma
 These builds are generated automatically and contain all changes since the last release.
 UGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.
 
+**The nightly builds now require Java 8**
+
 [![Build Status](https://travis-ci.org/winder/Universal-G-Code-Sender.svg?branch=master)](https://travis-ci.org/winder/Universal-G-Code-Sender)
 
 | | |
