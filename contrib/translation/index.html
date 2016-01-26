@@ -63,19 +63,36 @@
             
             
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Docs <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../../guide/user/">User</a>
+                            <a href="../../guide/platform/">UGS Platform</a>
                         </li>
                     
                         <li >
-                            <a href="../../guide/developer/">Developer</a>
+                            <a href="../../guide/user/">Setup</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../dev/getting_started/">Getting Started</a>
                         </li>
                     
                         <li >
-                            <a href="../../guide/plugin/">Plugin</a>
+                            <a href="../../dev/development/">Backend</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../dev/plugin/">Plugin</a>
                         </li>
                     
                     </ul>
@@ -88,7 +105,7 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../development/">Code</a>
+                            <a href="../code/">Code</a>
                         </li>
                     
                         <li class="active">
@@ -108,7 +125,7 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../development/">
+                    <a rel="next" href="../code/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
@@ -138,12 +155,37 @@
     
         <li class="main active"><a href="#translations">Translations</a></li>
         
+            <li><a href="#classic-gui">Classic GUI</a></li>
+        
+            <li><a href="#ugs-platform">UGS Platform</a></li>
+        
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="translations">Translations</h1></div>
+<h1 id="translations">Translations</h1>
+<p>Translations are greatly appreciated.</p>
+<h2 id="classic-gui">Classic GUI</h2>
+<p>The Classic GUI is localized with properties files found in <code>src/resources</code>.</p>
+<ul>
+<li>Start with <code>MessagesBundle.properties</code></li>
+<li>Rename to <code>MessagesBundle_&lt;locale&gt;.properties</code></li>
+<li>Translate the file.</li>
+</ul>
+<p>If you want to stop here, create a pull request and provide this file. I'm more
+than happy to do the last steps.</p>
+<p>To finish the job completely you'll need to know how to use <a href="https://git-scm.com">git</a>.</p>
+<ul>
+<li>Add your </li>
+<li>Edit <code>src/com/willwinder/universalgcodesender/i18n/AvailableLanguages.java</code></li>
+<li>Add your new translation to the <code>availableLanguages</code> object.</li>
+<li><a href="https://help.github.com/articles/using-pull-requests/">Create a pull request</a>.</li>
+</ul>
+<h2 id="ugs-platform">UGS Platform</h2>
+<p>NetBeans platform provides facilities for localization, but they have not been
+explored yet. If you're interesting in exploring this, <a href="http://bits.netbeans.org/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/i18n-branding.html">here is the
+documentation</a>, create an issue on github with anything you find out!</p></div>
         </div>
 
         <footer class="col-md-12">
