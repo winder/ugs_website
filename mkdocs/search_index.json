@@ -62,13 +62,23 @@
         }, 
         {
             "location": "/dev/getting_started/", 
-            "text": "Getting started", 
+            "text": "Compiling\n\n\nClassic GUI\n\n\nFor development the \nMaven\n tool is used. The \nmaven-shade-plugin\n and \nmaven-assembly-plugin\n are used to generate the self-executing JAR and distribution zip.\n\n\nRunning from the command line\n\n\nmvn exec:java -Dexec.mainClass=\ncom.willwinder.universalgcodesender.MainWindow\n\n\n\n\n\nExecuting tests\n\n\nmvn test\n\n\n\n\nBuilding the self-executing JAR\n\n\nmvn package\n\n\n\n\nBuilding a UniversalGcodeSender.zip release file\n\n\nmvn package assembly:assembly\n\n\n\n\nThe Classic GUI uses Maven along with \n\n\nUGS Platform\n\n\nThe build process for the platform is not quite as streamlined as the classic project. If for any reason these instructions aren't working, you can refer to the \nafter_success\n commands in \n.travis.yml\n.\n\n\nThe UGS Platform uses the same backend as the Classic GUI, so that JAR must be built first. The JAR is then copied into the UGSPlatform project at which point ant commands can be used to run the project.\n\n\nmvn package assembly:assembly\nmkdir -p UGSPlatform/UGSLib/release/modules/ext/ugs/\ncp target/UniversalGcodeSender.jar \nUGSPlatform/UGSLib/release/modules/ext/ugs/Universal G-Code Sender.jar\n\ncd UGSPlatform\n\n\n\n\nAt this point you can use ant to run and build the project.\n\n\nRunning from the command line\n\n\nant run\n\n\n\n\nBuilding a distribution zip\n\n\nant build-zip", 
             "title": "Getting Started"
         }, 
         {
-            "location": "/dev/getting_started/#getting-started", 
+            "location": "/dev/getting_started/#compiling", 
             "text": "", 
-            "title": "Getting started"
+            "title": "Compiling"
+        }, 
+        {
+            "location": "/dev/getting_started/#classic-gui", 
+            "text": "For development the  Maven  tool is used. The  maven-shade-plugin  and  maven-assembly-plugin  are used to generate the self-executing JAR and distribution zip.  Running from the command line  mvn exec:java -Dexec.mainClass= com.willwinder.universalgcodesender.MainWindow   Executing tests  mvn test  Building the self-executing JAR  mvn package  Building a UniversalGcodeSender.zip release file  mvn package assembly:assembly  The Classic GUI uses Maven along with", 
+            "title": "Classic GUI"
+        }, 
+        {
+            "location": "/dev/getting_started/#ugs-platform", 
+            "text": "The build process for the platform is not quite as streamlined as the classic project. If for any reason these instructions aren't working, you can refer to the  after_success  commands in  .travis.yml .  The UGS Platform uses the same backend as the Classic GUI, so that JAR must be built first. The JAR is then copied into the UGSPlatform project at which point ant commands can be used to run the project.  mvn package assembly:assembly\nmkdir -p UGSPlatform/UGSLib/release/modules/ext/ugs/\ncp target/UniversalGcodeSender.jar  UGSPlatform/UGSLib/release/modules/ext/ugs/Universal G-Code Sender.jar \ncd UGSPlatform  At this point you can use ant to run and build the project.  Running from the command line  ant run  Building a distribution zip  ant build-zip", 
+            "title": "UGS Platform"
         }, 
         {
             "location": "/dev/development/", 

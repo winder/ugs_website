@@ -153,14 +153,54 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#getting-started">Getting started</a></li>
+        <li class="main active"><a href="#compiling">Compiling</a></li>
+        
+            <li><a href="#classic-gui">Classic GUI</a></li>
+        
+            <li><a href="#ugs-platform">UGS Platform</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="getting-started">Getting started</h1></div>
+<h1 id="compiling">Compiling</h1>
+<h2 id="classic-gui">Classic GUI</h2>
+<p>For development the <a href="http://maven.apache.org/">Maven</a> tool is used. The <code>maven-shade-plugin</code> and <code>maven-assembly-plugin</code> are used to generate the self-executing JAR and distribution zip.</p>
+<h3 id="running-from-the-command-line">Running from the command line</h3>
+<pre><code>mvn exec:java -Dexec.mainClass=&quot;com.willwinder.universalgcodesender.MainWindow&quot;
+</code></pre>
+
+<h3 id="executing-tests">Executing tests</h3>
+<pre><code>mvn test
+</code></pre>
+
+<h3 id="building-the-self-executing-jar">Building the self-executing JAR</h3>
+<pre><code>mvn package
+</code></pre>
+
+<h3 id="building-a-universalgcodesenderzip-release-file">Building a UniversalGcodeSender.zip release file</h3>
+<pre><code>mvn package assembly:assembly
+</code></pre>
+
+<p>The Classic GUI uses Maven along with </p>
+<h2 id="ugs-platform">UGS Platform</h2>
+<p>The build process for the platform is not quite as streamlined as the classic project. If for any reason these instructions aren't working, you can refer to the <code>after_success</code> commands in <code>.travis.yml</code>.</p>
+<p>The UGS Platform uses the same backend as the Classic GUI, so that JAR must be built first. The JAR is then copied into the UGSPlatform project at which point ant commands can be used to run the project.</p>
+<pre><code class="sh">mvn package assembly:assembly
+mkdir -p UGSPlatform/UGSLib/release/modules/ext/ugs/
+cp target/UniversalGcodeSender.jar &quot;UGSPlatform/UGSLib/release/modules/ext/ugs/Universal G-Code Sender.jar&quot;
+cd UGSPlatform
+</code></pre>
+
+<p>At this point you can use ant to run and build the project.</p>
+<h3 id="running-from-the-command-line_1">Running from the command line</h3>
+<pre><code>ant run
+</code></pre>
+
+<h3 id="building-a-distribution-zip">Building a distribution zip</h3>
+<pre><code>ant build-zip
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
