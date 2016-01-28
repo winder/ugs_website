@@ -12,7 +12,8 @@ pages:
     - "Setup": 'guide/user.md'
 - 'Developer Guide':
     - "Getting Started": 'dev/getting_started.md'
-    - "Backend": 'dev/development.md'
+    - "Backend": 'dev/backend_development.md'
+    - "Frontend": 'dev/frontend_development.md'
     - "Plugin": 'dev/plugin.md'
 - 'Contributing':
     - "Code" : 'contrib/code.md'
