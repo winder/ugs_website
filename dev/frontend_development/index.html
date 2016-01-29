@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Backend - UGS</title>
+	<title>Frontend - UGS</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -87,8 +87,12 @@
                             <a href="../getting_started/">Getting Started</a>
                         </li>
                     
+                        <li >
+                            <a href="../backend_development/">Backend</a>
+                        </li>
+                    
                         <li class="active">
-                            <a href="./">Backend</a>
+                            <a href="./">Frontend</a>
                         </li>
                     
                         <li >
@@ -125,7 +129,7 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../getting_started/">
+                    <a rel="next" href="../backend_development/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
@@ -153,14 +157,77 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#development">Development</a></li>
+        <li class="main active"><a href="#front-end-architecture">Front-end Architecture</a></li>
+        
+    
+        <li class="main "><a href="#model">Model</a></li>
+        
+    
+        <li class="main "><a href="#view">View</a></li>
+        
+            <li><a href="#classic-gui">Classic GUI</a></li>
+        
+            <li><a href="#ugs-platform">UGS Platform</a></li>
+        
+    
+        <li class="main "><a href="#presenter">Presenter</a></li>
+        
+            <li><a href="#backendapi">BackendAPI</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="development">Development</h1></div>
+<h1 id="front-end-architecture">Front-end Architecture</h1>
+<p>UGS uses a Model-View-Presenter architecture. What this means is that at a high
+level there are three layers which each serve different purposes. A <strong>Model</strong>
+for all backend logic, a <strong>View</strong> displayed to the user and a <strong>Presenter</strong>
+which serves as a buffer between the model and one or more views.</p>
+<h1 id="model">Model</h1>
+<p>The model contains all backend logic. Things like opening a connection, listing
+serial ports, streaming a file, and handling firmware specific nuances. All of
+this is hidden from the front end as much as possible.</p>
+<h1 id="view">View</h1>
+<p>The view only has access to the presenter. It is responsible for all user
+interaction and feedback. The main logic in here should be things like
+enabling or disabling components based on the current state of the model.</p>
+<h2 id="classic-gui">Classic GUI</h2>
+<p>The <strong>Classic GUI</strong> is built using NetBeans. There are a number of custom Swing
+components, and they are all initialized with the NetBeans GUI builder. The
+vast majority of the <strong>Classic GUI</strong> code is contained in <code>MainWindow.java</code>.
+There isn't a lot to expand on here, this front end has grown organically over
+the years and is fairly rigid. The <code>Visualizer</code> component is a standalone
+JOGL window which is updated using events from the backend (it was a model for
+many of the improvements in the current applications architecture).</p>
+<h2 id="ugs-platform">UGS Platform</h2>
+<p>The <strong>UGS Platform</strong> build is also built using NetBeans. It is a built ontop of
+the NetBeans Platform which provides it a robust set of tools like flexible
+windows, a plugin framework, and a suite of tools for module communications. At
+the core of this is a module named <code>UGSLib</code> which is a simple wrapper to the
+standard UGS JAR file. There is a suite of modules named <code>UGSCore</code> which
+provides many of the standard UI elements seen in the <strong>Classic GUI</strong>, in
+addition there are other modules that provide new functionality.</p>
+<p>Extending the GUI is now a matter of creating a new plugin, for details on how
+to do this see the <a href="../plugin/">Plugin Tutorial</a>.</p>
+<h1 id="presenter">Presenter</h1>
+<p>The presenter serves as an API for the model. All the heavy lifting needed for
+the GUI should happen here. For example the controller model object knows how
+to stream a processed file, but it doesn't know how to process the file. So the
+presenter will pass data to the gcode processor and generate a processed object
+which can be passed to the controller.</p>
+<p>Similarly, all notifications from the model are reinterpreted for the view with
+a simpler message strategy.</p>
+<p>In this way, all updates to the backend code can be leveraged by all front ends
+which utilize UGS.</p>
+<h2 id="backendapi">BackendAPI</h2>
+<p>In UGS interfaces named <code>BackendAPI</code> and <code>BackendAPIReadOnly</code> provide the
+presenter layer. The read only methods are split off into a sub-interface in
+case a developer wants to be sure they don't change any state. For instance a
+widget that displays the current machine location probably has no need for
+pausing a stream.</p>
+<p>These APIs are used by all front ends (<strong>Classic GUI</strong>, <strong>PendantUI</strong> and
+<strong>UGS Platform</strong>).</p></div>
         </div>
 
         <footer class="col-md-12">

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Will Winder">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Backend - UGS</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">UGS</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../download/">Download</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../guide/platform/">UGS Platform</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../guide/user/">Setup</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../getting_started/">Getting Started</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">Backend</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../frontend_development/">Frontend</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../plugin/">Plugin</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contributing <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../contrib/code/">Code</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../contrib/translation/">Translations</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../contrib/donation/">Donating</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../getting_started/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../frontend_development/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/winder/Universal-G-Code-Sender">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#backend-architecture">Backend architecture</a></li>
+        
+            <li><a href="#controller">Controller</a></li>
+        
+            <li><a href="#communicator">Communicator</a></li>
+        
+            <li><a href="#connection">Connection</a></li>
+        
+    
+        <li class="main "><a href="#streaming-strategy">Streaming strategy</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="backend-architecture">Backend architecture</h1>
+<p>Similar to the front-end there are more layers on the backend to help with
+supporting differences between different gcode controllers and the different
+ways to communicate with these controllers. Because UGS depends on serial
+events from CNC devices, the communication between layers is also event driven.
+This is implemented using a series of <strong>Listener</strong> classes which pass messages
+from the lower levels to the upper levels whenever data is detected on the
+serial port (USB).</p>
+<h2 id="controller">Controller</h2>
+<p>A controller is primarily responsible for implementing controller-specific
+features. Different features can be things like what happens when a
+<code>Perform Homing</code> command is requested, or how to issue status requests and
+parse their results. <code>GRBL</code> and <code>TinyG</code> are both supported, they share a
+lot of code with the <strong>AbstractController.java</strong> abstract class.</p>
+<p>Internally the <strong>AbstractController</strong> class implements several important
+things. It manages the stream lifecycle, keeping track of which commands have
+been sent, which have been completed and in some cases which are queued for
+sending. The controller also figures out when the stream has finished. Finally
+the <strong>AbstractController</strong> implements the <code>SerialCommunicatorListener</code>, which
+how its able to detect all of this state information (and allows commands to
+be sent to the CNC controller).</p>
+<p>The controller provides a <code>ControllerListener</code> interface which is used to
+provide real time status.</p>
+<p>Finally, the <strong>AbstractController</strong> defines a number of abstract methods which
+can be used by device specific controllers as needed to hook into important
+lifecycle events:</p>
+<pre><code class="java">    abstract protected void closeCommBeforeEvent();
+    abstract protected void closeCommAfterEvent();
+    protected void openCommAfterEvent() throws Exception {}
+    abstract protected void cancelSendBeforeEvent();
+    abstract protected void cancelSendAfterEvent();
+    abstract protected void pauseStreamingEvent() throws Exception;
+    abstract protected void resumeStreamingEvent() throws Exception;
+    abstract protected void isReadyToSendCommandsEvent() throws Exception;
+    abstract protected void statusUpdatesEnabledValueChanged(boolean enabled);
+    abstract protected void statusUpdatesRateValueChanged(int rate);
+
+    // This one is special, because it is responsible for parsing device
+    // responses, such as a command complete, status string, or parsing a
+    // status event. In the case of a command complete, it must call
+    // `commandComplete` to push the stream lifecycle along.
+    abstract protected void rawResponseHandler(String response);
+</code></pre>
+
+<p>Here is the public interface which controlles conform to:</p>
+<pre><code class="java">public interface IController {
+    /*
+    Observable
+    */
+    public void addListener(ControllerListener cl);
+
+    /*
+    Actions
+    */
+    public void performHomingCycle() throws Exception;
+    public void returnToHome() throws Exception;
+    public void resetCoordinatesToZero() throws Exception;
+    public void resetCoordinateToZero(final char coord) throws Exception;
+    public void killAlarmLock() throws Exception;
+    public void toggleCheckMode() throws Exception;
+    public void viewParserState() throws Exception;
+    public void issueSoftReset() throws Exception;
+
+    /*
+    Behavior
+    */
+    public void setSingleStepMode(boolean enabled);
+    public boolean getSingleStepMode();
+
+    public void setStatusUpdatesEnabled(boolean enabled);
+    public boolean getStatusUpdatesEnabled();
+
+    public void setStatusUpdateRate(int rate);
+    public int getStatusUpdateRate();
+
+    public GcodeCommandCreator getCommandCreator();
+    public long getJobLengthEstimate(File gcodeFile);
+
+    /*
+    Serial
+    */
+    public Boolean openCommPort(String port, int portRate) throws Exception;
+    public Boolean closeCommPort() throws Exception;
+    public Boolean isCommOpen();
+
+    /*
+    Stream information
+    */
+    public Boolean isReadyToStreamFile() throws Exception;
+    public Boolean isStreamingFile();
+    public long getSendDuration();
+    public int rowsInSend();
+    public int rowsSent();
+    public int rowsRemaining();
+
+    /*
+    Stream control
+    */
+    public void beginStreaming() throws Exception;
+    public void pauseStreaming() throws Exception;
+    public void resumeStreaming() throws Exception;
+    public void cancelSend();
+
+    /*
+    Stream content
+    */
+    public GcodeCommand createCommand(String gcode) throws Exception;
+    public void sendCommandImmediately(GcodeCommand cmd) throws Exception;
+    public void queueCommand(GcodeCommand cmd) throws Exception;
+    public void queueStream(GcodeStreamReader r);
+    public void queueRawStream(Reader r);
+}
+</code></pre>
+
+<h2 id="communicator">Communicator</h2>
+<p>A communicator handles all levels of sending data to the device. Raw responses
+are returned to any listeners via the <code>SerialCommunicatorListener</code>.</p>
+<p>The <code>AbstractCommunicator</code> implements several listener utilities which are used
+by implementing classes.</p>
+<p>The <code>BufferedCommunicator</code> abstract class handles the process of buffering
+multiple commands at once in order to keep a constant stream of commands
+available to the CNC device. It does this in the <strong>streamCommands</strong> method by
+maintaining a list of active commands, and the current size of those commands. A
+method named <code>processedCommand</code> must be implemented in a subclass to determine
+whether a raw response indicates a command has completed. This notifies the
+<strong>BufferedCommunicator</strong> that it should attempt to send more commands.</p>
+<p><code>GrblCommunicator</code> and <code>TinyGCommunicator</code> are two concrete implementations of
+the <strong>BufferedCommunicator</strong>.</p>
+<h2 id="connection">Connection</h2>
+<p>This is a very thin layer which provides a way to write and receive data:</p>
+<pre><code class="java">    abstract public boolean openPort(String name, int baud) throws Exception;
+    abstract public void closePort() throws Exception;
+    abstract public boolean isOpen();
+    abstract public void sendByteImmediately(byte b) throws Exception;
+    abstract public void sendStringToComm(String command) throws Exception;
+</code></pre>
+
+<h1 id="streaming-strategy">Streaming strategy</h1>
+<p>UGS attempts to use a fixed amount of memory when streaming a file. In this way
+it can send gcode files of any size. Files are preprocessed at the <code>BackendAPI</code>
+level using the <code>GcodeStreamWriter</code> class. This will serialize all the required
+metadata into a file. Later on that file can be opened with the
+<code>GcodeStreamReader</code> class, the <strong>Controller</strong> and <strong>Communicator</strong> classes use
+this. Using the reader, the <strong>Communicator</strong> class can pull out commands one at
+a time and send them to the <strong>Connection</strong>.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>
