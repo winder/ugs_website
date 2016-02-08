@@ -138,12 +138,12 @@ things along.
   be implementing.
 ```java
 /**
- * ControlStateListener - this is how a plugin can listen to UGS lifecycle events.
+ * UGSEventListener - this is how a plugin can listen to UGS lifecycle events.
  * ListSelectionListener - listen for table selections.
  */
 public final class WorkflowWindowTutorialTopComponent
         extends TopComponent
-        implements ControlStateListener, ListSelectionListener {
+        implements UGSEventListener, ListSelectionListener {
 
     // These are the UGS backend objects for interacting with the backend.
     private final Settings settings;
@@ -171,7 +171,7 @@ public final class WorkflowWindowTutorialTopComponent
         // Settings and BackendAPI objects.
         settings = CentralLookup.getDefault().lookup(Settings.class);
         backend = CentralLookup.getDefault().lookup(BackendAPI.class);
-        backend.addControlStateListener(this);
+        backend.addUGSEventListener(this);
 
         // Allow contiguous ranges of selections and register a listener.
         this.fileTable.setSelectionMode(
@@ -194,19 +194,16 @@ public final class WorkflowWindowTutorialTopComponent
 * If a file is loaded, we add it to the table.
 ```java
     @Override
-    public void ControlStateEvent(ControlStateEvent cse) {
-        switch (cse.getEventType()) {
-            case STATE_CHANGED:
-                if (wasSending && cse.getState() == ControlState.COMM_IDLE)
-                   this.completeFile(backend.getGcodeFile());
-                wasSending = backend.isSending();
-                break;
-            case FILE_CHANGED:
-                this.addFileToWorkflow(backend.getGcodeFile());
-                break;
-            default:
-                throw new AssertionError(cse.getEventType().name());
+    public void UGSEvent(UGSEvent cse) {
+        if (cse.isStateChangeEvent()) {
+            if (wasSending && cse.getControlState() == ControlState.COMM_IDLE)
+               this.completeFile(backend.getGcodeFile());
+            wasSending = backend.isSending();
         }
+        if (cse.isFileChangeEvent()) {
+            this.addFileToWorkflow(backend.getGcodeFile());
+        }
+
     }
 ```
 
