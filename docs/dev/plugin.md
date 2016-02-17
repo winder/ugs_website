@@ -6,23 +6,24 @@ Platform is a module which wraps and exposes the Universal Gcode Sender JAR
 file - the same jar you could execute to run the Classic GUI! Other than using
 the UGSLib module, developing a plugin for the UGS Platform is exactly the same
 as developing any other NetBeans Platform plugin. And there is lots of great
-documentation for that! Here is the [NetBeans Platform Plugin Quick Start](https://platform.netbeans.org/tutorials/nbm-google.html)
+documentation for that, here is the [NetBeans Platform Plugin Quick Start](https://platform.netbeans.org/tutorials/nbm-google.html)
 guide.
 
 # Workflow Plugin Tutorial
 
 In this tutorial we're going to build a window to help manage jobs that use
-multiple tools which are split into multiple tools. The rough design idea will
+multiple tools which are split into multiple files. The rough design idea will
 have a central table with four columns containing:
 * File name
 * Tool name (editable)
 * Finished flag
 
 There will be a pair of buttons to add and remove files from the table, and
-will also hook up a lifecycle event listener for other file open events.
+we will also hook up a UGS event listener to detect when files are opened from
+other areas of the interface as well.
 
-There will be another pair of buttons to move rows around in the table, so that
-if files were added out of order the order can be corrected.
+Lastly, we'll add another pair of buttons to move rows around in the table, so
+that we can reorganize the workflow if files were added out of order the order.
 
 Here is a sketch of what we're building:
 <center><img src="../../img/tutorials/workflow_plugin/00.Design.png" width="90%" /></center>
