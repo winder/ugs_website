@@ -10,8 +10,8 @@ pages:
 - 'Home': 'index.md'
 - 'Download': 'download.md'
 - 'User Guide':
-    - "UGS Platform": 'guide/platform.md'
-    - "Setup": 'guide/user.md'
+    - "Classic": 'guide/classic.md'
+    - "Platform": 'guide/platform.md'
 - 'Developer Guide':
     - "Getting Started": 'dev/getting_started.md'
     - "Backend": 'dev/backend_development.md'
