@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>UGS Platform - UGS</title>
+	<title>Platform - UGS</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -76,12 +76,12 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
-                        <li class="active">
-                            <a href="./">UGS Platform</a>
+                        <li >
+                            <a href="../classic/">Classic</a>
                         </li>
                     
-                        <li >
-                            <a href="../user/">Setup</a>
+                        <li class="active">
+                            <a href="./">Platform</a>
                         </li>
                     
                     </ul>
@@ -139,12 +139,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../../download/">
+                    <a rel="next" href="../classic/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../user/">
+                    <a rel="prev" href="../../dev/getting_started/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -167,14 +167,31 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#platform">Platform</a></li>
+        <li class="main active"><a href="#ugs-platform">UGS Platform</a></li>
+        
+    
+        <li class="main "><a href="#platform-benefits">Platform Benefits</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="platform">Platform</h1></div>
+<h1 id="ugs-platform">UGS Platform</h1>
+<p>The UGS Platform is the next generation of Universal Gcode Sender. It is built
+ontop of the Netbeans Platform which allows us to leverage its mature modular
+framework. This platform allows more features to be added without compromising
+on code quality, or being bogged down by a home grown framework. The Classic
+GUI is used as a library, so core features benefit both interfaces.</p>
+<p><center>
+<img src="../../img/platform/screenshot.png" alt="Screenshot" width="90%"/>
+</center></p>
+<h1 id="platform-benefits">Platform Benefits</h1>
+<ul>
+<li>Out of the box dynamic windowing system allows arranging the UI dynamically.</li>
+<li>Plugin Framework available for decoupling features.</li>
+<li>Huge library of modules to leverage: Code Editors, Auto-updates, Keybindings</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">

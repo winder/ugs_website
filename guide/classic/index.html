@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Setup - UGS</title>
+	<title>Classic - UGS</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -76,12 +76,12 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
-                        <li >
-                            <a href="../platform/">UGS Platform</a>
+                        <li class="active">
+                            <a href="./">Classic</a>
                         </li>
                     
-                        <li class="active">
-                            <a href="./">Setup</a>
+                        <li >
+                            <a href="../platform/">Platform</a>
                         </li>
                     
                     </ul>
@@ -139,12 +139,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../platform/">
+                    <a rel="next" href="../../download/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../../dev/getting_started/">
+                    <a rel="prev" href="../platform/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -167,14 +167,43 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#work-in-progress">Work in progress</a></li>
+        <li class="main active"><a href="#classic-interface">Classic Interface</a></li>
+        
+    
+        <li class="main "><a href="#features">Features</a></li>
+        
+    
+        <li class="main "><a href="#usage">Usage</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="work-in-progress">Work in progress</h1></div>
+<h1 id="classic-interface">Classic Interface</h1>
+<p>This is the classic user interface. Initially designed as a bare-bones gcode
+sender it has grown in features since the initial release in 2012. It is built
+with <code>Swing</code> using the <code>NetBeans Builder</code> built-in graphical GUI layout plugin.
+The graphical nature of the plugin allows non-developers to tweak the interface
+without needing to write any code.</p>
+<p><center>
+<img src="../../img/screenshots/sending.png" alt="Screenshot" width="90%"/>
+</center></p>
+<h1 id="features">Features</h1>
+<ul>
+<li>Self-executing JAR, all native dependancies for Windows, OSX, Linux and
+    RaspberryPi are built in.</li>
+<li>GRBL and TinyG support, extensible interface for adding more.</li>
+<li>3D Gcode Visualizer.</li>
+<li>Real time machine feedback and control.</li>
+<li>Built in pendant - connect to UGS from your smart phone or tablet.</li>
+<li>Configurable Gcode Processing - Remove comments, truncate decimals, expand arcs</li>
+<li>Constant memory usage - run any sized gcode file.</li>
+<li>Extensive development test suite for all core features.</li>
+<li>Localized: Afrikaans, Italian, Spanish, German, French, Greek, Dutch, English</li>
+</ul>
+<h1 id="usage">Usage</h1>
+<p><Pull requests accepted!></p></div>
         </div>
 
         <footer class="col-md-12">

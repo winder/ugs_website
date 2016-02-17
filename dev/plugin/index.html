@@ -77,11 +77,11 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../../guide/platform/">UGS Platform</a>
+                            <a href="../../guide/classic/">Classic</a>
                         </li>
                     
                         <li >
-                            <a href="../../guide/user/">Setup</a>
+                            <a href="../../guide/platform/">Platform</a>
                         </li>
                     
                     </ul>
@@ -198,19 +198,20 @@ Platform is a module which wraps and exposes the Universal Gcode Sender JAR
 file - the same jar you could execute to run the Classic GUI! Other than using
 the UGSLib module, developing a plugin for the UGS Platform is exactly the same
 as developing any other NetBeans Platform plugin. And there is lots of great
-documentation for that! Here is the <a href="https://platform.netbeans.org/tutorials/nbm-google.html">NetBeans Platform Plugin Quick Start</a>
+documentation for that, here is the <a href="https://platform.netbeans.org/tutorials/nbm-google.html">NetBeans Platform Plugin Quick Start</a>
 guide.</p>
 <h1 id="workflow-plugin-tutorial">Workflow Plugin Tutorial</h1>
 <p>In this tutorial we're going to build a window to help manage jobs that use
-multiple tools which are split into multiple tools. The rough design idea will
+multiple tools which are split into multiple files. The rough design idea will
 have a central table with four columns containing:
 <em> File name
 </em> Tool name (editable)
 * Finished flag</p>
 <p>There will be a pair of buttons to add and remove files from the table, and
-will also hook up a lifecycle event listener for other file open events.</p>
-<p>There will be another pair of buttons to move rows around in the table, so that
-if files were added out of order the order can be corrected.</p>
+we will also hook up a UGS event listener to detect when files are opened from
+other areas of the interface as well.</p>
+<p>Lastly, we'll add another pair of buttons to move rows around in the table, so
+that we can reorganize the workflow if files were added out of order the order.</p>
 <p>Here is a sketch of what we're building:
 <center><img src="../../img/tutorials/workflow_plugin/00.Design.png" width="90%" /></center></p>
 <h2 id="create-and-configure-project">Create and configure project</h2>
