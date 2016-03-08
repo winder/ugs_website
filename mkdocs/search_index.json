@@ -42,7 +42,7 @@
         }, 
         {
             "location": "/guide/classic/", 
-            "text": "Classic Interface\n\n\nThis is the classic user interface. Initially designed as a bare-bones gcode\nsender it has grown in features since the initial release in 2012. It is built\nwith \nSwing\n using the \nNetBeans Builder\n built-in graphical GUI layout plugin.\nThe graphical nature of the plugin allows non-developers to tweak the interface\nwithout needing to write any code.\n\n\n\n\n\n\n\n\nFeatures\n\n\n\n\nSelf-executing JAR, all native dependancies for Windows, OSX, Linux and\n    RaspberryPi are built in.\n\n\nGRBL and TinyG support, extensible interface for adding more.\n\n\n3D Gcode Visualizer.\n\n\nReal time machine feedback and control.\n\n\nBuilt in pendant - connect to UGS from your smart phone or tablet.\n\n\nConfigurable Gcode Processing - Remove comments, truncate decimals, expand arcs\n\n\nConstant memory usage - run any sized gcode file.\n\n\nExtensive development test suite for all core features.\n\n\nLocalized: Afrikaans, Italian, Spanish, German, French, Greek, Dutch, English\n\n\n\n\nUsage", 
+            "text": "Classic Interface\n\n\nThis is the classic user interface. Initially designed as a bare-bones gcode\nsender it has grown in features since the initial release in 2012. It is built\nwith \nSwing\n using the \nNetBeans Builder\n built-in graphical GUI layout plugin.\nThe graphical nature of the plugin allows non-developers to tweak the interface\nwithout needing to write any code.\n\n\n\n\n\n\n\n\nFeatures\n\n\n\n\nSelf-executing JAR, all native dependancies for Windows, OSX, Linux and\n    RaspberryPi are built in.\n\n\nGRBL and TinyG support, extensible interface for adding more.\n\n\n3D Gcode Visualizer.\n\n\nReal time machine feedback and control.\n\n\nBuilt in pendant - connect to UGS from your smart phone or tablet.\n\n\nConfigurable Gcode Processing - Remove comments, truncate decimals, expand arcs\n\n\nConstant memory usage - run any sized gcode file.\n\n\nExtensive development test suite for all core features.\n\n\nLocalized: Afrikaans, Italian, Spanish, German, French, Greek, Dutch, English\n\n\n\n\nHow to run\n\n\n\n\nDownload and install the version of Java listed on the download page, \nor a later version.\n\n\nDownload and extract the Classic GUI from one of the links here.\n\n\nOn most Operating Systems you can now double click the \nUniversalGcodeSender.jar\n file.\n   If double clicking does not work, execute \nstart-windows.bat\n on Windows or \nstart.sh\n on Linux or Mac OSX.\n\n\n\n\nUsage\n\n\n== TODO: Pull requests accepted! ==", 
             "title": "Classic"
         }, 
         {
@@ -56,13 +56,18 @@
             "title": "Features"
         }, 
         {
+            "location": "/guide/classic/#how-to-run", 
+            "text": "Download and install the version of Java listed on the download page,  or a later version.  Download and extract the Classic GUI from one of the links here.  On most Operating Systems you can now double click the  UniversalGcodeSender.jar  file.\n   If double clicking does not work, execute  start-windows.bat  on Windows or  start.sh  on Linux or Mac OSX.", 
+            "title": "How to run"
+        }, 
+        {
             "location": "/guide/classic/#usage", 
-            "text": "", 
+            "text": "== TODO: Pull requests accepted! ==", 
             "title": "Usage"
         }, 
         {
             "location": "/guide/platform/", 
-            "text": "UGS Platform\n\n\nThe UGS Platform is the next generation of Universal Gcode Sender. It is built\nontop of the Netbeans Platform which allows us to leverage its mature modular\nframework. This platform allows more features to be added without compromising\non code quality, or being bogged down by a home grown framework. The Classic\nGUI is used as a library, so core features benefit both interfaces.\n\n\n\n\n\n\n\n\nPlatform Benefits\n\n\n\n\nOut of the box dynamic windowing system allows arranging the UI dynamically.\n\n\nPlugin Framework available for decoupling features.\n\n\nHuge library of modules to leverage: Code Editors, Auto-updates, Keybindings", 
+            "text": "UGS Platform\n\n\nThe UGS Platform is the next generation of Universal Gcode Sender. It is built\nontop of the Netbeans Platform which allows us to leverage its mature modular\nframework. This platform allows more features to be added without compromising\non code quality, or being bogged down by a home grown framework. The Classic\nGUI is used as a library, so core features benefit both interfaces.\n\n\n\n\n\n\n\n\nPlatform Benefits\n\n\n\n\nThis is the current target for new UGS features.\n\n\nOut of the box dynamic windowing system allows arranging the UI dynamically.\n\n\nPlugin Framework available for decoupling features.\n\n\nHuge library of modules to leverage: Code Editors, Auto-updates, Keybindings\n\n\n\n\nHow to run\n\n\n\n\nDownload and install the version of Java listed on the download page, \nor a later version.\n\n\nDownload and extract the UGS Platform build from the downloads page.\n\n\nIn the locate \nbin\n in the \nugsplatform\n directory.\n\n\nOn Windows run \nugsplatform.exe\n or \nugsplatform64.exe\n, on Linux or Mac OSX run \nugsplatform\n.\n\n\n\n\nUsage\n\n\n== TODO: Pull requests accepted! ==", 
             "title": "Platform"
         }, 
         {
@@ -72,8 +77,18 @@
         }, 
         {
             "location": "/guide/platform/#platform-benefits", 
-            "text": "Out of the box dynamic windowing system allows arranging the UI dynamically.  Plugin Framework available for decoupling features.  Huge library of modules to leverage: Code Editors, Auto-updates, Keybindings", 
+            "text": "This is the current target for new UGS features.  Out of the box dynamic windowing system allows arranging the UI dynamically.  Plugin Framework available for decoupling features.  Huge library of modules to leverage: Code Editors, Auto-updates, Keybindings", 
             "title": "Platform Benefits"
+        }, 
+        {
+            "location": "/guide/platform/#how-to-run", 
+            "text": "Download and install the version of Java listed on the download page,  or a later version.  Download and extract the UGS Platform build from the downloads page.  In the locate  bin  in the  ugsplatform  directory.  On Windows run  ugsplatform.exe  or  ugsplatform64.exe , on Linux or Mac OSX run  ugsplatform .", 
+            "title": "How to run"
+        }, 
+        {
+            "location": "/guide/platform/#usage", 
+            "text": "== TODO: Pull requests accepted! ==", 
+            "title": "Usage"
         }, 
         {
             "location": "/dev/getting_started/", 
