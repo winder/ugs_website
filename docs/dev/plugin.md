@@ -1,3 +1,8 @@
+# Note: The UGS Platform has been updated to use maven. Some parts of this document need to be updated to reflect that change.
+
+<br/>
+<br/>
+
 # Plugin development
 
 The UGS Platform is built ontop of the NetBeans Platform. This gives us powerful
