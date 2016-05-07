@@ -267,23 +267,13 @@
         }, 
         {
             "location": "/contrib/translation/", 
-            "text": "Translations\n\n\nTranslations are greatly appreciated.\n\n\nClassic GUI\n\n\nThe Classic GUI is localized with properties files found in \nsrc/resources\n.\n\n\n\n\nStart with \nMessagesBundle.properties\n\n\nRename to \nMessagesBundle_\nlocale\n.properties\n\n\nTranslate the file.\n\n\n\n\nIf you want to stop here, create a pull request and provide this file. I'm more\nthan happy to do the last steps.\n\n\nTo finish the job completely you'll need to know how to use \ngit\n.\n\n\n\n\nAdd your \n\n\nEdit \nsrc/com/willwinder/universalgcodesender/i18n/AvailableLanguages.java\n\n\nAdd your new translation to the \navailableLanguages\n object.\n\n\nCreate a pull request\n.\n\n\n\n\nUGS Platform\n\n\nNetBeans platform provides facilities for localization, but they have not been\nexplored yet. If you're interesting in exploring this, \nhere is the\ndocumentation\n, create an issue on github with anything you find out!", 
+            "text": "Translations\n\n\nTranslations are greatly appreciated.\n\n\nLocalization property files are found in \nugs-core/src/resources\n.\n\n\n\n\nStart with \nMessagesBundle.properties\n\n\nRename to \nMessagesBundle_\nlocale\n.properties\n\n\nTranslate the file.\n\n\n\n\nIf you want to stop here, create a pull request and provide this file. I'm more\nthan happy to do the last steps.\n\n\nTo finish the job completely you'll need to know how to use \ngit\n.\n\n\n\n\nAdd your new file to \nugs-core/src/resources\n.\n\n\nOpen \nsrc/com/willwinder/universalgcodesender/i18n/AvailableLanguages.java\n\n\nAdd your new translation to the \navailableLanguages\n object.\n\n\nCreate a GitHub pull request\n.", 
             "title": "Translations"
         }, 
         {
             "location": "/contrib/translation/#translations", 
-            "text": "Translations are greatly appreciated.", 
+            "text": "Translations are greatly appreciated.  Localization property files are found in  ugs-core/src/resources .   Start with  MessagesBundle.properties  Rename to  MessagesBundle_ locale .properties  Translate the file.   If you want to stop here, create a pull request and provide this file. I'm more\nthan happy to do the last steps.  To finish the job completely you'll need to know how to use  git .   Add your new file to  ugs-core/src/resources .  Open  src/com/willwinder/universalgcodesender/i18n/AvailableLanguages.java  Add your new translation to the  availableLanguages  object.  Create a GitHub pull request .", 
             "title": "Translations"
-        }, 
-        {
-            "location": "/contrib/translation/#classic-gui", 
-            "text": "The Classic GUI is localized with properties files found in  src/resources .   Start with  MessagesBundle.properties  Rename to  MessagesBundle_ locale .properties  Translate the file.   If you want to stop here, create a pull request and provide this file. I'm more\nthan happy to do the last steps.  To finish the job completely you'll need to know how to use  git .   Add your   Edit  src/com/willwinder/universalgcodesender/i18n/AvailableLanguages.java  Add your new translation to the  availableLanguages  object.  Create a pull request .", 
-            "title": "Classic GUI"
-        }, 
-        {
-            "location": "/contrib/translation/#ugs-platform", 
-            "text": "NetBeans platform provides facilities for localization, but they have not been\nexplored yet. If you're interesting in exploring this,  here is the\ndocumentation , create an issue on github with anything you find out!", 
-            "title": "UGS Platform"
         }, 
         {
             "location": "/contrib/donation/", 
