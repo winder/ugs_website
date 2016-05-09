@@ -3,7 +3,7 @@
 We are currently using [POEditor](https://poeditor.com/join/project/2J2hB5I41Z) to manage localization.
 If you would like to help please consider signing up to contribute through this service.
 
-To request access to the project sign up here: https://poeditor.com/join/project/2J2hB5I41Z
+To request access to the project sign up here: [https://poeditor.com/join/project/2J2hB5I41Z](https://poeditor.com/join/project/2J2hB5I41Z)
 
 | Language | Maintainers |
 | -------- | ----------- |
