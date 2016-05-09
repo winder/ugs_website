@@ -267,23 +267,18 @@
         }, 
         {
             "location": "/contrib/translation/", 
-            "text": "Translations\n\n\nTranslations are greatly appreciated.\n\n\nAdding a new language\n\n\nLocalization property files are found in \nugs-core/src/resources\n.\n\n\n\n\nStart with \nMessagesBundle.properties\n\n\nRename to \nMessagesBundle_\nlocale\n.properties\n\n\nTranslate the file.\n\n\n\n\nIf you want to stop here, create a pull request and provide this file. I'm more\nthan happy to do the last steps.\n\n\nTo finish the job completely you'll need to know how to use \ngit\n.\n\n\n\n\nAdd your new file to \nugs-core/src/resources\n.\n\n\nOpen \nsrc/com/willwinder/universalgcodesender/i18n/AvailableLanguages.java\n\n\nAdd your new translation to the \navailableLanguages\n object.\n\n\nCreate a GitHub pull request\n.\n\n\n\n\nMaintaining an existing language\n\n\nWe are currently evaluating various online localization services to help with adding new languages and keeping existing ones up to date. If you would like to contribute please create a ticket on github and we will invite you to be a member of the service.\n\n\n\n\n\n\n\n\nLanguage\n\n\nMaintainers\n\n\n\n\n\n\n\n\n\n\nAfrikaans\n\n\nHelp needed!\n\n\n\n\n\n\nDutch\n\n\nHelp needed!\n\n\n\n\n\n\nGerman\n\n\nHelp needed!\n\n\n\n\n\n\nItalian\n\n\nHelp needed!\n\n\n\n\n\n\nSpanish\n\n\nHelp needed!\n\n\n\n\n\n\nFrench\n\n\nHelp needed!", 
+            "text": "Localizing UGS\n\n\nWe are currently using \nPOEditor\n to manage localization.\nIf you would like to help please consider signing up to contribute through this service.\n\n\nTo request access to the project sign up here: https://poeditor.com/join/project/2J2hB5I41Z\n\n\n\n\n\n\n\n\nLanguage\n\n\nMaintainers\n\n\n\n\n\n\n\n\n\n\nAfrikaans\n\n\nMaintainer needed!\n\n\n\n\n\n\nDutch\n\n\nMaintainer needed!\n\n\n\n\n\n\nGerman\n\n\nMaintainer needed!\n\n\n\n\n\n\nItalian\n\n\nMaintainer needed!\n\n\n\n\n\n\nSpanish\n\n\nMaintainer needed!\n\n\n\n\n\n\nFrench\n\n\nMaintainer needed!\n\n\n\n\n\n\n\n\nAdding a new language\n\n\nLocalization property files are found in \nugs-core/src/resources\n.\n\n\n\n\nStart with \nMessagesBundle.properties\n\n\nRename to \nMessagesBundle_\nlocale\n.properties\n\n\nTranslate the file.\n\n\n\n\nIf you want to stop here, create a pull request and provide this file. I'm more\nthan happy to do the last steps.\n\n\nTo finish the job completely you'll need to know how to use \ngit\n.\n\n\n\n\nAdd your new file to \nugs-core/src/resources\n.\n\n\nOpen \nsrc/com/willwinder/universalgcodesender/i18n/AvailableLanguages.java\n\n\nAdd your new translation to the \navailableLanguages\n object.\n\n\nCreate a GitHub pull request\n.", 
             "title": "Translations"
         }, 
         {
-            "location": "/contrib/translation/#translations", 
-            "text": "Translations are greatly appreciated.", 
-            "title": "Translations"
+            "location": "/contrib/translation/#localizing-ugs", 
+            "text": "We are currently using  POEditor  to manage localization.\nIf you would like to help please consider signing up to contribute through this service.  To request access to the project sign up here: https://poeditor.com/join/project/2J2hB5I41Z     Language  Maintainers      Afrikaans  Maintainer needed!    Dutch  Maintainer needed!    German  Maintainer needed!    Italian  Maintainer needed!    Spanish  Maintainer needed!    French  Maintainer needed!", 
+            "title": "Localizing UGS"
         }, 
         {
             "location": "/contrib/translation/#adding-a-new-language", 
             "text": "Localization property files are found in  ugs-core/src/resources .   Start with  MessagesBundle.properties  Rename to  MessagesBundle_ locale .properties  Translate the file.   If you want to stop here, create a pull request and provide this file. I'm more\nthan happy to do the last steps.  To finish the job completely you'll need to know how to use  git .   Add your new file to  ugs-core/src/resources .  Open  src/com/willwinder/universalgcodesender/i18n/AvailableLanguages.java  Add your new translation to the  availableLanguages  object.  Create a GitHub pull request .", 
             "title": "Adding a new language"
-        }, 
-        {
-            "location": "/contrib/translation/#maintaining-an-existing-language", 
-            "text": "We are currently evaluating various online localization services to help with adding new languages and keeping existing ones up to date. If you would like to contribute please create a ticket on github and we will invite you to be a member of the service.     Language  Maintainers      Afrikaans  Help needed!    Dutch  Help needed!    German  Help needed!    Italian  Help needed!    Spanish  Help needed!    French  Help needed!", 
-            "title": "Maintaining an existing language"
         }, 
         {
             "location": "/contrib/donation/", 
