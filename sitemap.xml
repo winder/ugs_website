@@ -3,16 +3,16 @@
 
     
     <url>
-     <loc>None/</loc>
-     <lastmod>2016-05-09</lastmod>
+     <loc>/</loc>
+     <lastmod>2016-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/download/</loc>
-     <lastmod>2016-05-09</lastmod>
+     <loc>/download/</loc>
+     <lastmod>2016-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,42 +20,14 @@
     
         
     <url>
-     <loc>None/guide/classic/</loc>
-     <lastmod>2016-05-09</lastmod>
+     <loc>/guide/classic/</loc>
+     <lastmod>2016-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/guide/platform/</loc>
-     <lastmod>2016-05-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>None/dev/getting_started/</loc>
-     <lastmod>2016-05-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/dev/backend_development/</loc>
-     <lastmod>2016-05-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/dev/frontend_development/</loc>
-     <lastmod>2016-05-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/dev/plugin/</loc>
-     <lastmod>2016-05-09</lastmod>
+     <loc>/guide/platform/</loc>
+     <lastmod>2016-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -64,20 +36,48 @@
     
         
     <url>
-     <loc>None/contrib/code/</loc>
-     <lastmod>2016-05-09</lastmod>
+     <loc>/dev/getting_started/</loc>
+     <lastmod>2016-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/contrib/translation/</loc>
-     <lastmod>2016-05-09</lastmod>
+     <loc>/dev/backend_development/</loc>
+     <lastmod>2016-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/contrib/donation/</loc>
-     <lastmod>2016-05-09</lastmod>
+     <loc>/dev/frontend_development/</loc>
+     <lastmod>2016-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/dev/plugin/</loc>
+     <lastmod>2016-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/contrib/code/</loc>
+     <lastmod>2016-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/contrib/translation/</loc>
+     <lastmod>2016-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/contrib/donation/</loc>
+     <lastmod>2016-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
