@@ -47,41 +47,39 @@ See the [Downloads page](download.md).
 
 # GRBL 1.1 Features
 
-1. Overrides and Toggles
-Platform version only. Easily control the real time feed and speed overrides by
-enabling the Overrides widget in the Window menu.
+1. Overrides and Toggles <br/><br/>
+    Platform version only. Easily control the real time feed and speed overrides by
+    enabling the Overrides widget in the Window menu.
 <center>
 <img src="img/platform/Overrides_window.png" alt="Overrides" width="60%"/>
 </center>
 
-2. Jog Mode
-With older versions of GRBL UGS is pretty reliable when it comes to jogging, but
-there are limitations. With GRBL 1.1 this is no longer the case when using the
-new JOG MODE syntax. This first-class jog mode guarantees the GCODE state will
-be unaltered, and also allows you to stop a jog while it is in progress. UGS
-uses this new syntax automatically when it detects a version of GRBL which
-supports it. During a jog use the STOP action to stop an in-progress jog:
-```
-  >>> $J=G21G91X0.7F11
-  ok
-  >>> $J=G21G91Y0.7F11
-  ok
-  >>> $J=G21G91Z-0.7F11
-  ok
-```
+2. Jog Mode <br/><br/>
+    With older versions of GRBL UGS is pretty reliable when it comes to jogging, but
+    there are limitations. With GRBL 1.1 this is no longer the case when using the
+    new JOG MODE syntax. This first-class jog mode guarantees the GCODE state will
+    be unaltered, and also allows you to stop a jog while it is in progress. UGS
+    uses this new syntax automatically when it detects a version of GRBL which
+    supports it. During a jog use the STOP action to stop an in-progress jog:
 
-3. Pin State Reporting
-Platform version only. New flags have been added to the controller state window
- to indicate when various external switches are enabled.
+        >> $J=G21G91X0.7F11
+        ok
+        >> $J=G21G91Y0.7F11
+        ok
+        >> $J=G21G91Z-0.7F11
+        ok
 
+3. Pin State Reporting <br/><br/>
+    Platform version only. New flags have been added to the controller state window
+    to indicate when various external switches are enabled.
 <center>
 <img src="img/platform/Digital_readout.png" alt="Digital readout" width="40%"/>
 </center>
 
 4. Message resolution
-GRBL removed most help and error messages to make room for new features on the
-micro controller, they are now provided as data files in the grbl source code.
-UGS uses these data files to resolve all error codes and setting strings.
+    GRBL removed most help and error messages to make room for new features on the
+    micro controller, they are now provided as data files in the grbl source code.
+    UGS uses these data files to resolve all error codes and setting strings.
 
 -------------
 
