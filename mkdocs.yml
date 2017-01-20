@@ -10,6 +10,7 @@ pages:
 - 'Home': 'index.md'
 - 'Download': 'download.md'
 - 'User Guide':
+    - "Common Features": 'guide/common.md'
     - "Classic": 'guide/classic.md'
     - "Platform": 'guide/platform.md'
 - 'Developer Guide':
