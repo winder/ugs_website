@@ -56,6 +56,26 @@
             "title": "Nightly Builds"
         }, 
         {
+            "location": "/guide/common/", 
+            "text": "Common Features\n\n\nBecause the UGS Platform and the Classic GUI both build on the same foundation\nthey have a lot in common.\n\n\nGcode Processing\n\n\nError handling\n\n\nWhen GRBL reports an error while processing a line of gcode UGS will\nautomatically pause the stream. In some cases you might want to continue and\nignore the error in the future. The following dialog is displayed allowing you\nto do so:\n\n\n\n\n\n\n\n\nIf you select 'yes' at this point, a line will be added to the controller\noptions:", 
+            "title": "Common Features"
+        }, 
+        {
+            "location": "/guide/common/#common-features", 
+            "text": "Because the UGS Platform and the Classic GUI both build on the same foundation\nthey have a lot in common.", 
+            "title": "Common Features"
+        }, 
+        {
+            "location": "/guide/common/#gcode-processing", 
+            "text": "", 
+            "title": "Gcode Processing"
+        }, 
+        {
+            "location": "/guide/common/#error-handling", 
+            "text": "When GRBL reports an error while processing a line of gcode UGS will\nautomatically pause the stream. In some cases you might want to continue and\nignore the error in the future. The following dialog is displayed allowing you\nto do so:     If you select 'yes' at this point, a line will be added to the controller\noptions:", 
+            "title": "Error handling"
+        }, 
+        {
             "location": "/guide/classic/", 
             "text": "Classic Interface\n\n\nThis is the classic user interface. Initially designed as a bare-bones gcode\nsender it has grown in features since the initial release in 2012. It is built\nwith \nSwing\n using the \nNetBeans Builder\n built-in graphical GUI layout plugin.\nThe graphical nature of the plugin allows non-developers to tweak the interface\nwithout needing to write any code.\n\n\n\n\n\n\n\n\nFeatures\n\n\n\n\nSelf-executing JAR, all native dependancies for Windows, OSX, Linux and\n    RaspberryPi are built in.\n\n\nGRBL and TinyG support, extensible interface for adding more.\n\n\n3D Gcode Visualizer.\n\n\nReal time machine feedback and control.\n\n\nBuilt in pendant - connect to UGS from your smart phone or tablet.\n\n\nConfigurable Gcode Processing - Remove comments, truncate decimals, expand arcs\n\n\nConstant memory usage - run any sized gcode file.\n\n\nExtensive development test suite for all core features.\n\n\nLocalized: Afrikaans, Italian, Spanish, German, French, Greek, Dutch, English\n\n\n\n\nHow to run\n\n\n\n\nDownload and install the version of Java listed on the download page, \nor a later version.\n\n\nDownload and extract the Classic GUI from one of the links here.\n\n\nOn most Operating Systems you can now double click the \nUniversalGcodeSender.jar\n file.\n   If double clicking does not work, execute \nstart-windows.bat\n on Windows or \nstart.sh\n on Linux or Mac OSX.\n\n\n\n\nUsage\n\n\n== TODO: Pull requests accepted! ==", 
             "title": "Classic"

@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Platform - UGS</title>
+	<title>Common Features - UGS</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -77,8 +77,8 @@
                     <ul class="dropdown-menu">
                     
                         
-<li >
-    <a href="../common/">Common Features</a>
+<li class="active">
+    <a href="./">Common Features</a>
 </li>
 
                     
@@ -89,8 +89,8 @@
 
                     
                         
-<li class="active">
-    <a href="./">Platform</a>
+<li >
+    <a href="../platform/">Platform</a>
 </li>
 
                     
@@ -168,12 +168,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../classic/">
+                    <a rel="next" href="../../download/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../../dev/getting_started/">
+                    <a rel="prev" href="../classic/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -196,47 +196,35 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#ugs-platform">UGS Platform</a></li>
+        <li class="main active"><a href="#common-features">Common Features</a></li>
         
     
-        <li class="main "><a href="#platform-benefits">Platform Benefits</a></li>
+        <li class="main "><a href="#gcode-processing">Gcode Processing</a></li>
         
-    
-        <li class="main "><a href="#how-to-run">How to run</a></li>
-        
-    
-        <li class="main "><a href="#usage">Usage</a></li>
+            <li><a href="#error-handling">Error handling</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="ugs-platform">UGS Platform</h1>
-<p>The UGS Platform is the next generation of Universal Gcode Sender. It is built
-ontop of the Netbeans Platform which allows us to leverage its mature modular
-framework. This platform allows more features to be added without compromising
-on code quality, or being bogged down by a home grown framework. The Classic
-GUI is used as a library, so core features benefit both interfaces.</p>
+<h1 id="common-features">Common Features</h1>
+<p>Because the UGS Platform and the Classic GUI both build on the same foundation
+they have a lot in common.</p>
+<h1 id="gcode-processing">Gcode Processing</h1>
+<h2 id="error-handling">Error handling</h2>
+<p>When GRBL reports an error while processing a line of gcode UGS will
+automatically pause the stream. In some cases you might want to continue and
+ignore the error in the future. The following dialog is displayed allowing you
+to do so:</p>
 <p><center>
-<img src="../../img/platform/screenshot.png" alt="Screenshot" width="90%"/>
+<img src="../../img/common/bad.code.dialog.png" alt="Screenshot" width="90%"/>
 </center></p>
-<h1 id="platform-benefits">Platform Benefits</h1>
-<ul>
-<li>This is the current target for new UGS features.</li>
-<li>Out of the box dynamic windowing system allows arranging the UI dynamically.</li>
-<li>Plugin Framework available for decoupling features.</li>
-<li>Huge library of modules to leverage: Code Editors, Auto-updates, Keybindings</li>
-</ul>
-<h1 id="how-to-run">How to run</h1>
-<ol>
-<li>Download and install the version of Java listed on the download page, <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0ahUKEwi05PP5z6_LAhXDvIMKHRyyB5UQFggoMAE&amp;url=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjre8-downloads-2133155.html&amp;usg=AFQjCNH7hWo8nDItPkEtYqoPreE_9QPZkw&amp;cad=rja">or a later version.</a></li>
-<li><a href="../../download/">Download and extract the UGS Platform build from the downloads page.</a></li>
-<li>In the locate <code>bin</code> in the <code>ugsplatform</code> directory.</li>
-<li>On Windows run <code>ugsplatform.exe</code> or <code>ugsplatform64.exe</code>, on Linux or Mac OSX run <code>ugsplatform</code>.</li>
-</ol>
-<h1 id="usage">Usage</h1>
-<p>== TODO: Pull requests accepted! ==</p></div>
+<p>If you select 'yes' at this point, a line will be added to the controller
+options:</p>
+<p><center>
+<img src="../../img/common/bad.code.setting.png" alt="Screenshot" width="90%"/>
+</center></p></div>
         </div>
 
         <footer class="col-md-12">
