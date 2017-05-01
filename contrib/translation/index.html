@@ -209,57 +209,17 @@
 <h1 id="localizing-ugs">Localizing UGS</h1>
 <p>We are currently using <a href="https://poeditor.com/join/project/2J2hB5I41Z">POEditor</a> to manage localization.
 If you would like to help please consider signing up to contribute through this service.</p>
-<p>To request access to the project sign up here: <a href="https://poeditor.com/join/project/2J2hB5I41Z">https://poeditor.com/join/project/2J2hB5I41Z</a></p>
-<table>
-<thead>
-<tr>
-<th>Language</th>
-<th>Maintainers</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Afrikaans</td>
-<td>Maintainer needed!</td>
-</tr>
-<tr>
-<td>Dutch</td>
-<td>Maintainer needed!</td>
-</tr>
-<tr>
-<td>German</td>
-<td>Maintainer needed!</td>
-</tr>
-<tr>
-<td>Italian</td>
-<td>Maintainer needed!</td>
-</tr>
-<tr>
-<td>Spanish</td>
-<td>Maintainer needed!</td>
-</tr>
-<tr>
-<td>French</td>
-<td>Maintainer needed!</td>
-</tr>
-</tbody>
-</table>
+<p>To join the project sign up here: <a href="https://poeditor.com/join/project/2J2hB5I41Z">https://poeditor.com/join/project/2J2hB5I41Z</a></p>
 <h1 id="adding-a-new-language">Adding a new language</h1>
-<p>Localization property files are found in <code>ugs-core/src/resources</code>.</p>
+<p>You can add a new language from POEditor and start translating.</p>
+<p>If you want to stop here, create a ticket on GitHub and I'll add your work to the project. To finish the job completely you'll need to know how to use <a href="https://git-scm.com">git</a>.</p>
 <ul>
-<li>Start with <code>MessagesBundle.properties</code></li>
-<li>Rename to <code>MessagesBundle_&lt;locale&gt;.properties</code></li>
-<li>Translate the file.</li>
-</ul>
-<p>If you want to stop here, create a pull request and provide this file. I'm more
-than happy to do the last steps.</p>
-<p>To finish the job completely you'll need to know how to use <a href="https://git-scm.com">git</a>.</p>
-<ul>
-<li>Add your new file to <code>ugs-core/src/resources</code>.</li>
+<li>Add a new file to <code>ugs-core/src/resources</code>.</li>
 <li>Open <code>src/com/willwinder/universalgcodesender/i18n/AvailableLanguages.java</code></li>
 <li>Add your new translation to the <code>availableLanguages</code> object.</li>
 <li><a href="https://help.github.com/articles/using-pull-requests/">Create a GitHub pull request</a>.</li>
-</ul></div>
+</ul>
+<p>Finally I will link POEditor to the new file and future localization can be handled from there.</p></div>
         </div>
 
         <footer class="col-md-12">
