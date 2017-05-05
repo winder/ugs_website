@@ -125,7 +125,7 @@ The classic GUI has everything you need to get started.
 
 -------------
 
-## Donations
+# Donations
 
 Universal Gcode Sender is free software developed and maintained in my free time for the hobby cnc community. If you would like to make a monetary donation, all proceeds will be used to try convincing my wife that it is worth my time.
 
