@@ -21,5 +21,4 @@ pages:
 - 'Contributing':
     - "Code" : 'contrib/code.md'
     - "Translations": 'contrib/translation.md'
-    - "Donating": 'contrib/donation.md'
 

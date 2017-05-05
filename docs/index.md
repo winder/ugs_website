@@ -123,6 +123,45 @@ The classic GUI has everything you need to get started.
 
 <img src="img/screenshots/advanced_machine_control.png" alt="Screenshot" width="90%"/>
 
+-------------
+
+## Donations
+
+Universal Gcode Sender is free software developed and maintained in my free time for the hobby cnc community. If you would like to make a monetary donation, all proceeds will be used to try convincing my wife that it is worth my time.
+
+<style>
+  input[type="radio"] {
+    margin: 0 5px 0 15px;
+  }
+  #donatebox {
+      text-align:center;
+      width: 300px;
+  }
+</style>
+
+<div id="donatebox">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <!-- donation amounts -->
+  <input type="radio" name="amount" value="1">$1
+  <input type="radio" name="amount" value="5" checked>$5
+  <input type="radio" name="amount" value="10">$10
+  <br/>
+  <input type="radio" name="amount" value="25">$25
+  <input type="radio" name="amount" value="">Custom amount
+  <br/>
+
+  <input type="hidden" name="cmd" value="_donations">
+  <input type="hidden" name="business" value="wwinder.unh@gmail.com">
+  <input type="hidden" name="lc" value="US">
+  <input type="hidden" name="item_name" value="Universal Gcode Sender">
+  <input type="hidden" name="item_number" value="UGS Website Donate Button">
+  <input type="hidden" name="no_note" value="0">
+  <input type="hidden" name="currency_code" value="USD">
+  <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
 
 [java_version_img]: img/shields/Language-Java-brightgreen.svg
 [java_version_link]: http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
