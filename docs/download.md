@@ -23,5 +23,12 @@ UGS has a comprehensive set of automated tests and the build will not pass if an
 
 | | |
 |-|-|
-| [Classic GUI](http://bit.ly/1hftIhy) | The classic UGS GUI. |
-| [UGS Platform](http://bit.ly/1DkClRW) | The next generation platform-based GUI utilizing the UGS API. |
+| [Classic GUI](http://bit.ly/1hftIhy) | The classic UGS interface. |
+| [UGS Platform](http://bit.ly/1DkClRW) | The next generation platform-based interface. |
+
+"Somewhat stable" nightly build. In an effort to move towards a proper 2.0.0 release we have these "Somewhat stable" builds, they are similar to a release candidate but less formal.
+
+| | |
+|-|-|
+| [Classic GUI](http://bit.ly/2ssmIqt) | Some what stable UGS classic interface. |
+| [UGS Platform](http://bit.ly/2rk84y2) | Some what stable UPG next generation interface. |
