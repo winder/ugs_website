@@ -107,7 +107,7 @@
         }, 
         {
             "location": "/guide/platform/", 
-            "text": "UGS Platform\n\n\nThe UGS Platform is the next generation of Universal Gcode Sender. It is built\nontop of the Netbeans Platform which allows us to leverage its mature modular\nframework. This platform allows more features to be added without compromising\non code quality, or being bogged down by a home grown framework. The Classic\nGUI is used as a library, so core features benefit both interfaces.\n\n\n\n\n\n\n\n\nPlatform Benefits\n\n\n\n\nThis is the current target for new UGS features.\n\n\nOut of the box dynamic windowing system allows arranging the UI dynamically.\n\n\nPlugin Framework available for decoupling features.\n\n\nHuge library of modules to leverage: Code Editors, Auto-updates, Keybindings\n\n\n\n\nHow to run\n\n\n\n\nDownload and install the version of Java listed on the download page, \nor a later version.\n\n\nDownload and extract the UGS Platform build from the downloads page.\n\n\nIn the locate \nbin\n in the \nugsplatform\n directory.\n\n\nOn Windows run \nugsplatform.exe\n or \nugsplatform64.exe\n, on Linux or Mac OSX run \nugsplatform\n.\n\n\n\n\nUsage\n\n\n== TODO: Pull requests accepted! ==\n\n\nTroubleshooting / FAQ\n\n\nToolbars or Windows don't appear.\n\n\nThis usually happens if you try running the platform without the required version of Java. The user cache is initialized but some objects become corrupt and initialization fails in the future even after upgrading Java.\n\n\nThis can be fixed by clearing out the user cache directory which can be found on the UGS \"About\" screen seen in the image below.", 
+            "text": "UGS Platform\n\n\nThe UGS Platform is the next generation of Universal Gcode Sender. It is built\nontop of the Netbeans Platform which allows us to leverage its mature modular\nframework. This platform allows more features to be added without compromising\non code quality, or being bogged down by a home grown framework. The Classic\nGUI is used as a library, so core features benefit both interfaces.\n\n\n\n\n\n\n\n\nPlatform Benefits\n\n\n\n\nThis is the current target for new UGS features.\n\n\nOut of the box dynamic windowing system allows arranging the UI dynamically.\n\n\nPlugin Framework available for decoupling features.\n\n\nHuge library of modules to leverage: Code Editors, Auto-updates, Keybindings\n\n\n\n\nHow to run\n\n\n\n\nDownload and install the version of Java listed on the download page, \nor a later version.\n\n\nDownload and extract the UGS Platform build from the downloads page.\n\n\nIn the locate \nbin\n in the \nugsplatform\n directory.\n\n\nOn Windows run \nugsplatform.exe\n or \nugsplatform64.exe\n, on Linux or Mac OSX run \nugsplatform\n.\n\n\n\n\nUsage\n\n\n== TODO: Pull requests accepted! ==", 
             "title": "Platform"
         }, 
         {
@@ -131,12 +131,32 @@
             "title": "Usage"
         }, 
         {
-            "location": "/guide/platform/#troubleshooting-faq", 
-            "text": "", 
-            "title": "Troubleshooting / FAQ"
+            "location": "/guide/troubleshooting/", 
+            "text": "Common Problems\n\n\n\"Grbl has not finished booting.\"\n\n\nThis happens when UGS connects to a serial port and does not receive the GRBL startup string. Typically this is caused by a configuration problem and can be solved by one of the following:\n\n\n\n\nCheck the baud rate is 115200, or 9600 for very old versions of grbl.\n\n\nMake sure you are connecting to the correct port.\n\n\nMake sure you have installed any drivers required for your controller.\n\n\nMake sure GRBL is properly flashed on your controller.\n\n\n\n\nGcode program stopped working\n\n\nThe UGS Parser has a configurable list of rules to skip certain patterns, these rules are typically added by a Yes/No dialog asking if you would like to skip the erroneous commands in the future. Sometimes GRBL will get into an ALARM state and there will be lots of these popups which should not be skipped in the future.\n\n\n\n\n\n\n\n\nSkipping good commands may lead to broken gcode. Those rules should be removed from the gcode processor by going into the controller options.\n\n\nIn UGS Classic the option is in \nSettings \n Gcode Processor Configuration\n.\n\n\nIn UGS Platform the option is under \nPreferences... \n UGS \n Controller Options\n.\n\n\nFor both, you need to uncheck or remove the invalid settings in the bottom list:\n\n\n\n\n\n\n\n\nPlatform Specific Issues\n\n\nToolbars or Windows don't appear.\n\n\nThis usually happens if you try running the platform without the required version of Java. The user cache is initialized but some objects become corrupt and initialization fails in the future even after upgrading Java.\n\n\nThis can be fixed by clearing out the user cache directory which can be found on the UGS \"About\" screen seen in the image below.", 
+            "title": "Help"
         }, 
         {
-            "location": "/guide/platform/#toolbars-or-windows-dont-appear", 
+            "location": "/guide/troubleshooting/#common-problems", 
+            "text": "", 
+            "title": "Common Problems"
+        }, 
+        {
+            "location": "/guide/troubleshooting/#grbl-has-not-finished-booting", 
+            "text": "This happens when UGS connects to a serial port and does not receive the GRBL startup string. Typically this is caused by a configuration problem and can be solved by one of the following:   Check the baud rate is 115200, or 9600 for very old versions of grbl.  Make sure you are connecting to the correct port.  Make sure you have installed any drivers required for your controller.  Make sure GRBL is properly flashed on your controller.", 
+            "title": "\"Grbl has not finished booting.\""
+        }, 
+        {
+            "location": "/guide/troubleshooting/#gcode-program-stopped-working", 
+            "text": "The UGS Parser has a configurable list of rules to skip certain patterns, these rules are typically added by a Yes/No dialog asking if you would like to skip the erroneous commands in the future. Sometimes GRBL will get into an ALARM state and there will be lots of these popups which should not be skipped in the future.     Skipping good commands may lead to broken gcode. Those rules should be removed from the gcode processor by going into the controller options.  In UGS Classic the option is in  Settings   Gcode Processor Configuration .  In UGS Platform the option is under  Preferences...   UGS   Controller Options .  For both, you need to uncheck or remove the invalid settings in the bottom list:", 
+            "title": "Gcode program stopped working"
+        }, 
+        {
+            "location": "/guide/troubleshooting/#platform-specific-issues", 
+            "text": "", 
+            "title": "Platform Specific Issues"
+        }, 
+        {
+            "location": "/guide/troubleshooting/#toolbars-or-windows-dont-appear", 
             "text": "This usually happens if you try running the platform without the required version of Java. The user cache is initialized but some objects become corrupt and initialization fails in the future even after upgrading Java.  This can be fixed by clearing out the user cache directory which can be found on the UGS \"About\" screen seen in the image below.", 
             "title": "Toolbars or Windows don't appear."
         }, 

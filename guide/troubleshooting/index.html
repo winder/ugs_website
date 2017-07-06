@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Getting Started - UGS</title>
+	<title>Help - UGS</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -72,31 +72,31 @@
             
             
             
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
 <li >
-    <a href="../../guide/common/">Common Features</a>
+    <a href="../common/">Common Features</a>
 </li>
 
                     
                         
 <li >
-    <a href="../../guide/classic/">Classic</a>
+    <a href="../classic/">Classic</a>
 </li>
 
                     
                         
 <li >
-    <a href="../../guide/platform/">Platform</a>
+    <a href="../platform/">Platform</a>
 </li>
 
                     
                         
-<li >
-    <a href="../../guide/troubleshooting/">Help</a>
+<li class="active">
+    <a href="./">Help</a>
 </li>
 
                     
@@ -105,31 +105,31 @@
             
             
             
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
-<li class="active">
-    <a href="./">Getting Started</a>
+<li >
+    <a href="../../dev/getting_started/">Getting Started</a>
 </li>
 
                     
                         
 <li >
-    <a href="../backend_development/">Backend</a>
+    <a href="../../dev/backend_development/">Backend</a>
 </li>
 
                     
                         
 <li >
-    <a href="../frontend_development/">Frontend</a>
+    <a href="../../dev/frontend_development/">Frontend</a>
 </li>
 
                     
                         
 <li >
-    <a href="../plugin/">Plugin</a>
+    <a href="../../dev/plugin/">Plugin</a>
 </li>
 
                     
@@ -168,12 +168,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../../guide/troubleshooting/">
+                    <a rel="next" href="../platform/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../backend_development/">
+                    <a rel="prev" href="../../dev/getting_started/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -196,89 +196,52 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#project-organization">Project Organization</a></li>
+        <li class="main active"><a href="#common-problems">Common Problems</a></li>
+        
+            <li><a href="#grbl-has-not-finished-booting">"Grbl has not finished booting."</a></li>
+        
+            <li><a href="#gcode-program-stopped-working">Gcode program stopped working</a></li>
         
     
-        <li class="main "><a href="#development-with-an-ide">Development with an IDE</a></li>
+        <li class="main "><a href="#platform-specific-issues">Platform Specific Issues</a></li>
         
-            <li><a href="#classic-gui">Classic GUI</a></li>
-        
-            <li><a href="#ugs-platform">UGS Platform</a></li>
-        
-    
-        <li class="main "><a href="#development-with-the-command-line">Development with the Command Line</a></li>
-        
-            <li><a href="#classic-gui_1">Classic GUI</a></li>
-        
-            <li><a href="#ugs-platform_1">UGS Platform</a></li>
+            <li><a href="#toolbars-or-windows-dont-appear">Toolbars or Windows don't appear.</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="project-organization">Project Organization</h1>
-<p>Universal Gcode Sender uses <a href="http://maven.apache.org/">Maven</a> to build the
-project. It is using maven modules to separate the core library / classic GUI
-and the UGS Platform project. At the top level a <code>UGS</code> target defines the
-<code>ugs-core</code> and <code>ugs-platform-parent</code> modules which can be built separately or
-all at once.</p>
-<p>The classic gui is part of the core project in the <code>ugs-core</code> module. The
-<code>maven-shade-plugin</code> and <code>maven-assembly-plugin</code> are generate the
-self-executing JAR and distribution zip.</p>
-<p>UGS Platform is built on the <a href="https://netbeans.org/features/platform/">NetBeans Platform</a>.
-It is also using maven.</p>
-<p>Development is done using NetBeans, but most of the code can be edited using
-any IDE that supports Maven.</p>
-<h1 id="development-with-an-ide">Development with an IDE</h1>
-<hr />
-<p>Any IDE supporting Maven should be able to open the UGS project directory. Once
-opened it should show you the <code>ugs-core</code> and <code>ugs-platform-parent</code> modules
-which correspond to the Classic and Platform interfaces.</p>
-<p>Development is done using NetBeans, and for some project development NetBeans
-is almost required. But for tweaking the UI and experimenting with the backend
-any IDE which supports maven can be used.</p>
-<h2 id="classic-gui">Classic GUI</h2>
-<hr />
-<p>In the <code>ugs-core</code> module, you can run the <code>MainWindow.java</code> file to start the
-Classic GUI.</p>
-<h2 id="ugs-platform">UGS Platform</h2>
-<hr />
-<p>The platform build has a number of submodules. Load the suite of modules by 
-running the ugs-platform-app module.</p>
-<h1 id="development-with-the-command-line">Development with the Command Line</h1>
-<hr />
-<p>The UGS Classic and Platform interfaces can also be run from the command line.
-These commands should be run from the root directory.</p>
-<h2 id="classic-gui_1">Classic GUI</h2>
-<hr />
-<p>There is a helper script named <code>run_classic.sh</code>, or you can use the commands below.</p>
-<h3 id="running-the-ui">Running the UI</h3>
-<pre><code>mvn install
-mvn exec:java -Dexec.mainClass=&quot;com.willwinder.universalgcodesender.MainWindow&quot; -pl ugs-core
-</code></pre>
-
-<h3 id="executing-tests">Executing tests</h3>
-<pre><code>mvn install
-mvn test -pl ugs-core
-</code></pre>
-
-<h3 id="building-the-self-executing-jar">Building the self-executing JAR</h3>
-<pre><code>mvn install
-mvn package -pl ugs-core
-</code></pre>
-
-<h3 id="building-a-universalgcodesenderzip-release-file">Building a UniversalGcodeSender.zip release file</h3>
-<pre><code>mvn package assembly:assembly
-</code></pre>
-
-<h2 id="ugs-platform_1">UGS Platform</h2>
-<hr />
-<p>There is a helper script named <code>run_platform.sh</code>, or you can use the commands below.</p>
-<h3 id="running-the-ui_1">Running the UI</h3>
-<pre><code>mvn install
-mvn nbm:run-platform -pl ugs-platform/application
-</code></pre></div>
+<h1 id="common-problems">Common Problems</h1>
+<h2 id="grbl-has-not-finished-booting">"Grbl has not finished booting."</h2>
+<p>This happens when UGS connects to a serial port and does not receive the GRBL startup string. Typically this is caused by a configuration problem and can be solved by one of the following:</p>
+<ol>
+<li>Check the baud rate is 115200, or 9600 for very old versions of grbl.</li>
+<li>Make sure you are connecting to the correct port.</li>
+<li>Make sure you have installed any drivers required for your controller.</li>
+<li>Make sure GRBL is properly flashed on your controller.</li>
+</ol>
+<h2 id="gcode-program-stopped-working">Gcode program stopped working</h2>
+<p>The UGS Parser has a configurable list of rules to skip certain patterns, these rules are typically added by a Yes/No dialog asking if you would like to skip the erroneous commands in the future. Sometimes GRBL will get into an ALARM state and there will be lots of these popups which should not be skipped in the future.</p>
+<p><center>
+<img src="../../img/common/bad.code.dialog.png" alt="Screenshot" width="90%"/>
+</center></p>
+<p>Skipping good commands may lead to broken gcode. Those rules should be removed from the gcode processor by going into the controller options.</p>
+<p>In UGS Classic the option is in <b>Settings &gt; Gcode Processor Configuration</b>.</p>
+<p>In UGS Platform the option is under <b>Preferences... &gt; UGS &gt; Controller Options</b>.</p>
+<p>For both, you need to uncheck or remove the invalid settings in the bottom list:</p>
+<p><center>
+<img src="../../img/common/bad.code.setting.png" alt="Screenshot" width="90%"/>
+</center></p>
+<h1 id="platform-specific-issues">Platform Specific Issues</h1>
+<h2 id="toolbars-or-windows-dont-appear">Toolbars or Windows don't appear.</h2>
+<p>This usually happens if you try running the platform without the required version of Java. The user cache is initialized but some objects become corrupt and initialization fails in the future even after upgrading Java.</p>
+<p>This can be fixed by clearing out the user cache directory which can be found on the UGS "About" screen seen in the image below.
+<br/>
+<center>
+<img src="../../img/platform/about_popup.png" alt="Screenshot" width="60%"/>
+</center></p>
+<h2 id="_1"></h2></div>
         </div>
 
         <footer class="col-md-12">

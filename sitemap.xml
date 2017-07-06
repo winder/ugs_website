@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-06-20</lastmod>
+     <lastmod>2017-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>/download/</loc>
-     <lastmod>2017-06-20</lastmod>
+     <lastmod>2017-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -21,19 +21,25 @@
         
     <url>
      <loc>/guide/common/</loc>
-     <lastmod>2017-06-20</lastmod>
+     <lastmod>2017-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/guide/classic/</loc>
-     <lastmod>2017-06-20</lastmod>
+     <lastmod>2017-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/guide/platform/</loc>
-     <lastmod>2017-06-20</lastmod>
+     <lastmod>2017-07-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/guide/troubleshooting/</loc>
+     <lastmod>2017-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -43,25 +49,25 @@
         
     <url>
      <loc>/dev/getting_started/</loc>
-     <lastmod>2017-06-20</lastmod>
+     <lastmod>2017-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/dev/backend_development/</loc>
-     <lastmod>2017-06-20</lastmod>
+     <lastmod>2017-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/dev/frontend_development/</loc>
-     <lastmod>2017-06-20</lastmod>
+     <lastmod>2017-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/dev/plugin/</loc>
-     <lastmod>2017-06-20</lastmod>
+     <lastmod>2017-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -71,13 +77,13 @@
         
     <url>
      <loc>/contrib/code/</loc>
-     <lastmod>2017-06-20</lastmod>
+     <lastmod>2017-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/contrib/translation/</loc>
-     <lastmod>2017-06-20</lastmod>
+     <lastmod>2017-07-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
