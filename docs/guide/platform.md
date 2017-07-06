@@ -29,14 +29,3 @@ GUI is used as a library, so core features benefit both interfaces.
 # Usage 
 == TODO: Pull requests accepted! ==
 
-# Troubleshooting / FAQ
-
-## Toolbars or Windows don't appear.
-
-This usually happens if you try running the platform without the required version of Java. The user cache is initialized but some objects become corrupt and initialization fails in the future even after upgrading Java.
-
-This can be fixed by clearing out the user cache directory which can be found on the UGS "About" screen seen in the image below.
-<br/>
-<center>
-<img src="../../img/platform/about_popup.png" alt="Screenshot" width="60%"/>
-</center>

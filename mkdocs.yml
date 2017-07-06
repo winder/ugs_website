@@ -13,6 +13,7 @@ pages:
     - "Common Features": 'guide/common.md'
     - "Classic": 'guide/classic.md'
     - "Platform": 'guide/platform.md'
+    - "Help": 'guide/troubleshooting.md'
 - 'Developer Guide':
     - "Getting Started": 'dev/getting_started.md'
     - "Backend": 'dev/backend_development.md'
