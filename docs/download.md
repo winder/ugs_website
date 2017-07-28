@@ -27,6 +27,8 @@ UGS has a comprehensive set of automated tests and the build will not pass if an
 | [UGS Platform](http://bit.ly/1DkClRW) | The next generation platform-based interface. |
 
 "Somewhat stable" nightly build. In an effort to move towards a proper 2.0.0 release we have these "Somewhat stable" builds, they are similar to a release candidate but less formal.
+<br/>
+Stable build from: <b>July 28, 2017</b>
 
 | | |
 |-|-|
