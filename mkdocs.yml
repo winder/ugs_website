@@ -19,6 +19,7 @@ pages:
     - "Backend": 'dev/backend_development.md'
     - "Frontend": 'dev/frontend_development.md'
     - "Plugin": 'dev/plugin.md'
+    - "Gcode Processors": 'dev/gcode_processor.md'
 - 'Contributing':
     - "Code" : 'contrib/code.md'
     - "Translations": 'contrib/translation.md'
