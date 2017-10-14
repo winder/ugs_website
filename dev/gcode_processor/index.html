@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Will Winder">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Gcode Processors - UGS</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-73554112-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">UGS</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../download/">Download</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../guide/common/">Common Features</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../guide/classic/">Classic</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../guide/platform/">Platform</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../guide/troubleshooting/">Help</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../getting_started/">Getting Started</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../backend_development/">Backend</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../frontend_development/">Frontend</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../plugin/">Plugin</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="./">Gcode Processors</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contributing <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../contrib/code/">Code</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../contrib/translation/">Translations</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../plugin/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../../contrib/code/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/winder/Universal-G-Code-Sender">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#gcode-processor-development">Gcode Processor Development</a></li>
+        
+    
+        <li class="main "><a href="#anatomy-of-a-commandprocessor">Anatomy of a CommandProcessor</a></li>
+        
+    
+        <li class="main "><a href="#simple-example">Simple Example</a></li>
+        
+    
+        <li class="main "><a href="#more-complex-examples">More Complex Examples</a></li>
+        
+            <li><a href="#decimalprocessor">DecimalProcessor</a></li>
+        
+            <li><a href="#feedoverrideprocessor">FeedOverrideProcessor</a></li>
+        
+            <li><a href="#linesplitter">LineSplitter</a></li>
+        
+    
+        <li class="main "><a href="#tutorial-creating-a-new-commandprocessor">Tutorial: Creating a New CommandProcessor</a></li>
+        
+            <li><a href="#goal">Goal</a></li>
+        
+            <li><a href="#creating-the-processor">Creating the processor</a></li>
+        
+            <li><a href="#hooking-up-the-json">Hooking up the JSON</a></li>
+        
+            <li><a href="#json-loader">JSON Loader</a></li>
+        
+            <li><a href="#testing">Testing</a></li>
+        
+            <li><a href="#localizing">Localizing</a></li>
+        
+            <li><a href="#conclusion">Conclusion</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="gcode-processor-development">Gcode Processor Development</h1>
+<p>The UGS core library has a flexible gcode processor plugin system. It is designed
+as a processing pipeline to convert one line of code at a time by passing it
+through multiple <strong>Command Processor</strong> plugins. Some advanced features in UGS,
+like the Auto Leveler, take advantage of this feature to inject a special
+processor module into the gcode processing pipeline. Other processors are simpler,
+such as the <strong>M30Processor</strong> which simply removes unwanted <strong>M30</strong> commands, or the
+<strong>CommandLengthProcessor</strong> which causes an error if the final processed line has
+too much data for your controller.</p>
+<p>This process is configured using a JSON file which holds processor configuration,
+order in which processors should appear in the pipeline, and whether or not they
+are enabled. All of this is configurable in UGS and UGP in a <strong>Gcode Processor
+Configuration</strong> menu.</p>
+<h1 id="anatomy-of-a-commandprocessor">Anatomy of a CommandProcessor</h1>
+<p>The processor interface is simple. One command goes in along with the current state
+and a list of output commands come out. A CommandProcessor might discover invalid
+input, in which case a GcodeParserException can be thrown for the GcodeParser to
+handle.</p>
+<pre><code class="java">public interface CommandProcessor {
+    /**
+     * Given a command and the current state of a program returns a replacement
+     * list of commands.
+     * @param command Input gcode.
+     * @param state State of the gcode parser when the command will run.
+     * @return One or more gcode commands to replace the original command with.
+     */
+    public List&lt;String&gt; processCommand(String command, GcodeState state) throws GcodeParserException;
+
+    /**
+     * Returns information about the current command and its configuration.
+     * @return 
+     */
+    public String getHelp();
+}
+</code></pre>
+
+<h1 id="simple-example">Simple Example</h1>
+<p>The <strong>CommandLengthProcessor</strong> is one of the simplest examples of a
+CommandProcessor.  One thing of interest is that it accepts a length parameter
+during configuration. By adding a CommandLengthProcessor to the GcodeParser,
+you can ensure the maximum length of commands.</p>
+<pre><code class="java">public class CommandLengthProcessor implements CommandProcessor {
+    final private int length;
+    public CommandLengthProcessor(int length) {
+        this.length = length;
+    }
+
+    @Override
+    public String getHelp() {
+        // Global localization helpers are used for the help message.
+        return Localization.getString(&quot;sender.help.command.length&quot;) + &quot;\n&quot; +
+                Localization.getString(&quot;sender.command.length&quot;)
+                + &quot;: &quot; + length;
+    }
+
+    @Override
+    public List&lt;String&gt; processCommand(String command, GcodeState state) throws GcodeParserException {
+        if (command.length() &gt; length)
+            throw new GcodeParserException(&quot;Command '&quot; + command + &quot;' is longer than &quot; + length + &quot; characters.&quot;);
+
+        return Collections.singletonList(command);
+    }
+}
+</code></pre>
+
+<h1 id="more-complex-examples">More Complex Examples</h1>
+<p>The following examples can be found in GitHub, they wont have the full code
+included.</p>
+<h3 id="decimalprocessor">DecimalProcessor</h3>
+<p>This is only slightly more complicated than the CommandLengthProcessor. It adds
+in some config validation by throwing a RuntimeException in the constructor,
+which is handled by code which configures the GcodeParser. The <strong>processCommand</strong>
+method is then able to truncate any decimals using simple string manipulation.</p>
+<h3 id="feedoverrideprocessor">FeedOverrideProcessor</h3>
+<p>Like the <strong>DecimalProcessor</strong>, the <strong>FeedOverrideProcessor</strong> is able to modifie any
+<strong>F-Commands</strong> with simple string manipulation.</p>
+<h3 id="linesplitter">LineSplitter</h3>
+<p>The <strong>LineSplitter</strong> CommandProcessor will actually modify commands by parsing
+the gcode and rewriting it. There are several utilities used here to help:</p>
+<ul>
+<li><strong>GcodeParser.processCommand</strong> - Converts the command string into something
+easier to work with.</li>
+<li><strong>GcodePreprocessorUtils.extractMotion</strong> - Helper to extract all words associated
+to movement commands, the remainder should still be sent but may not be sent in
+the context of the rewritten command.</li>
+</ul>
+<p>The remaining logic checks the length of any <code>G0</code> or <code>G1</code> commands and converts
+them, or returns the original command unmodified.</p>
+<h1 id="tutorial-creating-a-new-commandprocessor">Tutorial: Creating a New CommandProcessor</h1>
+<p>Creating a fully integrated and configurable <strong>CommandProcessor</strong> is simple, but
+does touch a number of different files. This tutorial will go over those pieces
+in the context of creating a processor named <strong>M3Dweller</strong>.</p>
+<h3 id="goal">Goal</h3>
+<p>Create a processor which inserts a <strong>Dwell</strong> command (short delay) whenever the
+spindle is enabled. This allows any potentially slow setups such as VFD's to
+come up to speed. It should be configurable via the <strong>Gcode Processor
+Configuration</strong> menu.</p>
+<h3 id="creating-the-processor">Creating the processor</h3>
+<p>First you'll notice that the constructor initializes the command which should
+be added after our spindle start <strong>M3</strong> command. The locale is set to make sure
+comma is not used as a decimal separator:</p>
+<pre><code class="java">    private final String dwellCommand;
+
+    public M3Dweller(double dwellDuration) {
+        this.dwellCommand = String.format(Locale.ROOT, &quot;G4P%.2f&quot;, dwellDuration);
+    }
+</code></pre>
+
+<p>The help method simply adds some comments for the settings GUI:</p>
+<pre><code class="java">    @Override
+    public String getHelp() {
+        return &quot;Add a delay after enabling the spindle with \&quot;M3\&quot; commands. \&quot;M3\&quot; must be the only command on the line.&quot;;
+    }
+</code></pre>
+
+<p>Everything is then pulled together in the <strong>processCommand</strong> method to return an
+extra dwell command when <strong>M3</strong> is detected:</p>
+<pre><code class="java">    // Contains an M3 not followed by another digit (i.e. M30)
+    Pattern m3Pattern = Pattern.compile(&quot;.*[mM]3(?!\\d)(\\D.*)?&quot;);
+
+    @Override
+    public List&lt;String&gt; processCommand(String command, GcodeState state) throws GcodeParserException {
+        if (m3Pattern.matcher(command).matches()) {
+            return Arrays.asList(command, dwellCommand);
+        }
+        return Collections.singletonList(command);
+    }
+</code></pre>
+
+<p>All at once now:</p>
+<pre><code class="java">public class M3Dweller implements CommandProcessor {
+    private final String dwellCommand;
+
+    // Contains an M3 not followed by another digit (i.e. M30)
+    Pattern m3Pattern = Pattern.compile(&quot;.*[mM]3(?!\\d)(\\D.*)?&quot;);
+
+    public M3Dweller(double dwellDuration) {
+        this.dwellCommand = String.format(Locale.ROOT, &quot;G4P%.2f&quot;, dwellDuration);
+    }
+
+    @Override
+    public List&lt;String&gt; processCommand(String command, GcodeState state) throws GcodeParserException {
+        String noComments = GcodePreprocessorUtils.removeComment(command);
+        if (m3Pattern.matcher(noComments).matches()) {
+            return Arrays.asList(command, dwellCommand);
+        }
+        return Collections.singletonList(command);
+    }
+
+    @Override
+    public String getHelp() {
+        return &quot;Add a delay after enabling the spindle with \&quot;M3\&quot; commands. \&quot;M3\&quot; must be the only command on the line.&quot;;
+    }
+}
+</code></pre>
+
+<h3 id="hooking-up-the-json">Hooking up the JSON</h3>
+<p>The json files are stored in <code>ugs-core/src/resources/firmware_config</code>, each of
+these will be updated to include our new processor. Notice that we have an
+argument named duration, and that it is disabled by default:</p>
+<pre><code class="json">                &quot;name&quot;: &quot;M3Dweller&quot;,
+                &quot;enabled&quot;: false,
+                &quot;optional&quot;: true,
+                &quot;args&quot;: {
+                    &quot;duration&quot;: 2.5
+                }
+            },{
+</code></pre>
+
+<p>We also increment the version string, which will prompt users that there is a
+new configuration file available and they may need to revisit their settings:</p>
+<pre><code class="diff">-    &quot;Version&quot;: 3,
++    &quot;Version&quot;: 4,
+</code></pre>
+
+<h3 id="json-loader">JSON Loader</h3>
+<p>The last step is to update the <strong>CommandProcessorLoader</strong> to include logic that
+creates the new M3Dweller when needed. I used one of the other processors as an
+example and made sure to make a corresponding entry for the <strong>M3Dweller</strong> in each
+of the corresponding code and comment locations:</p>
+<pre><code class="java">                case &quot;M3Dweller&quot;:
+                    double duration = pc.args.get(&quot;duration&quot;).getAsDouble();
+                    p = new M3Dweller(duration);
+                    break;
+</code></pre>
+
+<p>There is also a test which should be updated to make sure everything is working:</p>
+<pre><code class="diff">+        args = new JsonObject();
++        args.addProperty(&quot;duration&quot;, 2.5);
++        object = new JsonObject();
++        object.addProperty(&quot;name&quot;, &quot;M3Dweller&quot;);
++        object.add(&quot;args&quot;, args);
++        array.add(object);
++
+         String jsonConfig = array.toString();
+         List&lt;CommandProcessor&gt; processors = CommandProcessorLoader.initializeWithProcessors(jsonConfig);
+
+-        assertEquals(8, processors.size());
++        assertEquals(9, processors.size());
+         assertEquals(ArcExpander.class, processors.get(0).getClass());
+         assertEquals(CommentProcessor.class, processors.get(1).getClass());
+         assertEquals(DecimalProcessor.class, processors.get(2).getClass());
+         assertEquals(FeedOverrideProcessor.class, processors.get(3).getClass());
+         assertEquals(M30Processor.class, processors.get(4).getClass());
+         assertEquals(PatternRemover.class, processors.get(5).getClass());
+         assertEquals(CommandLengthProcessor.class, processors.get(6).getClass());
+         assertEquals(WhitespaceProcessor.class, processors.get(7).getClass());
++        assertEquals(M3Dweller.class, processors.get(8).getClass());
+</code></pre>
+
+<h3 id="testing">Testing</h3>
+<p>The command processors lend themselves to thorough testing, so we create a new
+<code>M3DwellerTest.java</code> file in the associated test package and write some tests:</p>
+<pre><code class="java">    @Test
+    public void testReplaces() throws Exception {
+        M3Dweller dweller = new M3Dweller(2.5);
+        String command;
+
+        command = &quot;M3&quot;;
+        Assertions.assertThat(dweller.processCommand(command, null)).containsExactly(command,&quot;G4P2.50&quot;);
+
+        command = &quot;m3&quot;;
+        Assertions.assertThat(dweller.processCommand(command, null)).containsExactly(command,&quot;G4P2.50&quot;);
+
+        command = &quot;M3 S1000&quot;;
+        Assertions.assertThat(dweller.processCommand(command, null)).containsExactly(command,&quot;G4P2.50&quot;);
+
+        command = &quot;m3 S1000&quot;;
+        Assertions.assertThat(dweller.processCommand(command, null)).containsExactly(command,&quot;G4P2.50&quot;);
+
+        command = &quot;(this is ignored) M3 S1000&quot;;
+        Assertions.assertThat(dweller.processCommand(command, null)).containsExactly(command,&quot;G4P2.50&quot;);
+    }
+
+    @Test
+    public void testNoOp() throws Exception {
+        M3Dweller dweller = new M3Dweller(2.5);
+        String command;
+        command = &quot;anything else&quot;;
+        Assertions.assertThat(dweller.processCommand(command, null)).containsExactly(command);
+
+        command = &quot;M30&quot;;
+        Assertions.assertThat(dweller.processCommand(command, null)).containsExactly(command);
+
+        command = &quot;G0 X0 Y0 (definitely not ready to start the spindle with an M3 yet)&quot;;
+        Assertions.assertThat(dweller.processCommand(command, null)).containsExactly(command);
+    }
+</code></pre>
+
+<h3 id="localizing">Localizing</h3>
+<p>In addition to the help message which may use the global <strong>Localization</strong> helper,
+the settings menu will attempt to find something with the same name as in the
+JSON file. So we add an entry to 
+<code>./ugs-core/src/resources/MessagesBundle_en_US.properties</code>, which will later be
+pulled into a separate localization service to be localized in other languages.</p>
+<pre><code class="diff"> WhitespaceProcessor = Whitespace Remover
++M3Dweller = Spindle start delay
+ controller.exception.smoothie.booting = Smoothie has not finished booting.
+</code></pre>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>We have now fully integrated our <strong>M3Dweller</strong> processor into the UGS framework
+and users of UGS and UGP can both make use of it.</p>
+<p>The raw commit for this feature is found on <a href="https://github.com/winder/Universal-G-Code-Sender/commit/edc9f08e6eb908706f4985bdbcbbb6ffa831b72a">github here</a>.
+<center><img src = "../../img/tutorials/gcode_processor_plugin/1.update.png" width="90%" /></center>
+<center><img src = "../../img/tutorials/gcode_processor_plugin/2.settings.png" width="90%" /></center>
+<center><img src = "../../img/tutorials/gcode_processor_plugin/3.edit.png" width="90%" /></center></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
