@@ -41,4 +41,23 @@ This can be fixed by clearing out the user cache directory which can be found on
 <img src="../../img/platform/about_popup.png" alt="Screenshot" width="60%"/>
 </center>
 
-##
+# Information
+
+## Property Files
+
+### Classic
+
+Occasionally it is useful to attach some of these property files to bug reports to help with reproducing a problem.
+
+Classic UGS properties are stored in your home directory, which changes based on the operating system being used:
+* windows: /home/user/ugs
+* mac: ~/Library/Preferences/ugs
+* linux: ~/ugs
+
+Files include <b>UniversalGcodeSender.json</b> which contain different settings, and a <b>firmware_config</b> directory which contains several configurations for different firmwares and testing profiles.
+
+### Platform
+
+The platform version of UGS contains additional property files automatically created by the NetBeans Platform framework being used. These files are also contained in various locations based on the operating system being used. You can find the exact locations of these files in the About / Help menu (See screenshot above).
+
+It is sometimes necessary to clear out these properties between major feature updates.
