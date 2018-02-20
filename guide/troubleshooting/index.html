@@ -219,6 +219,11 @@
             <li><a href="#property-files">Property Files</a></li>
         
     
+        <li class="main "><a href="#operating-system-compatibility-problems">Operating System Compatibility Problems</a></li>
+        
+            <li><a href="#linux-non-reparenting-window-managers">Linux: Non Reparenting Window Managers</a></li>
+        
+    
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
@@ -263,7 +268,14 @@
 <p>Files include <b>UniversalGcodeSender.json</b> which contain different settings, and a <b>firmware_config</b> directory which contains several configurations for different firmwares and testing profiles.</p>
 <h3 id="platform">Platform</h3>
 <p>The platform version of UGS contains additional property files automatically created by the NetBeans Platform framework being used. These files are also contained in various locations based on the operating system being used. You can find the exact locations of these files in the About / Help menu (See screenshot above).</p>
-<p>It is sometimes necessary to clear out these properties between major feature updates.</p></div>
+<p>It is sometimes necessary to clear out these properties between major feature updates.</p>
+<h1 id="operating-system-compatibility-problems">Operating System Compatibility Problems</h1>
+<h2 id="linux-non-reparenting-window-managers">Linux: Non Reparenting Window Managers</h2>
+<p>There are a number of window managers which are "<a href="https://en.wikipedia.org/wiki/Re-parenting_window_manager">non reparenting</a>", this causes some problems with Java.</p>
+<p>Some details about this problem <a href="https://bugs.launchpad.net/ubuntu/+source/openjdk-6/+bug/258374">can be seen here</a>.</p>
+<p>Use the <strong>_JAVA_AWT_WM_NONREPARENTING</strong> environment property to fix the problem:</p>
+<pre><code class="shell">export _JAVA_AWT_WM_NONREPARENTING=1
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
