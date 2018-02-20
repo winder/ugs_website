@@ -61,3 +61,16 @@ Files include <b>UniversalGcodeSender.json</b> which contain different settings,
 The platform version of UGS contains additional property files automatically created by the NetBeans Platform framework being used. These files are also contained in various locations based on the operating system being used. You can find the exact locations of these files in the About / Help menu (See screenshot above).
 
 It is sometimes necessary to clear out these properties between major feature updates.
+
+# Operating System Compatibility Problems
+
+## Linux: Non Reparenting Window Managers
+
+There are a number of window managers which are "[non reparenting](https://en.wikipedia.org/wiki/Re-parenting_window_manager)", this causes some problems with Java.
+
+Some details about this problem [can be seen here](https://bugs.launchpad.net/ubuntu/+source/openjdk-6/+bug/258374).
+
+Use the **_JAVA_AWT_WM_NONREPARENTING** environment property to fix the problem:
+```shell
+export _JAVA_AWT_WM_NONREPARENTING=1
+```
