@@ -22,6 +22,7 @@ pages:
     - "Plugin": 'dev/plugin.md'
     - "Gcode Processors": 'dev/gcode_processor.md'
 - 'Contributing':
-    - "Code" : 'contrib/code.md'
+    - "Code": 'contrib/code.md'
+    - "Documentation": 'contrib/docs.md'
     - "Translations": 'contrib/translation.md'
 
