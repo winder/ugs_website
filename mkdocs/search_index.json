@@ -521,6 +521,16 @@
             "title": "Code Contributions"
         }, 
         {
+            "location": "/contrib/docs/", 
+            "text": "Documentation Contributions\n\n\nThe documentation on this site is written using \nMkDocs\n where the source files are written in \nMarkdown\n.\n\n\nTo contribute follow these steps:\n\n\n\n\n\n\nMake sure you have python installed\n\n\npython --version\n\n\n\n\n\n\n\nInstall MkDocs and the theme \n\n\nsudo pip install mkdocs\nsudo pip install mkdocs-bootswatch\n\n\n\n\n\n\n\nClone the repository \nhttps://github.com/winder/ugs_website\n\n\n\n\n\n\nFrom the cloned root directory run \n\n\nmkdocs serve\n\n\n\n\n\n\n\nGo to \nhttp://localhost:8000/\n in your browser\n\n\n\n\nMake your changes and see them live updating in your web browser", 
+            "title": "Documentation"
+        }, 
+        {
+            "location": "/contrib/docs/#documentation-contributions", 
+            "text": "The documentation on this site is written using  MkDocs  where the source files are written in  Markdown .  To contribute follow these steps:    Make sure you have python installed  python --version    Install MkDocs and the theme   sudo pip install mkdocs\nsudo pip install mkdocs-bootswatch    Clone the repository  https://github.com/winder/ugs_website    From the cloned root directory run   mkdocs serve    Go to  http://localhost:8000/  in your browser   Make your changes and see them live updating in your web browser", 
+            "title": "Documentation Contributions"
+        }, 
+        {
             "location": "/contrib/translation/", 
             "text": "Localizing UGS\n\n\nWe are currently using \nPOEditor\n to manage localization.\nIf you would like to help please consider signing up to contribute through this service.\n\n\nTo join the project sign up here: \nhttps://poeditor.com/join/project/2J2hB5I41Z\n\n\nAdding a new language\n\n\nYou can add a new language from POEditor and start translating.\n\n\nIf you want to stop here, create a ticket on GitHub and I'll add your work to the project. To finish the job completely you'll need to know how to use \ngit\n.\n\n\n\n\nAdd a new file to \nugs-core/src/resources\n.\n\n\nOpen \nsrc/com/willwinder/universalgcodesender/i18n/AvailableLanguages.java\n\n\nAdd your new translation to the \navailableLanguages\n object.\n\n\nCreate a GitHub pull request\n.\n\n\n\n\nFinally I will link POEditor to the new file and future localization can be handled from there.", 
             "title": "Translations"

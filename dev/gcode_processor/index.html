@@ -15,6 +15,7 @@
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link rel="stylesheet" href="../../css/highlight.css">
         <link href="../../css/base.css" rel="stylesheet">
+        <link href="../../css/style.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -156,6 +157,12 @@
                     
                         
 <li >
+    <a href="../../contrib/docs/">Documentation</a>
+</li>
+
+                    
+                        
+<li >
     <a href="../../contrib/translation/">Translations</a>
 </li>
 
@@ -204,37 +211,13 @@
     
         <li class="main active"><a href="#gcode-processor-development">Gcode Processor Development</a></li>
         
-    
-        <li class="main "><a href="#anatomy-of-a-commandprocessor">Anatomy of a CommandProcessor</a></li>
+            <li><a href="#anatomy-of-a-commandprocessor">Anatomy of a CommandProcessor</a></li>
         
-    
-        <li class="main "><a href="#simple-example">Simple Example</a></li>
+            <li><a href="#simple-example">Simple Example</a></li>
         
-    
-        <li class="main "><a href="#more-complex-examples">More Complex Examples</a></li>
+            <li><a href="#more-complex-examples">More Complex Examples</a></li>
         
-            <li><a href="#decimalprocessor">DecimalProcessor</a></li>
-        
-            <li><a href="#feedoverrideprocessor">FeedOverrideProcessor</a></li>
-        
-            <li><a href="#linesplitter">LineSplitter</a></li>
-        
-    
-        <li class="main "><a href="#tutorial-creating-a-new-commandprocessor">Tutorial: Creating a New CommandProcessor</a></li>
-        
-            <li><a href="#goal">Goal</a></li>
-        
-            <li><a href="#creating-the-processor">Creating the processor</a></li>
-        
-            <li><a href="#hooking-up-the-json">Hooking up the JSON</a></li>
-        
-            <li><a href="#json-loader">JSON Loader</a></li>
-        
-            <li><a href="#testing">Testing</a></li>
-        
-            <li><a href="#localizing">Localizing</a></li>
-        
-            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#tutorial-creating-a-new-commandprocessor">Tutorial: Creating a New CommandProcessor</a></li>
         
     
     </ul>
@@ -254,7 +237,7 @@ too much data for your controller.</p>
 order in which processors should appear in the pipeline, and whether or not they
 are enabled. All of this is configurable in UGS and UGP in a <strong>Gcode Processor
 Configuration</strong> menu.</p>
-<h1 id="anatomy-of-a-commandprocessor">Anatomy of a CommandProcessor</h1>
+<h2 id="anatomy-of-a-commandprocessor">Anatomy of a CommandProcessor</h2>
 <p>The processor interface is simple. One command goes in along with the current state
 and a list of output commands come out. A CommandProcessor might discover invalid
 input, in which case a GcodeParserException can be thrown for the GcodeParser to
@@ -277,7 +260,7 @@ handle.</p>
 }
 </code></pre>
 
-<h1 id="simple-example">Simple Example</h1>
+<h2 id="simple-example">Simple Example</h2>
 <p>The <strong>CommandLengthProcessor</strong> is one of the simplest examples of a
 CommandProcessor.  One thing of interest is that it accepts a length parameter
 during configuration. By adding a CommandLengthProcessor to the GcodeParser,
@@ -306,7 +289,7 @@ you can ensure the maximum length of commands.</p>
 }
 </code></pre>
 
-<h1 id="more-complex-examples">More Complex Examples</h1>
+<h2 id="more-complex-examples">More Complex Examples</h2>
 <p>The following examples can be found in GitHub, they wont have the full code
 included.</p>
 <h3 id="decimalprocessor">DecimalProcessor</h3>
@@ -329,7 +312,7 @@ the context of the rewritten command.</li>
 </ul>
 <p>The remaining logic checks the length of any <code>G0</code> or <code>G1</code> commands and converts
 them, or returns the original command unmodified.</p>
-<h1 id="tutorial-creating-a-new-commandprocessor">Tutorial: Creating a New CommandProcessor</h1>
+<h2 id="tutorial-creating-a-new-commandprocessor">Tutorial: Creating a New CommandProcessor</h2>
 <p>Creating a fully integrated and configurable <strong>CommandProcessor</strong> is simple, but
 does touch a number of different files. This tutorial will go over those pieces
 in the context of creating a processor named <strong>M3Dweller</strong>.</p>

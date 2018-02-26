@@ -1,0 +1,6 @@
+.bs-sidebar .nav > .active > a,
+.bs-sidebar .nav > .active:hover > a,
+.bs-sidebar .nav > .active:focus > a {
+    background-color: #e6e6e6;
+    border-right: 2px solid;
+}
