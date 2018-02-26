@@ -45,7 +45,7 @@ See the [Downloads page](download.md).
 
 -------------
 
-# GRBL 1.1 Features
+### GRBL 1.1 Features
 
 1. Overrides and Toggles <br/><br/>
     Platform version only. Easily control the real time feed and speed overrides by

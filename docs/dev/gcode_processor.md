@@ -14,7 +14,7 @@ order in which processors should appear in the pipeline, and whether or not they
 are enabled. All of this is configurable in UGS and UGP in a **Gcode Processor
 Configuration** menu.
 
-# Anatomy of a CommandProcessor
+## Anatomy of a CommandProcessor
 
 The processor interface is simple. One command goes in along with the current state
 and a list of output commands come out. A CommandProcessor might discover invalid
@@ -40,7 +40,7 @@ public interface CommandProcessor {
 }
 ```
 
-# Simple Example
+## Simple Example
 
 The **CommandLengthProcessor** is one of the simplest examples of a
 CommandProcessor.  One thing of interest is that it accepts a length parameter
@@ -72,7 +72,7 @@ public class CommandLengthProcessor implements CommandProcessor {
 }
 ```
 
-# More Complex Examples
+## More Complex Examples
 The following examples can be found in GitHub, they wont have the full code
 included.
 
@@ -99,7 +99,7 @@ the context of the rewritten command.
 The remaining logic checks the length of any `G0` or `G1` commands and converts
 them, or returns the original command unmodified.
 
-# Tutorial: Creating a New CommandProcessor
+## Tutorial: Creating a New CommandProcessor
 
 Creating a fully integrated and configurable **CommandProcessor** is simple, but
 does touch a number of different files. This tutorial will go over those pieces

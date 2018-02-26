@@ -4,7 +4,8 @@ repo_url: https://github.com/winder/Universal-G-Code-Sender
 site_author: Will Winder
 site_description: "Cross platform G-Code sender with advanced features for GRBL based CNC machines."
 google_analytics: ['UA-73554112-1', 'auto']
-
+extra_css:
+    - css/style.css
 
 pages:
 - 'Home': 'index.md'
@@ -21,6 +22,7 @@ pages:
     - "Plugin": 'dev/plugin.md'
     - "Gcode Processors": 'dev/gcode_processor.md'
 - 'Contributing':
-    - "Code" : 'contrib/code.md'
+    - "Code": 'contrib/code.md'
+    - "Documentation": 'contrib/docs.md'
     - "Translations": 'contrib/translation.md'
 
