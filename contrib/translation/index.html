@@ -225,14 +225,16 @@ If you would like to help please consider signing up to contribute through this 
 <p>To join the project sign up here: <a href="https://poeditor.com/join/project/2J2hB5I41Z">https://poeditor.com/join/project/2J2hB5I41Z</a></p>
 <h1 id="adding-a-new-language">Adding a new language</h1>
 <p>You can add a new language from POEditor and start translating.</p>
-<p>If you want to stop here, create a ticket on GitHub and I'll add your work to the project. To finish the job completely you'll need to know how to use <a href="https://git-scm.com">git</a>.</p>
+<p>If you want to stop here, create a ticket on GitHub and someone will update the project. To finish the job completely you'll need to know how to use <a href="https://git-scm.com">git</a>.</p>
 <ul>
-<li>Add a new file to <code>ugs-core/src/resources</code>.</li>
+<li>Create an empty property file for your language in <code>ugs-core/src/resources</code>.</li>
 <li>Open <code>src/com/willwinder/universalgcodesender/i18n/AvailableLanguages.java</code></li>
 <li>Add your new translation to the <code>availableLanguages</code> object.</li>
+<li>Update the file in <code>update_languages.py</code> with a mapping between the POEditor key and your new file.</li>
+<li>Run <code>update_languages.py</code>, see README in scripts directory for configuration detail. Only commit the new file even if others were updated.</li>
 <li><a href="https://help.github.com/articles/using-pull-requests/">Create a GitHub pull request</a>.</li>
 </ul>
-<p>Finally I will link POEditor to the new file and future localization can be handled from there.</p></div>
+<p>Future language syncs will be done periodically with the <code>update_languages.py</code> script.</p></div>
         </div>
 
         <footer class="col-md-12">
