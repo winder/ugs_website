@@ -27,5 +27,20 @@ GUI is used as a library, so core features benefit both interfaces.
 [java_download_link]: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwi05PP5z6_LAhXDvIMKHRyyB5UQFggoMAE&url=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjre8-downloads-2133155.html&usg=AFQjCNH7hWo8nDItPkEtYqoPreE_9QPZkw&cad=rja
 
 # Usage 
-== TODO: Pull requests accepted! ==
+
+## Controller state (DRO)
+The Controller state (or Digital Read Out) panel displays the current status of your machine. 
+
+<img src="../../img/guide/platform/controller_state.png" alt="Controller state (DRO)"/>
+
+The panel provides the following functions:
+
+* Coordinates of both the machine and your current work
+* Buttons for resetting the work coordinates for each axis
+* Changable work coordinates using simple mathematical expressions. <br/> You can either set an exact coordinate or, as an example, use the following `# / 2` to divide the current position in half. The `#`-character will be replaced with current position. If you start your expression with `*` or `/` the current position is prepended. <br/> <img src="../../img/guide/platform/work_coord.gif" alt="Work coordinate"/>
+* Display the current machine state (Idle, Run, Jog, Alarm, etc.)
+* Display the current feed rate and spindle speed
+* Display the different GCode states
+* Display alarm with the triggered limit switches
+
 
