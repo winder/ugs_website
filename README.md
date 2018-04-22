@@ -8,3 +8,7 @@ If there's anything in particular you'd like to see feel free to open a ticket a
 
 For more information about how to contribute documentation see the mkdocs documentation:
 http://www.mkdocs.org/user-guide/writing-your-docs/
+
+### Setup
+
+- `pip install -r requirements.txt`
