@@ -199,14 +199,23 @@
 <h2 id="property-files">Property Files</h2>
 <h3 id="classic">Classic</h3>
 <p>Occasionally it is useful to attach some of these property files to bug reports to help with reproducing a problem.</p>
-<p>Classic UGS properties are stored in your home directory, which changes based on the operating system being used:
-<em> windows: /home/user/ugs
-</em> mac: ~/Library/Preferences/ugs
-* linux: ~/ugs</p>
+<p>Classic UGS properties are stored in your home directory, which changes based on the operating system being used:</p>
+<ul>
+<li><strong>Windows</strong>: /home/user/ugs</li>
+<li><strong>Mac</strong>: ~/Library/Preferences/ugs</li>
+<li><strong>Linux</strong>: ~/ugs</li>
+</ul>
 <p>Files include <b>UniversalGcodeSender.json</b> which contain different settings, and a <b>firmware_config</b> directory which contains several configurations for different firmwares and testing profiles.</p>
 <h3 id="platform">Platform</h3>
 <p>The platform version of UGS contains additional property files automatically created by the NetBeans Platform framework being used. These files are also contained in various locations based on the operating system being used. You can find the exact locations of these files in the About / Help menu (See screenshot above).</p>
 <p>It is sometimes necessary to clear out these properties between major feature updates.</p>
+<p>Logs are typically located in these directories:</p>
+<ul>
+<li><strong>Windows 7</strong>: C:\Users\username\AppData\Roaming\ugsplatform\2.0-SNAPSHOT\var\log\messages.log</li>
+<li><strong>Windows XP</strong>: C:\Documents and Settings\username\Application Data\ugsplatform\2.0-SNAPSHOT\var\log\messages.log</li>
+<li><strong>Mac</strong>: ~/Library/Application Support/ugsplatform\2.0-SNAPSHOT/var/log/messages.log</li>
+<li><strong>Linux</strong>: ~/.ugsplatform/2.0-SNAPSHOT/var/log/messages.log</li>
+</ul>
 <h1 id="operating-system-compatibility-problems">Operating System Compatibility Problems</h1>
 <h2 id="linux-non-reparenting-window-managers">Linux: Non Reparenting Window Managers</h2>
 <p>There are a number of window managers which are "<a href="https://en.wikipedia.org/wiki/Re-parenting_window_manager">non reparenting</a>", this causes some problems with Java.</p>
