@@ -50,9 +50,10 @@ This can be fixed by clearing out the user cache directory which can be found on
 Occasionally it is useful to attach some of these property files to bug reports to help with reproducing a problem.
 
 Classic UGS properties are stored in your home directory, which changes based on the operating system being used:
-* windows: /home/user/ugs
-* mac: ~/Library/Preferences/ugs
-* linux: ~/ugs
+
+* **Windows**: /home/user/ugs
+* **Mac**: ~/Library/Preferences/ugs
+* **Linux**: ~/ugs
 
 Files include <b>UniversalGcodeSender.json</b> which contain different settings, and a <b>firmware_config</b> directory which contains several configurations for different firmwares and testing profiles.
 
@@ -61,6 +62,14 @@ Files include <b>UniversalGcodeSender.json</b> which contain different settings,
 The platform version of UGS contains additional property files automatically created by the NetBeans Platform framework being used. These files are also contained in various locations based on the operating system being used. You can find the exact locations of these files in the About / Help menu (See screenshot above).
 
 It is sometimes necessary to clear out these properties between major feature updates.
+
+Logs are typically located in these directories:
+
+* **Windows 7**: C:\Users\username\AppData\Roaming\ugsplatform\2.0-SNAPSHOT\var\log\messages.log
+* **Windows XP**: C:\Documents and Settings\username\Application Data\ugsplatform\2.0-SNAPSHOT\var\log\messages.log
+* **Mac**: ~/Library/Application Support/ugsplatform\2.0-SNAPSHOT/var/log/messages.log
+* **Linux**: ~/.ugsplatform/2.0-SNAPSHOT/var/log/messages.log
+
 
 # Operating System Compatibility Problems
 
