@@ -52,17 +52,17 @@
         },
         {
             "location": "/download/",
-            "text": "Releases\n\n\n\n\n\n\n\n\nVersion\n\n\nJava Version Required\n\n\n\n\n\n\n\n\n\n\n1.0.9\n\n\n7+\n\n\n\n\n\n\n1.0.8\n\n\n7+\n\n\n\n\n\n\n1.0.7\n\n\n7+\n\n\n\n\n\n\n1.0.6\n\n\n6+\n\n\n\n\n\n\n\n\nOlder releases can be found \non github\n\n\n\n\n\n\nNightly Builds\n\n\nThese builds are generated automatically and contain all changes since the last release.\nUGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.\n\n\nThe nightly builds now require Java 8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClassic GUI\n\n\nThe classic UGS interface.\n\n\n\n\n\n\nUGS Platform\n\n\nThe next generation platform-based interface.\n\n\n\n\n\n\n\n\n\"Somewhat stable\" nightly build. In an effort to move towards a proper 2.0.0 release we have these \"Somewhat stable\" builds, they are similar to a release candidate but less formal.\n\n\nStable build from: \nJuly 28, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClassic GUI\n\n\nSome what stable UGS classic interface.\n\n\n\n\n\n\nUGS Platform\n\n\nSome what stable UPG next generation interface.",
+            "text": "Releases\n\n\nThe beta or nightly build is recommended. Version 1.0.9 does not support GRBL v1.1.\n\n\n\n\n\n\n\n\nVersion\n\n\nJava Version Required\n\n\nRelease Date\n\n\n\n\n\n\n\n\n\n\n2.0 Classic (Beta)\n\n\n8+\n\n\nJuly 28, 2017\n\n\n\n\n\n\n2.0 Platform (Beta)\n\n\n8+\n\n\nJuly 28, 2017\n\n\n\n\n\n\n1.0.9\n\n\n7+\n\n\nNovember 11, 2015\n\n\n\n\n\n\n1.0.8\n\n\n7+\n\n\nFebruary 25, 2015\n\n\n\n\n\n\n1.0.7\n\n\n7+\n\n\nMarch 30, 2014\n\n\n\n\n\n\n1.0.6\n\n\n6+\n\n\nMarch 15, 2013\n\n\n\n\n\n\n\n\nOlder releases can be found \non github\n\n\n\n\n\n\nNightly Builds\n\n\nThese builds are generated automatically and contain all changes since the last release.\nUGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.\n\n\nThe nightly builds require Java 8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClassic GUI\n\n\nThe classic UGS interface.\n\n\n\n\n\n\nUGS Platform\n\n\nThe next generation platform-based interface.",
             "title": "Download"
         },
         {
             "location": "/download/#releases",
-            "text": "Version  Java Version Required      1.0.9  7+    1.0.8  7+    1.0.7  7+    1.0.6  6+     Older releases can be found  on github",
+            "text": "The beta or nightly build is recommended. Version 1.0.9 does not support GRBL v1.1.     Version  Java Version Required  Release Date      2.0 Classic (Beta)  8+  July 28, 2017    2.0 Platform (Beta)  8+  July 28, 2017    1.0.9  7+  November 11, 2015    1.0.8  7+  February 25, 2015    1.0.7  7+  March 30, 2014    1.0.6  6+  March 15, 2013     Older releases can be found  on github",
             "title": "Releases"
         },
         {
             "location": "/download/#nightly-builds",
-            "text": "These builds are generated automatically and contain all changes since the last release.\nUGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.  The nightly builds now require Java 8            Classic GUI  The classic UGS interface.    UGS Platform  The next generation platform-based interface.     \"Somewhat stable\" nightly build. In an effort to move towards a proper 2.0.0 release we have these \"Somewhat stable\" builds, they are similar to a release candidate but less formal. \nStable build from:  July 28, 2017           Classic GUI  Some what stable UGS classic interface.    UGS Platform  Some what stable UPG next generation interface.",
+            "text": "These builds are generated automatically and contain all changes since the last release.\nUGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.  The nightly builds require Java 8            Classic GUI  The classic UGS interface.    UGS Platform  The next generation platform-based interface.",
             "title": "Nightly Builds"
         },
         {
