@@ -1,11 +1,15 @@
 # Releases
 
-| Version | Java Version Required |
-| ------- | --------------------- |
-| [1.0.9](http://bit.ly/1M6z2ys) | 7+ |
-| [1.0.8](http://bit.ly/1BSKon6) | 7+ |
-| [1.0.7](http://bit.ly/1dNrLAy) | 7+ |
-| [1.0.6](http://bit.ly/16q7obd) | 6+ |
+The beta or nightly build is recommended.
+
+| Version | Minimum Java Version | Release Date |
+| ------- | --------------------- | ------------- |
+| [2.0 Classic (Beta)](http://bit.ly/2ssmIqt) | 8 | July 28, 2017 |
+| [2.0 Platform (Beta)](http://bit.ly/2rk84y2) | 8 | July 28, 2017 |
+| [1.0.9](http://bit.ly/1M6z2ys) | 7 | November 11, 2015 |
+| [1.0.8](http://bit.ly/1BSKon6) | 7 | February 25, 2015 |
+| [1.0.7](http://bit.ly/1dNrLAy) | 7 | March 30, 2014 |
+| [1.0.6](http://bit.ly/16q7obd) | 6 | March 15, 2013 |
 
 Older releases can be found [on github](https://github.com/winder/builds/tree/master/UniversalGCodeSender)
 
@@ -17,7 +21,7 @@ Older releases can be found [on github](https://github.com/winder/builds/tree/ma
 These builds are generated automatically and contain all changes since the last release.
 UGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.
 
-**The nightly builds now require Java 8**
+**The nightly builds require Java 8**
 
 [![Build Status](https://travis-ci.org/winder/Universal-G-Code-Sender.svg?branch=master)](https://travis-ci.org/winder/Universal-G-Code-Sender)
 
@@ -25,12 +29,3 @@ UGS has a comprehensive set of automated tests and the build will not pass if an
 |-|-|
 | [Classic GUI](http://bit.ly/1hftIhy) | The classic UGS interface. |
 | [UGS Platform](http://bit.ly/1DkClRW) | The next generation platform-based interface. |
-
-"Somewhat stable" nightly build. In an effort to move towards a proper 2.0.0 release we have these "Somewhat stable" builds, they are similar to a release candidate but less formal.
-<br/>
-Stable build from: <b>July 28, 2017</b>
-
-| | |
-|-|-|
-| [Classic GUI](http://bit.ly/2ssmIqt) | Some what stable UGS classic interface. |
-| [UGS Platform](http://bit.ly/2rk84y2) | Some what stable UPG next generation interface. |
