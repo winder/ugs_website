@@ -1,6 +1,6 @@
 site_name: UGS
 theme: cosmo
-repo_url: https://github.com/winder/Universal-G-Code-Sender
+repo_url: https://github.com/winder/ugs_website
 site_author: Will Winder
 site_description: "Cross platform G-Code sender with advanced features for GRBL based CNC machines."
 google_analytics: ['UA-73554112-1', 'auto']
