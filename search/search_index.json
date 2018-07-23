@@ -52,18 +52,23 @@
         },
         {
             "location": "/download/",
-            "text": "Releases\n\n\nThe beta or nightly build is recommended.\n\n\n\n\n\n\n\n\nVersion\n\n\nMinimum Java Version\n\n\nRelease Date\n\n\n\n\n\n\n\n\n\n\n2.0 Classic (Beta)\n\n\n8\n\n\nJuly 28, 2017\n\n\n\n\n\n\n2.0 Platform (Beta)\n\n\n8\n\n\nJuly 28, 2017\n\n\n\n\n\n\n1.0.9\n\n\n7\n\n\nNovember 11, 2015\n\n\n\n\n\n\n1.0.8\n\n\n7\n\n\nFebruary 25, 2015\n\n\n\n\n\n\n1.0.7\n\n\n7\n\n\nMarch 30, 2014\n\n\n\n\n\n\n1.0.6\n\n\n6\n\n\nMarch 15, 2013\n\n\n\n\n\n\n\n\nOlder releases can be found \non github\n\n\n\n\n\n\nNightly Builds\n\n\nThese builds are generated automatically and contain all changes since the last release.\nUGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.\n\n\nThe nightly builds require Java 8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClassic GUI\n\n\nThe classic UGS interface.\n\n\n\n\n\n\nUGS Platform\n\n\nThe next generation platform-based interface.",
+            "text": "Download\n\n\nFor the latest features and bugfixes we recommend downloading either the Beta or Nightly builds. The source code can be downloaded \nfrom github\n.\n\n\n\n\n\nNightly Builds\n\n\nThese builds are generated automatically and contain the latest changes.\nUGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.\n\n\nThe nightly builds require Java 8 or later\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVersion\n\n\nJava Version\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n2.0 Classic (Nightly build)\n\n\nJava 8+\n\n\nThe classic UGS interface.\n\n\n\n\n\n\n2.0 Platform (Nightly build)\n\n\nJava 8+\n\n\nThe next generation platform-based interface.\n\n\n\n\n\n\n\n\n\n\n\nStable\n\n\nThese are considered stable releases. For even older releases please \nvisit github\n\n\n\n\n\n\n\n\nVersion\n\n\nJava Version\n\n\nRelease Date\n\n\n\n\n\n\n\n\n\n\n2.0 Classic (Beta)\n\n\nJava 8+\n\n\nJuly 28, 2017\n\n\n\n\n\n\n2.0 Platform (Beta)\n\n\nJava 8+\n\n\nJuly 28, 2017\n\n\n\n\n\n\n1.0.9 Classic\n\n\nJava 7+\n\n\nNovember 11, 2015\n\n\n\n\n\n\n1.0.8 Classic\n\n\nJava 7+\n\n\nFebruary 25, 2015\n\n\n\n\n\n\n1.0.7 Classic\n\n\nJava 7+\n\n\nMarch 30, 2014\n\n\n\n\n\n\n1.0.6 Classic\n\n\nJava 6+\n\n\nMarch 15, 2013",
             "title": "Download"
         },
         {
-            "location": "/download/#releases",
-            "text": "The beta or nightly build is recommended.     Version  Minimum Java Version  Release Date      2.0 Classic (Beta)  8  July 28, 2017    2.0 Platform (Beta)  8  July 28, 2017    1.0.9  7  November 11, 2015    1.0.8  7  February 25, 2015    1.0.7  7  March 30, 2014    1.0.6  6  March 15, 2013     Older releases can be found  on github",
-            "title": "Releases"
+            "location": "/download/#download",
+            "text": "For the latest features and bugfixes we recommend downloading either the Beta or Nightly builds. The source code can be downloaded  from github .",
+            "title": "Download"
         },
         {
             "location": "/download/#nightly-builds",
-            "text": "These builds are generated automatically and contain all changes since the last release.\nUGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.  The nightly builds require Java 8            Classic GUI  The classic UGS interface.    UGS Platform  The next generation platform-based interface.",
+            "text": "These builds are generated automatically and contain the latest changes.\nUGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.  The nightly builds require Java 8 or later        Version  Java Version  Description      2.0 Classic (Nightly build)  Java 8+  The classic UGS interface.    2.0 Platform (Nightly build)  Java 8+  The next generation platform-based interface.",
             "title": "Nightly Builds"
+        },
+        {
+            "location": "/download/#stable",
+            "text": "These are considered stable releases. For even older releases please  visit github     Version  Java Version  Release Date      2.0 Classic (Beta)  Java 8+  July 28, 2017    2.0 Platform (Beta)  Java 8+  July 28, 2017    1.0.9 Classic  Java 7+  November 11, 2015    1.0.8 Classic  Java 7+  February 25, 2015    1.0.7 Classic  Java 7+  March 30, 2014    1.0.6 Classic  Java 6+  March 15, 2013",
+            "title": "Stable"
         },
         {
             "location": "/guide/common/",
@@ -532,12 +537,12 @@
         },
         {
             "location": "/contrib/docs/",
-            "text": "Documentation Contributions\n\n\nThe documentation on this site is written using \nMkDocs\n where the source files are written in \nMarkdown\n.\n\n\nTo contribute follow these steps:\n\n\n\n\n\n\nMake sure you have python installed\n\n\npython --version\n\n\n\n\n\n\n\nInstall MkDocs and the theme \n\n\nsudo pip install mkdocs\nsudo pip install mkdocs-bootswatch\n\n\n\n\n\n\n\nClone the repository \nhttps://github.com/winder/ugs_website\n\n\n\n\n\n\nFrom the cloned root directory run \n\n\nmkdocs serve\n\n\n\n\n\n\n\nGo to \nhttp://localhost:8000/\n in your browser\n\n\n\n\nMake your changes and see them live updating in your web browser",
+            "text": "Documentation Contributions\n\n\nIf you find any errors in the documentation or if there are missing pages, you are welcome to contribute! \nIt is written using \nMkDocs\n and \nMarkdown\n. Follow these instructions to get started:\n\n\n\n\nFork and clone\n the repository \nhttps://github.com/winder/ugs_website\n.\n\n\n\n\nMake sure you have \nPython\n installed with this command in your terminal:\n\n\npython --version\n\n\n\n\n\n\n\nInstall MkDocs and the theme modules \n\n\nsudo pip install mkdocs\nsudo pip install mkdocs-bootswatch\n\n\n\n\n\n\n\nFrom your cloned ugs_website directory run \n\n\nmkdocs serve\n\n\n\n\n\n\n\nGo to \nhttp://localhost:8000/\n in your browser\n\n\n\n\n\n\nNow, make your changes and see them live updating in your web browser. Create a \npull request\n in github and we will review and add your changes.",
             "title": "Documentation"
         },
         {
             "location": "/contrib/docs/#documentation-contributions",
-            "text": "The documentation on this site is written using  MkDocs  where the source files are written in  Markdown .  To contribute follow these steps:    Make sure you have python installed  python --version    Install MkDocs and the theme   sudo pip install mkdocs\nsudo pip install mkdocs-bootswatch    Clone the repository  https://github.com/winder/ugs_website    From the cloned root directory run   mkdocs serve    Go to  http://localhost:8000/  in your browser   Make your changes and see them live updating in your web browser",
+            "text": "If you find any errors in the documentation or if there are missing pages, you are welcome to contribute! \nIt is written using  MkDocs  and  Markdown . Follow these instructions to get started:   Fork and clone  the repository  https://github.com/winder/ugs_website .   Make sure you have  Python  installed with this command in your terminal:  python --version    Install MkDocs and the theme modules   sudo pip install mkdocs\nsudo pip install mkdocs-bootswatch    From your cloned ugs_website directory run   mkdocs serve    Go to  http://localhost:8000/  in your browser    Now, make your changes and see them live updating in your web browser. Create a  pull request  in github and we will review and add your changes.",
             "title": "Documentation Contributions"
         },
         {

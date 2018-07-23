@@ -4,3 +4,8 @@
     background-color: #e6e6e6;
     border-right: 2px solid;
 }
+
+hr {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}

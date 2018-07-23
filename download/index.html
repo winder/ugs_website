@@ -143,7 +143,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/winder/Universal-G-Code-Sender/edit/master/docs/download.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/winder/ugs_website/edit/master/docs/download.md"><i class="fa fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -153,78 +153,87 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#releases">Releases</a></li>
-        <li class="main "><a href="#nightly-builds">Nightly Builds</a></li>
+        <li class="main active"><a href="#download">Download</a></li>
+            <li><a href="#nightly-builds">Nightly Builds</a></li>
+            <li><a href="#stable">Stable</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="releases">Releases</h1>
-<p>The beta or nightly build is recommended.</p>
+<h1 id="download">Download</h1>
+<p>For the latest features and bugfixes we recommend downloading either the Beta or Nightly builds. The source code can be downloaded <a href="https://github.com/winder/builds/tree/master/UniversalGCodeSender">from github</a>.</p>
+<hr/>
+
+<h2 id="nightly-builds">Nightly Builds</h2>
+<p>These builds are generated automatically and contain the latest changes.
+UGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.</p>
+<p><strong>The nightly builds require Java 8 or later</strong></p>
+<p><a href="https://github.com/winder/Universal-G-Code-Sender/commits/master"><img alt="Last commit" src="https://img.shields.io/github/last-commit/winder/Universal-G-Code-Sender.svg?maxAge=1800" /></a>
+<a href="https://travis-ci.org/winder/Universal-G-Code-Sender"><img alt="Build Status" src="https://travis-ci.org/winder/Universal-G-Code-Sender.svg?branch=master" /></a>
+<a href="https://www.codacy.com/app/winder/Universal-G-Code-Sender?utm_source=github.com&amp;amp;utm_medium=referral&amp;amp;utm_content=winder/Universal-G-Code-Sender&amp;amp;utm_campaign=Badge_Grade"><img alt="Codacy Badge" src="https://api.codacy.com/project/badge/Grade/2941c34531f749a2b7fbcd1737f71000" /></a></p>
 <table>
 <thead>
 <tr>
 <th>Version</th>
-<th>Minimum Java Version</th>
+<th>Java Version</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://bit.ly/1hftIhy">2.0 Classic (Nightly build)</a></td>
+<td><a href="https://java.com/en/download/manual.jsp">Java 8+</a></td>
+<td>The classic UGS interface.</td>
+</tr>
+<tr>
+<td><a href="http://bit.ly/1DkClRW">2.0 Platform (Nightly build)</a></td>
+<td><a href="https://java.com/en/download/manual.jsp">Java 8+</a></td>
+<td>The next generation platform-based interface.</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+
+<h2 id="stable">Stable</h2>
+<p>These are considered stable releases. For even older releases please <a href="https://github.com/winder/builds/tree/master/UniversalGCodeSender">visit github</a></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Java Version</th>
 <th>Release Date</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="http://bit.ly/2ssmIqt">2.0 Classic (Beta)</a></td>
-<td>8</td>
+<td><a href="https://java.com/en/download/manual.jsp">Java 8+</a></td>
 <td>July 28, 2017</td>
 </tr>
 <tr>
 <td><a href="http://bit.ly/2rk84y2">2.0 Platform (Beta)</a></td>
-<td>8</td>
+<td><a href="https://java.com/en/download/manual.jsp">Java 8+</a></td>
 <td>July 28, 2017</td>
 </tr>
 <tr>
-<td><a href="http://bit.ly/1M6z2ys">1.0.9</a></td>
-<td>7</td>
+<td><a href="http://bit.ly/1M6z2ys">1.0.9 Classic</a></td>
+<td><a href="https://java.com/en/download/manual.jsp">Java 7+</a></td>
 <td>November 11, 2015</td>
 </tr>
 <tr>
-<td><a href="http://bit.ly/1BSKon6">1.0.8</a></td>
-<td>7</td>
+<td><a href="http://bit.ly/1BSKon6">1.0.8 Classic</a></td>
+<td><a href="https://java.com/en/download/manual.jsp">Java 7+</a></td>
 <td>February 25, 2015</td>
 </tr>
 <tr>
-<td><a href="http://bit.ly/1dNrLAy">1.0.7</a></td>
-<td>7</td>
+<td><a href="http://bit.ly/1dNrLAy">1.0.7 Classic</a></td>
+<td><a href="https://java.com/en/download/manual.jsp">Java 7+</a></td>
 <td>March 30, 2014</td>
 </tr>
 <tr>
-<td><a href="http://bit.ly/16q7obd">1.0.6</a></td>
-<td>6</td>
+<td><a href="http://bit.ly/16q7obd">1.0.6 Classic</a></td>
+<td><a href="https://java.com/en/download/manual.jsp">Java 6+</a></td>
 <td>March 15, 2013</td>
-</tr>
-</tbody>
-</table>
-<p>Older releases can be found <a href="https://github.com/winder/builds/tree/master/UniversalGCodeSender">on github</a></p>
-<p><br/>
-<br/></p>
-<h1 id="nightly-builds">Nightly Builds</h1>
-<p>These builds are generated automatically and contain all changes since the last release.
-UGS has a comprehensive set of automated tests and the build will not pass if any of the tests are failing.</p>
-<p><strong>The nightly builds require Java 8</strong></p>
-<p><a href="https://travis-ci.org/winder/Universal-G-Code-Sender"><img alt="Build Status" src="https://travis-ci.org/winder/Universal-G-Code-Sender.svg?branch=master" /></a></p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="http://bit.ly/1hftIhy">Classic GUI</a></td>
-<td>The classic UGS interface.</td>
-</tr>
-<tr>
-<td><a href="http://bit.ly/1DkClRW">UGS Platform</a></td>
-<td>The next generation platform-based interface.</td>
 </tr>
 </tbody>
 </table></div>
