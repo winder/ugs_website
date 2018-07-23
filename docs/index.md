@@ -192,7 +192,7 @@ Universal Gcode Sender is free software developed and maintained in my free time
 </div>
 
 [java_version_img]: img/shields/Language-Java-brightgreen.svg
-[java_version_link]: http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
+[java_version_link]: https://java.com/en/download/manual.jsp
 [license_img]: img/shields/License-GPLv3-blue.svg
 [license_link]: http://www.gnu.org/licenses/quick-guide-gplv3.en.html
 [travis_img]: https://travis-ci.org/winder/Universal-G-Code-Sender.svg?branch=master
