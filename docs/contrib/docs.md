@@ -1,6 +1,6 @@
 # Documentation Contributions
 
-If you find any errors in the documentation or are missing pages you are welcome to contribute! 
+If you find any errors in the documentation or if there are missing pages, you are welcome to contribute! 
 It is written using [MkDocs](http://www.mkdocs.org/user-guide/writing-your-docs/) and [Markdown](https://guides.github.com/features/mastering-markdown/). Follow these instructions to get started:
 
 * [Fork and clone](https://help.github.com/articles/committing-changes-to-a-pull-request-branch-created-from-a-fork/) the repository [https://github.com/winder/ugs_website](https://github.com/winder/ugs_website).
