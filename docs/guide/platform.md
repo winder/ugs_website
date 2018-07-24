@@ -20,6 +20,8 @@ GUI is used as a library, so core features benefit both interfaces.<br/><br/>
 
 # Usage 
 
+<hr/>
+
 ## How to run
 
 1. Download and install the version of Java listed on the download page, [or a later version.][java_download_link]
@@ -29,6 +31,7 @@ GUI is used as a library, so core features benefit both interfaces.<br/><br/>
 
 [java_download_link]: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwi05PP5z6_LAhXDvIMKHRyyB5UQFggoMAE&url=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjre8-downloads-2133155.html&usg=AFQjCNH7hWo8nDItPkEtYqoPreE_9QPZkw&cad=rja
 
+<hr/>
 
 ## Connecting to the controller
 Start off by connecting to your controller hardware using the toolbar at the top of the program. 
@@ -36,6 +39,8 @@ Start off by connecting to your controller hardware using the toolbar at the top
 * Select the correct hardware in the firmware combo box: <br/><img src="../../img/guide/platform/connect_firmware.png" alt="Firmware combo box"/><br/><br/>
 * Refresh the serial ports list and select the correct port for your hardware. If you can't find the correct port in the list, make sure you have the drivers installed. <br/><img src="../../img/guide/platform/connect_serial_port.png" alt="Serial port"/><br/><br/>The ports are usually named like this:<br/> - **MacOSX**: `/dev/tty.usbmodem*` or `/dev/tty.usbserial*` <br/> - **Linux**: `/dev/ttyUSB*` or `/dev/ttyACM*` <br/> - **Windows**: `COM1`, `COM2` and so on.<br/><br/>
 * Select the correct baud rate for your controller. <br/> - **GRBL** - version 0.9 or later are using 115200, earlier versions are using 9600. <br/> - **TinyG/g2core** will adapt to the baud rate you are connecting with so it really doesn't matter.
+
+<hr/>
 
 ## Setup wizard
 Do you need help configuring your hardware? In that case the setup wizard might be helpful, it will allow you to configure limit switches, homing, soft limits and calibrating your machine.
@@ -50,6 +55,7 @@ Do you need help configuring your hardware? In that case the setup wizard might 
 * If limit switches are enabled you may enable homing as well. This page helps you figuring out in which direction the homing should be made: <br/><img src="../../img/guide/platform/setup_wizard-8.png" width="80%" alt="Homing setup"/>
 * If homing is enabled you may also configure soft limits so that the controller knows if it can process a command without triggering limit switches: <br/><img src="../../img/guide/platform/setup_wizard-9.png" width="80%" alt="Soft limits setup"/>
 
+<hr/>
 
 ## Digital read-out 
 The Digital read-out (or Controller state) panel displays the current status of your machine such as the work/machine coordinates, machine/spindle speeds and gcode states.
@@ -65,6 +71,8 @@ The panel provides the following functions:
 * Display the current feed rate and spindle speed
 * Display the different GCode states
 * Display alarm with the triggered limit switches
+
+<hr/>
 
 ## Overrides
 With the overrides plugin you can tweak the running session of a gcode program in real time. You can speed up/down the feed rate, spindle and the fast movement. To use, open the menu `Window -> Overrides`.<br/><br/>
