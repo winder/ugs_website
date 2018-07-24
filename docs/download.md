@@ -1,6 +1,6 @@
 # Download
 
-For the latest features and bugfixes we recommend downloading either the Beta or Nightly builds. The source code can be downloaded [from github](https://github.com/winder/builds/tree/master/UniversalGCodeSender).
+For the latest features and bugfixes we recommend downloading either the Beta or Nightly builds. The source code can be downloaded [from github](https://github.com/winder/Universal-G-Code-Sender).
 
 <hr/>
 
