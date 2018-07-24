@@ -42,7 +42,7 @@ Do you need help configuring your hardware? In that case the setup wizard might 
 
 * To start the wizard open the menu `Machine -> Setup wizard...` <br/><img src="../../img/guide/platform/setup_wizard-1.png" alt="Start the setup wizard"/>
 * If you aren't connected to your controller a connection dialog will be presented: <br/><img src="../../img/guide/platform/setup_wizard-2.png" width="80%" alt="Connect to controller"/>
-* The version of the controller will be shown after connecting and the available setup steps will be available for your controller:<br/><img src="../../img/guide/platform/setup_wizard-3.png" width="80%" alt="Connected controller"/>
+* The version of the controller will be shown after connecting and the available setup steps will be loaded for your controller:<br/><img src="../../img/guide/platform/setup_wizard-3.png" width="80%" alt="Connected controller"/>
 * If you have a settings file from your machine manufacturer or if you have a backup of your settings you may import it here:<br/><img src="../../img/guide/platform/setup_wizard-4.png" width="80%" alt="Import settings"/>
 * On the motor wiring configuration page you can test the direction of your motors and change its direction if needed. <br/><img src="../../img/guide/platform/setup_wizard-5.png" width="80%" alt="Motor wiring configuration"/>
 * On the step calibration page you can move the machine and measure the actual distance. It will then recommend a step setting for your machine: <br/><img src="../../img/guide/platform/setup_wizard-6.png" width="80%" alt="Step calibration"/>
