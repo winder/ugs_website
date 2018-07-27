@@ -1,6 +1,13 @@
 # Contributing
  
- 
+If you are interested in contributing to make UGS even more awesome, there are 
+many places you can pitch in.
+
+Browse through the already reported [issues][github_issues_link] or check out the [discussion forum][discussion_forum_link]. 
+You might know how to code, have ideas on how to improve the documentation or want to 
+translate the software to your language?
+
+
 ## Code
 
 Pull requests are welcome! Is there a feature you would like to see, or a bug
@@ -58,3 +65,5 @@ If you want to stop here, create a ticket on GitHub and someone will update the 
 
 Future language syncs will be done periodically with the `update_languages.py` script.
 
+[github_issues_link]: https://github.com/winder/Universal-G-Code-Sender
+[discussion_forum_link]: https://groups.google.com/forum/#!forum/universal-gcode-sender
