@@ -3,9 +3,10 @@
 If you are interested in contributing to make UGS even more awesome, there are 
 many places you can pitch in.
 
-Browse through the already reported [issues][github_issues_link] or check out the [discussion forum][discussion_forum_link]. 
-You might know how to code, have ideas on how to improve the documentation or want to 
-translate the software to your language?
+Browse through the already reported [issues][github_issues_link] or check out 
+the [discussion forum][discussion_forum_link]. You might know how to code, have 
+ideas on how to improve the documentation or want to translate the software to
+your language.
 
 
 ## Code
