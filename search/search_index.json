@@ -71,6 +71,26 @@
             "title": "Stable"
         },
         {
+            "location": "/guide/languages/",
+            "text": "Languages\n\n\nUGS has excellent support for many languages. In many cases the locale on your machine will properly detect your locale and apply the language automatically, but in some cases you'll need to change it in the preferences.\n\n\nPlatform\n\n\nOpen 'Preferences', the location of this button varies based on the Operating System. Once the Options window is open, select 'UGS', the 'Sender Options' and finally set your language. Click 'Apply' and restart UGS for changes to be applied.\n\n\n\n\n\n\n\n\nClassic\n\n\nOpen 'Sender Settings' in the Settings menu, and select your language. Restart for changes to be applied.",
+            "title": "Languages"
+        },
+        {
+            "location": "/guide/languages/#languages",
+            "text": "UGS has excellent support for many languages. In many cases the locale on your machine will properly detect your locale and apply the language automatically, but in some cases you'll need to change it in the preferences.",
+            "title": "Languages"
+        },
+        {
+            "location": "/guide/languages/#platform",
+            "text": "Open 'Preferences', the location of this button varies based on the Operating System. Once the Options window is open, select 'UGS', the 'Sender Options' and finally set your language. Click 'Apply' and restart UGS for changes to be applied.",
+            "title": "Platform"
+        },
+        {
+            "location": "/guide/languages/#classic",
+            "text": "Open 'Sender Settings' in the Settings menu, and select your language. Restart for changes to be applied.",
+            "title": "Classic"
+        },
+        {
             "location": "/guide/common/",
             "text": "Common Features\n\n\nBecause the UGS Platform and the Classic GUI both build on the same foundation\nthey have a lot in common.\n\n\nGcode Processing\n\n\nError handling\n\n\nWhen GRBL reports an error while processing a line of gcode UGS will\nautomatically pause the stream. In some cases you might want to continue and\nignore the error in the future. The following dialog is displayed allowing you\nto do so:\n\n\n\n\n\n\n\n\nIf you select 'yes' at this point, a line will be added to the controller\noptions:",
             "title": "Common Features"

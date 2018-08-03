@@ -8,7 +8,7 @@
         <meta name="author" content="Will Winder">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Help - UGS</title>
+        <title>Languages - UGS</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -65,8 +65,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
-<li >
-    <a href="../languages/">Languages</a>
+<li class="active">
+    <a href="./">Languages</a>
 </li>
                             
 <li >
@@ -81,8 +81,8 @@
     <a href="../platform/">Platform</a>
 </li>
                             
-<li class="active">
-    <a href="./">Help</a>
+<li >
+    <a href="../troubleshooting/">Help</a>
 </li>
                         </ul>
                     </li>
@@ -123,17 +123,17 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../platform/">
+                        <a rel="next" href="../../download/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../../dev/getting_started/">
+                        <a rel="prev" href="../common/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/winder/ugs_website/edit/master/docs/guide/troubleshooting.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/winder/ugs_website/edit/master/docs/guide/languages.md"><i class="fa fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -143,76 +143,30 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#common-problems">Common Problems</a></li>
-            <li><a href="#grbl-has-not-finished-booting">"Grbl has not finished booting."</a></li>
-            <li><a href="#gcode-program-stopped-working">Gcode program stopped working</a></li>
-        <li class="main "><a href="#platform-specific-issues">Platform Specific Issues</a></li>
-            <li><a href="#toolbars-or-windows-dont-appear">Toolbars or Windows don't appear.</a></li>
-        <li class="main "><a href="#information">Information</a></li>
-            <li><a href="#property-files">Property Files</a></li>
-        <li class="main "><a href="#operating-system-compatibility-problems">Operating System Compatibility Problems</a></li>
-            <li><a href="#linux-non-reparenting-window-managers">Linux: Non Reparenting Window Managers</a></li>
+        <li class="main active"><a href="#languages">Languages</a></li>
+            <li><a href="#platform">Platform</a></li>
+            <li><a href="#classic">Classic</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="common-problems">Common Problems</h1>
-<h2 id="grbl-has-not-finished-booting">"Grbl has not finished booting."</h2>
-<p>This happens when UGS connects to a serial port and does not receive the GRBL startup string. Typically this is caused by a configuration problem and can be solved by one of the following:</p>
-<ol>
-<li>Check the baud rate is 115200, or 9600 for very old versions of grbl.</li>
-<li>Make sure you are connecting to the correct port.</li>
-<li>Make sure you have installed any drivers required for your controller.</li>
-<li>Make sure GRBL is properly flashed on your controller.</li>
-</ol>
-<h2 id="gcode-program-stopped-working">Gcode program stopped working</h2>
-<p>The UGS Parser has a configurable list of rules to skip certain patterns, these rules are typically added by a Yes/No dialog asking if you would like to skip the erroneous commands in the future. Sometimes GRBL will get into an ALARM state and there will be lots of these popups which should not be skipped in the future.</p>
 <p><center>
-<img src="../../img/common/bad.code.dialog.png" alt="Screenshot" width="90%"/>
+<img src"../../img/guide/languages.png" alt="Language table" width="90%"/>
 </center></p>
-<p>Skipping good commands may lead to broken gcode. Those rules should be removed from the gcode processor by going into the controller options.</p>
-<p>In UGS Classic the option is in <b>Settings &gt; Gcode Processor Configuration</b>.</p>
-<p>In UGS Platform the option is under <b>Preferences... &gt; UGS &gt; Controller Options</b>.</p>
-<p>For both, you need to uncheck or remove the invalid settings in the bottom list:</p>
+<h1 id="languages">Languages</h1>
+<p>UGS has excellent support for many languages. In many cases the locale on your machine will properly detect your locale and apply the language automatically, but in some cases you'll need to change it in the preferences.</p>
+<h2 id="platform">Platform</h2>
+<p>Open 'Preferences', the location of this button varies based on the Operating System. Once the Options window is open, select 'UGS', the 'Sender Options' and finally set your language. Click 'Apply' and restart UGS for changes to be applied.</p>
 <p><center>
-<img src="../../img/common/bad.code.setting.png" alt="Screenshot" width="90%"/>
+<img src"../../img/guide/languages_platform.png" alt="Platform GUI Selecting Language." width="90%"/>
 </center></p>
-<h1 id="platform-specific-issues">Platform Specific Issues</h1>
-<h2 id="toolbars-or-windows-dont-appear">Toolbars or Windows don't appear.</h2>
-<p>This usually happens if you try running the platform without the required version of Java. The user cache is initialized but some objects become corrupt and initialization fails in the future even after upgrading Java.</p>
-<p>This can be fixed by clearing out the user cache directory which can be found on the UGS "About" screen seen in the image below.
-<br/>
+<h2 id="classic">Classic</h2>
+<p>Open 'Sender Settings' in the Settings menu, and select your language. Restart for changes to be applied.
 <center>
-<img src="../../img/platform/about_popup.png" alt="Screenshot" width="60%"/>
-</center></p>
-<h1 id="information">Information</h1>
-<h2 id="property-files">Property Files</h2>
-<h3 id="classic">Classic</h3>
-<p>Occasionally it is useful to attach some of these property files to bug reports to help with reproducing a problem.</p>
-<p>Classic UGS properties are stored in your home directory, which changes based on the operating system being used:</p>
-<ul>
-<li><strong>Windows</strong>: /home/user/ugs</li>
-<li><strong>Mac</strong>: ~/Library/Preferences/ugs</li>
-<li><strong>Linux</strong>: ~/ugs</li>
-</ul>
-<p>Files include <b>UniversalGcodeSender.json</b> which contain different settings, and a <b>firmware_config</b> directory which contains several configurations for different firmwares and testing profiles.</p>
-<h3 id="platform">Platform</h3>
-<p>The platform version of UGS contains additional property files automatically created by the NetBeans Platform framework being used. These files are also contained in various locations based on the operating system being used. You can find the exact locations of these files in the About / Help menu (See screenshot above).</p>
-<p>It is sometimes necessary to clear out these properties between major feature updates.</p>
-<p>Logs are typically located in these directories:</p>
-<ul>
-<li><strong>Windows 7</strong>: C:\Users\username\AppData\Roaming\ugsplatform\2.0-SNAPSHOT\var\log\messages.log</li>
-<li><strong>Windows XP</strong>: C:\Documents and Settings\username\Application Data\ugsplatform\2.0-SNAPSHOT\var\log\messages.log</li>
-<li><strong>Mac</strong>: ~/Library/Application Support/ugsplatform\2.0-SNAPSHOT/var/log/messages.log</li>
-<li><strong>Linux</strong>: ~/.ugsplatform/2.0-SNAPSHOT/var/log/messages.log</li>
-</ul>
-<h1 id="operating-system-compatibility-problems">Operating System Compatibility Problems</h1>
-<h2 id="linux-non-reparenting-window-managers">Linux: Non Reparenting Window Managers</h2>
-<p>There are a number of window managers which are "<a href="https://en.wikipedia.org/wiki/Re-parenting_window_manager">non reparenting</a>", this causes some problems with Java.</p>
-<p>Some details about this problem <a href="https://bugs.launchpad.net/ubuntu/+source/openjdk-6/+bug/258374">can be seen here</a>.</p>
-<p>Use the <strong>_JAVA_AWT_WM_NONREPARENTING</strong> environment property to fix the problem:</p>
-<pre><code class="shell">export _JAVA_AWT_WM_NONREPARENTING=1
-</code></pre></div>
+<img src"../../img/guide/languages_classic_preferences.png" alt="Classic GUI Opening Settings." width="90%"/>
+</br>
+<img src"../../img/guide/languages_classic_select.png" alt="Classic GUI Selecting Language." width="90%"/>
+</center></p></div>
         </div>
 
         <footer class="col-md-12">
