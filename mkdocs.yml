@@ -11,6 +11,7 @@ pages:
 - 'Home': 'index.md'
 - 'Download': 'download.md'
 - 'User Guide':
+    - "Languages": 'guide/languages.md'
     - "Common Features": 'guide/common.md'
     - "Classic": 'guide/classic.md'
     - "Platform": 'guide/platform.md'
