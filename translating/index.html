@@ -7,21 +7,21 @@
         
         <meta name="author" content="Will Winder">
         
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Frontend - UGS</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Translating - UGS</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
-        <link href="../../css/style.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <script>
@@ -49,7 +49,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../..">UGS</a>
+                    <a class="navbar-brand" href="..">UGS</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -57,63 +57,63 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li >
-                                <a href="../..">Home</a>
+                                <a href="..">Home</a>
                             </li>
                             <li >
-                                <a href="../../download/">Download</a>
+                                <a href="../download/">Download</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../../guide/languages/">Languages</a>
+    <a href="../guide/languages/">Languages</a>
 </li>
                                     
 <li >
-    <a href="../../guide/common/">Common Features</a>
+    <a href="../guide/common/">Common Features</a>
 </li>
                                     
 <li >
-    <a href="../../guide/classic/">Classic</a>
+    <a href="../guide/classic/">Classic</a>
 </li>
                                     
 <li >
-    <a href="../../guide/platform/">Platform</a>
+    <a href="../guide/platform/">Platform</a>
 </li>
                                     
 <li >
-    <a href="../../guide/troubleshooting/">Help</a>
+    <a href="../guide/troubleshooting/">Help</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../getting_started/">Getting Started</a>
+    <a href="../dev/getting_started/">Getting Started</a>
 </li>
                                     
 <li >
-    <a href="../backend_development/">Backend</a>
-</li>
-                                    
-<li class="active">
-    <a href="./">Frontend</a>
+    <a href="../dev/backend_development/">Backend</a>
 </li>
                                     
 <li >
-    <a href="../plugin/">Plugin</a>
+    <a href="../dev/frontend_development/">Frontend</a>
 </li>
                                     
 <li >
-    <a href="../gcode_processor/">Gcode Processors</a>
+    <a href="../dev/plugin/">Plugin</a>
+</li>
+                                    
+<li >
+    <a href="../dev/gcode_processor/">Gcode Processors</a>
 </li>
                                 </ul>
                             </li>
                             <li >
-                                <a href="../../contributing/">Contributing</a>
+                                <a href="../contributing/">Contributing</a>
                             </li>
                         </ul>
 
@@ -123,18 +123,8 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../backend_development/">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="../plugin/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                             <li>
-                                <a href="https://github.com/winder/ugs_website/edit/master/docs/dev/frontend_development.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/winder/ugs_website/edit/master/docs/translating.md"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -144,66 +134,12 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#front-end-architecture">Front-end Architecture</a></li>
-        <li class="main "><a href="#model">Model</a></li>
-        <li class="main "><a href="#view">View</a></li>
-            <li><a href="#classic-gui">Classic GUI</a></li>
-            <li><a href="#ugs-platform">UGS Platform</a></li>
-        <li class="main "><a href="#presenter">Presenter</a></li>
-            <li><a href="#backendapi">BackendAPI</a></li>
+        <li class="main active"><a href="#translating">Translating</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="front-end-architecture">Front-end Architecture</h1>
-<p>UGS uses a Model-View-Presenter architecture. What this means is that at a high
-level there are three layers which each serve different purposes. A <strong>Model</strong>
-for all backend logic, a <strong>View</strong> displayed to the user and a <strong>Presenter</strong>
-which serves as a buffer between the model and one or more views.</p>
-<h1 id="model">Model</h1>
-<p>The model contains all backend logic. Things like opening a connection, listing
-serial ports, streaming a file, and handling firmware specific nuances. All of
-this is hidden from the front end as much as possible.</p>
-<h1 id="view">View</h1>
-<p>The view only has access to the presenter. It is responsible for all user
-interaction and feedback. The main logic in here should be things like
-enabling or disabling components based on the current state of the model.</p>
-<h2 id="classic-gui">Classic GUI</h2>
-<p>The <strong>Classic GUI</strong> is built using NetBeans. There are a number of custom Swing
-components, and they are all initialized with the NetBeans GUI builder. The
-vast majority of the <strong>Classic GUI</strong> code is contained in <code>MainWindow.java</code>.
-There isn't a lot to expand on here, this front end has grown organically over
-the years and is fairly rigid. The <code>Visualizer</code> component is a standalone
-JOGL window which is updated using events from the backend (it was a model for
-many of the improvements in the current applications architecture).</p>
-<h2 id="ugs-platform">UGS Platform</h2>
-<p>The <strong>UGS Platform</strong> build is also built using NetBeans. It is a built ontop of
-the NetBeans Platform which provides it a robust set of tools like flexible
-windows, a plugin framework, and a suite of tools for module communications. At
-the core of this is a module named <code>UGSLib</code> which is a simple wrapper to the
-standard UGS JAR file. There is a suite of modules named <code>UGSCore</code> which
-provides many of the standard UI elements seen in the <strong>Classic GUI</strong>, in
-addition there are other modules that provide new functionality.</p>
-<p>Extending the GUI is now a matter of creating a new plugin, for details on how
-to do this see the <a href="../plugin/">Plugin Tutorial</a>.</p>
-<h1 id="presenter">Presenter</h1>
-<p>The presenter serves as an API for the model. All the heavy lifting needed for
-the GUI should happen here. For example the controller model object knows how
-to stream a processed file, but it doesn't know how to process the file. So the
-presenter will pass data to the gcode processor and generate a processed object
-which can be passed to the controller.</p>
-<p>Similarly, all notifications from the model are reinterpreted for the view with
-a simpler message strategy.</p>
-<p>In this way, all updates to the backend code can be leveraged by all front ends
-which utilize UGS.</p>
-<h2 id="backendapi">BackendAPI</h2>
-<p>In UGS interfaces named <code>BackendAPI</code> and <code>BackendAPIReadOnly</code> provide the
-presenter layer. The read only methods are split off into a sub-interface in
-case a developer wants to be sure they don't change any state. For instance a
-widget that displays the current machine location probably has no need for
-pausing a stream.</p>
-<p>These APIs are used by all front ends (<strong>Classic GUI</strong>, <strong>PendantUI</strong> and
-<strong>UGS Platform</strong>).</p></div>
+<h1 id="translating">Translating</h1></div>
         </div>
 
         <footer class="col-md-12">
@@ -211,11 +147,11 @@ pausing a stream.</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "../..",
+            var base_url = "..",
                 shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
         </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">

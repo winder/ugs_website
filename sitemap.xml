@@ -1,96 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
     <url>
-     <loc>/</loc>
-     <lastmod>2018-10-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
     <url>
-     <loc>/download/</loc>
-     <lastmod>2018-10-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
     <url>
-     <loc>/guide/languages/</loc>
-     <lastmod>2018-10-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/guide/common/</loc>
-     <lastmod>2018-10-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/guide/classic/</loc>
-     <lastmod>2018-10-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/guide/platform/</loc>
-     <lastmod>2018-10-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/guide/troubleshooting/</loc>
-     <lastmod>2018-10-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>/dev/getting_started/</loc>
-     <lastmod>2018-10-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/dev/backend_development/</loc>
-     <lastmod>2018-10-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/dev/frontend_development/</loc>
-     <lastmod>2018-10-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/dev/plugin/</loc>
-     <lastmod>2018-10-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/dev/gcode_processor/</loc>
-     <lastmod>2018-10-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
     <url>
-     <loc>/contributing/</loc>
-     <lastmod>2018-10-17</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
 </urlset>
