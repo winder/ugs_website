@@ -9,6 +9,7 @@ h1, h2, h3, h4 {
 .bs-sidebar .nav > .active:focus > a {
     background-color: #e6e6e6;
     border-right: 2px solid;
+    font-weight: normal;
 }
 
 hr {

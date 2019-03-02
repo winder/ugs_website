@@ -8,6 +8,7 @@ This happens when UGS connects to a serial port and does not receive the GRBL st
 2. Make sure you are connecting to the correct port.
 3. Make sure you have installed any drivers required for your controller.
 4. Make sure GRBL is properly flashed on your controller.
+5. As a last resort try removing all previous UGS settings (see <a href="#property-files">property Files</a>) and reinstall.
 
 ## Gcode program stopped working
 
@@ -45,9 +46,9 @@ This can be fixed by clearing out the user cache directory which can be found on
 
 ## Property Files
 
-### Classic
-
 Occasionally it is useful to attach some of these property files to bug reports to help with reproducing a problem.
+
+### Classic
 
 Classic UGS properties are stored in your home directory, which changes based on the operating system being used:
 
@@ -59,9 +60,19 @@ Files include <b>UniversalGcodeSender.json</b> which contain different settings,
 
 ### Platform
 
-The platform version of UGS contains additional property files automatically created by the NetBeans Platform framework being used. These files are also contained in various locations based on the operating system being used. You can find the exact locations of these files in the About / Help menu (See screenshot above).
+Platform UGS properties are stored in your home directory:
 
+* **Windows**: /home/user/ugs
+* **Mac**: ~/Library/Preferences/ugs
+* **Linux**: ~/ugs
+
+The platform version of UGS contains additional property files automatically created by the NetBeans Platform.
+These files are also contained in various locations based on the operating system being used. You can find the exact locations of these files in the About / Help menu.
 It is sometimes necessary to clear out these properties between major feature updates.
+<br/>
+<center>
+<img src="../../img/platform/about_popup.png" alt="Screenshot" width="60%"/>
+</center>
 
 Logs are typically located in these directories:
 
