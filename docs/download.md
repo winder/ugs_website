@@ -17,8 +17,8 @@ UGS has a comprehensive set of automated tests and the build will not pass if an
 
 | Version | Java Version | Description |
 | ------- | ------------ | ----------- |
-| [2.0 Classic (Nightly build)](http://bit.ly/2ErycR3) | [Java 8+][java_link] | The classic UGS interface. |
-| [2.0 Platform (Nightly build)](http://bit.ly/2R5zw2F) | [Java 8+][java_link] | The next generation platform-based interface. |
+| [2.0 Classic (Nightly build)](http://bit.ly/2GGgNF7) | [Java 8+][java_link] | The classic UGS interface. |
+| [2.0 Platform (Nightly build)](http://bit.ly/2XANF7B) | [Java 8+][java_link] | The next generation platform-based interface. |
 
 <hr/>
 
