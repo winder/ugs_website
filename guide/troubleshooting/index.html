@@ -166,6 +166,7 @@
 <li>Make sure you are connecting to the correct port.</li>
 <li>Make sure you have installed any drivers required for your controller.</li>
 <li>Make sure GRBL is properly flashed on your controller.</li>
+<li>As a last resort try removing all previous UGS settings (see <a href="#property-files">property Files</a>) and reinstall.</li>
 </ol>
 <h2 id="gcode-program-stopped-working">Gcode program stopped working</h2>
 <p>The UGS Parser has a configurable list of rules to skip certain patterns, these rules are typically added by a Yes/No dialog asking if you would like to skip the erroneous commands in the future. Sometimes GRBL will get into an ALARM state and there will be lots of these popups which should not be skipped in the future.</p>
@@ -189,8 +190,8 @@
 </center></p>
 <h1 id="information">Information</h1>
 <h2 id="property-files">Property Files</h2>
-<h3 id="classic">Classic</h3>
 <p>Occasionally it is useful to attach some of these property files to bug reports to help with reproducing a problem.</p>
+<h3 id="classic">Classic</h3>
 <p>Classic UGS properties are stored in your home directory, which changes based on the operating system being used:</p>
 <ul>
 <li><strong>Windows</strong>: /home/user/ugs</li>
@@ -199,8 +200,19 @@
 </ul>
 <p>Files include <b>UniversalGcodeSender.json</b> which contain different settings, and a <b>firmware_config</b> directory which contains several configurations for different firmwares and testing profiles.</p>
 <h3 id="platform">Platform</h3>
-<p>The platform version of UGS contains additional property files automatically created by the NetBeans Platform framework being used. These files are also contained in various locations based on the operating system being used. You can find the exact locations of these files in the About / Help menu (See screenshot above).</p>
-<p>It is sometimes necessary to clear out these properties between major feature updates.</p>
+<p>Platform UGS properties are stored in your home directory:</p>
+<ul>
+<li><strong>Windows</strong>: /home/user/ugs</li>
+<li><strong>Mac</strong>: ~/Library/Preferences/ugs</li>
+<li><strong>Linux</strong>: ~/ugs</li>
+</ul>
+<p>The platform version of UGS contains additional property files automatically created by the NetBeans Platform.
+These files are also contained in various locations based on the operating system being used. You can find the exact locations of these files in the About / Help menu.
+It is sometimes necessary to clear out these properties between major feature updates.
+<br/>
+<center>
+<img src="../../img/platform/about_popup.png" alt="Screenshot" width="60%"/>
+</center></p>
 <p>Logs are typically located in these directories:</p>
 <ul>
 <li><strong>Windows 7</strong>: C:\Users\username\AppData\Roaming\ugsplatform\2.0-SNAPSHOT\var\log\messages.log</li>
