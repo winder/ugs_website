@@ -127,27 +127,23 @@ The classic GUI has everything you need to get started.
 
 # Sponsors
 
-We are proud to be sponsored by several great companies who provide their enterpise class services free of charge to help us build Universal Gcode Sender.
-
 <center>
+<a href="https://www.bobscnc.com/">
+<img src="img/sponsors/bobs_cnc.jpg" alt="Bob's CNC" width="40%"/>
+</a>
+
 <a href="https://jfrog.com/">
 <img src="img/sponsors/artifactory.png" alt="JFrog Artifactory" width="40%"/>
-<br/>
-Artifact Management
 </a>
 <br/>
 
 <a href="https://cloudbees.com/">
 <img src="img/sponsors/cloudbees.png" alt="Cloudbees" width="40%"/>
-<br/>
-Jenkins Hosting
 </a>
 <br/>
 
 <a href="https://poeditor.com/">
 <img src="img/sponsors/poeditor.png" alt="POEditor" width="40%"/>
-<br/>
-POEditor: Localization Services
 </a>
 </center>
 
