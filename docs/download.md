@@ -18,7 +18,7 @@ The next generation platform-based interface.
 ### UGS Classic
 The classic UGS interface with slightly less features but with the same robust backend as the Platform edition.
 
-| Version | Opertating system | Description |
+| Version | Operating system | Description |
 | ------- | ----------------- | ----------- |
 | 2.0.6   | [![All platforms](../img/common/zip.png) All platforms](https://ugs.jfrog.io/ugs/UGS/v2.0.6/UniversalGcodeSender.zip) | A generic package without [Java][java_link] which needs to be installed separately |
 
