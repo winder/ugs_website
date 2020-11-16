@@ -6,9 +6,8 @@
 </center>
 
 A full featured gcode platform used for interfacing with advanced CNC controllers like [GRBL](https://github.com/grbl/grbl)
-and [TinyG](https://github.com/synthetos/TinyG).
-Universal Gcode Sender is a self-contained Java application which includes all external dependencies,
-that means if you have the Java Runtime Environment setup UGS provides the rest.
+, [TinyG](https://github.com/synthetos/TinyG), [g2core](https://github.com/synthetos/g2) and [Smoothieware](http://smoothieware.org/).
+Universal Gcode Sender is a self-contained Java application which includes all external dependencies and can be used on most computers running Windows, MacOSX or Linux. 
 <br/>
 
 <center>
@@ -16,6 +15,7 @@ that means if you have the Java Runtime Environment setup UGS provides the rest.
   [![Language][java_version_img]][java_version_link]
   [![License][license_img]][license_link]
   [![Build Status][travis_img]][travis_link]
+  [![GitHub Release Date][release_img]][release_link]
 <!--
   How to deal with github stars?
   [![Stars][github_img]][github_link]
@@ -26,16 +26,12 @@ that means if you have the Java Runtime Environment setup UGS provides the rest.
 
 -------------
 
-## Downloads
-See the [Downloads page](download.md).
-
--------------
-
 ## Features
 * Cross platform, tested on Windows, OSX, Linux, and Raspberry Pi.
-* Executable All-In-One JAR file - if you have java there is nothing to install. The JAR file includes native dependencies for all supported operating systems.
 * 3D Gcode Visualizer with color coded line segments and real time tool position feedback.
 * Duration estimates.
+* Support for Gamepads and Joysticks
+* Web pendant interface 
 * Over 3000 lines of unit test code, and another 1000 lines of comments documenting the tests.
 * Configuratble gcode optimization:
     * Remove comments
@@ -195,3 +191,5 @@ Universal Gcode Sender is free software developed and maintained in my free time
 [travis_link]: https://travis-ci.org/winder/Universal-G-Code-Sender
 [github_img]: https://img.shields.io/badge/Star-123-green.svg?style=social
 [github_link]: https://github.com/winder/Universal-G-Code-Sender
+[release_img]: https://img.shields.io/github/release/winder/Universal-G-Code-Sender
+[release_link]: /download/
