@@ -9,19 +9,14 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Help - UGS</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
         <link href="../../css/style.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <script>
@@ -36,105 +31,97 @@
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">UGS</a>
-                </div>
+                <a class="navbar-brand" href="../..">UGS</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../..">Home</a>
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
-                            <li >
-                                <a href="../../download/">Download</a>
+                            <li class="navitem">
+                                <a href="../../download/" class="nav-link">Download</a>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../languages/">Languages</a>
+<li>
+    <a href="../languages/" class="dropdown-item">Languages</a>
 </li>
                                     
-<li >
-    <a href="../common/">Common Features</a>
+<li>
+    <a href="../common/" class="dropdown-item">Common Features</a>
 </li>
                                     
-<li >
-    <a href="../classic/">Classic</a>
+<li>
+    <a href="../classic/" class="dropdown-item">Classic</a>
 </li>
                                     
-<li >
-    <a href="../platform/">Platform</a>
+<li>
+    <a href="../platform/" class="dropdown-item">Platform</a>
 </li>
                                     
-<li class="active">
-    <a href="./">Help</a>
+<li>
+    <a href="./" class="dropdown-item active">Help</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../dev/getting_started/">Getting Started</a>
+<li>
+    <a href="../../dev/getting_started/" class="dropdown-item">Getting Started</a>
 </li>
                                     
-<li >
-    <a href="../../dev/backend_development/">Backend</a>
+<li>
+    <a href="../../dev/backend_development/" class="dropdown-item">Backend</a>
 </li>
                                     
-<li >
-    <a href="../../dev/frontend_development/">Frontend</a>
+<li>
+    <a href="../../dev/frontend_development/" class="dropdown-item">Frontend</a>
 </li>
                                     
-<li >
-    <a href="../../dev/plugin/">Plugin</a>
+<li>
+    <a href="../../dev/plugin/" class="dropdown-item">Plugin</a>
 </li>
                                     
-<li >
-    <a href="../../dev/gcode_processor/">Gcode Processors</a>
+<li>
+    <a href="../../dev/gcode_processor/" class="dropdown-item">Gcode Processors</a>
 </li>
                                 </ul>
                             </li>
-                            <li >
-                                <a href="../../contributing/">Contributing</a>
+                            <li class="navitem">
+                                <a href="../../contributing/" class="nav-link">Contributing</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../platform/">
+                            <li class="nav-item">
+                                <a rel="prev" href="../platform/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../../dev/getting_started/">
+                            <li class="nav-item">
+                                <a rel="next" href="../../dev/getting_started/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
-                            <li>
-                                <a href="https://github.com/winder/ugs_website/edit/master/docs/guide/troubleshooting.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            <li class="nav-item">
+                                <a href="https://github.com/winder/ugs_website/edit/master/docs/guide/troubleshooting.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -142,21 +129,66 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#common-problems">Common Problems</a></li>
-            <li><a href="#grbl-has-not-finished-booting">"Grbl has not finished booting."</a></li>
-            <li><a href="#gcode-program-stopped-working">Gcode program stopped working</a></li>
-        <li class="main "><a href="#platform-specific-issues">Platform Specific Issues</a></li>
-            <li><a href="#toolbars-or-windows-dont-appear">Toolbars or Windows don't appear.</a></li>
-        <li class="main "><a href="#information">Information</a></li>
-            <li><a href="#property-files">Property Files</a></li>
-        <li class="main "><a href="#operating-system-compatibility-problems">Operating System Compatibility Problems</a></li>
-            <li><a href="#linux-non-reparenting-window-managers">Linux: Non Reparenting Window Managers</a></li>
-        <li class="main "><a href="#program-slows-down-and-send-freezes">Program Slows Down and Send Freezes</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#common-problems" class="nav-link">Common Problems</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#grbl-has-not-finished-booting" class="nav-link">"Grbl has not finished booting."</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#gcode-program-stopped-working" class="nav-link">Gcode program stopped working</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#platform-specific-issues" class="nav-link">Platform Specific Issues</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#toolbars-or-windows-dont-appear" class="nav-link">Toolbars or Windows don't appear.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#information" class="nav-link">Information</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#property-files" class="nav-link">Property Files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#operating-system-compatibility-problems" class="nav-link">Operating System Compatibility Problems</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#linux-non-reparenting-window-managers" class="nav-link">Linux: Non Reparenting Window Managers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#program-slows-down-and-send-freezes" class="nav-link">Program Slows Down and Send Freezes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="common-problems">Common Problems</h1>
 <h2 id="grbl-has-not-finished-booting">"Grbl has not finished booting."</h2>
@@ -225,15 +257,15 @@ It is sometimes necessary to clear out these properties between major feature up
 <p>There are a number of window managers which are "<a href="https://en.wikipedia.org/wiki/Re-parenting_window_manager">non reparenting</a>", this causes some problems with Java.</p>
 <p>Some details about this problem <a href="https://bugs.launchpad.net/ubuntu/+source/openjdk-6/+bug/258374">can be seen here</a>.</p>
 <p>Use the <strong>_JAVA_AWT_WM_NONREPARENTING</strong> environment property to fix the problem:</p>
-<pre><code class="shell">export _JAVA_AWT_WM_NONREPARENTING=1
+<pre><code class="language-shell">export _JAVA_AWT_WM_NONREPARENTING=1
 </code></pre>
-
 <h1 id="program-slows-down-and-send-freezes">Program Slows Down and Send Freezes</h1>
 <p>If you notice slowness while running your program, it may mean UGS is running out of available memory. There are a couple things to try:</p>
 <ol>
 <li>Check the controller settings, and make sure "Arc Expander" is not enabled. This can take a small program and turn it into a very large one by converting arcs into many small movements.</li>
 <li>Increase the memory allocated to UGS by navigating the the intsallation directory (See paths above). There is a folder named <code>etc</code> containing <code>ugsplatform.conf</code>, open this file with a simple text editor and modify the value of Xms to something like <code>-J-Xms256m</code>, or larger. <a href="http://wiki.netbeans.org/FaqSettingHeapSize">Additional details can be found here</a>.</li>
 </ol></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -242,26 +274,26 @@ It is sometimes necessary to clear out these properties between major feature up
         </footer>
         <script>
             var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
                 <p>
                     From here you can search these documents. Enter
                     your search terms below.
                 </p>
-                <form role="form">
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
@@ -270,12 +302,12 @@ It is sometimes necessary to clear out these properties between major feature up
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">

@@ -9,19 +9,14 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Plugin - UGS</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
         <link href="../../css/style.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <script>
@@ -36,105 +31,97 @@
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">UGS</a>
-                </div>
+                <a class="navbar-brand" href="../..">UGS</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../..">Home</a>
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
-                            <li >
-                                <a href="../../download/">Download</a>
+                            <li class="navitem">
+                                <a href="../../download/" class="nav-link">Download</a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../guide/languages/">Languages</a>
+<li>
+    <a href="../../guide/languages/" class="dropdown-item">Languages</a>
 </li>
                                     
-<li >
-    <a href="../../guide/common/">Common Features</a>
+<li>
+    <a href="../../guide/common/" class="dropdown-item">Common Features</a>
 </li>
                                     
-<li >
-    <a href="../../guide/classic/">Classic</a>
+<li>
+    <a href="../../guide/classic/" class="dropdown-item">Classic</a>
 </li>
                                     
-<li >
-    <a href="../../guide/platform/">Platform</a>
+<li>
+    <a href="../../guide/platform/" class="dropdown-item">Platform</a>
 </li>
                                     
-<li >
-    <a href="../../guide/troubleshooting/">Help</a>
+<li>
+    <a href="../../guide/troubleshooting/" class="dropdown-item">Help</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../getting_started/">Getting Started</a>
+<li>
+    <a href="../getting_started/" class="dropdown-item">Getting Started</a>
 </li>
                                     
-<li >
-    <a href="../backend_development/">Backend</a>
+<li>
+    <a href="../backend_development/" class="dropdown-item">Backend</a>
 </li>
                                     
-<li >
-    <a href="../frontend_development/">Frontend</a>
+<li>
+    <a href="../frontend_development/" class="dropdown-item">Frontend</a>
 </li>
                                     
-<li class="active">
-    <a href="./">Plugin</a>
+<li>
+    <a href="./" class="dropdown-item active">Plugin</a>
 </li>
                                     
-<li >
-    <a href="../gcode_processor/">Gcode Processors</a>
+<li>
+    <a href="../gcode_processor/" class="dropdown-item">Gcode Processors</a>
 </li>
                                 </ul>
                             </li>
-                            <li >
-                                <a href="../../contributing/">Contributing</a>
+                            <li class="navitem">
+                                <a href="../../contributing/" class="nav-link">Contributing</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../frontend_development/">
+                            <li class="nav-item">
+                                <a rel="prev" href="../frontend_development/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../gcode_processor/">
+                            <li class="nav-item">
+                                <a rel="next" href="../gcode_processor/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
-                            <li>
-                                <a href="https://github.com/winder/ugs_website/edit/master/docs/dev/plugin.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            <li class="nav-item">
+                                <a href="https://github.com/winder/ugs_website/edit/master/docs/dev/plugin.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -142,21 +129,64 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#note-the-ugs-platform-has-been-updated-to-use-maven-some-parts-of-this-document-need-to-be-updated-to-reflect-that-change">Note: The UGS Platform has been updated to use maven. Some parts of this document need to be updated to reflect that change.</a></li>
-        <li class="main "><a href="#plugin-development">Plugin development</a></li>
-        <li class="main "><a href="#workflow-plugin-tutorial">Workflow Plugin Tutorial</a></li>
-            <li><a href="#create-and-configure-project">Create and configure project</a></li>
-            <li><a href="#add-ugs-dependencies">Add UGS dependencies</a></li>
-            <li><a href="#create-window-class">Create window class</a></li>
-            <li><a href="#build-the-gui">Build the GUI</a></li>
-            <li><a href="#autogenerated-code">Autogenerated code</a></li>
-            <li><a href="#annotated-code">Annotated code</a></li>
-            <li><a href="#conclusion">Conclusion</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#note-the-ugs-platform-has-been-updated-to-use-maven-some-parts-of-this-document-need-to-be-updated-to-reflect-that-change" class="nav-link">Note: The UGS Platform has been updated to use maven. Some parts of this document need to be updated to reflect that change.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#plugin-development" class="nav-link">Plugin development</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#workflow-plugin-tutorial" class="nav-link">Workflow Plugin Tutorial</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#create-and-configure-project" class="nav-link">Create and configure project</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#add-ugs-dependencies" class="nav-link">Add UGS dependencies</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#create-window-class" class="nav-link">Create window class</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#build-the-gui" class="nav-link">Build the GUI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#autogenerated-code" class="nav-link">Autogenerated code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#annotated-code" class="nav-link">Annotated code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#conclusion" class="nav-link">Conclusion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="note-the-ugs-platform-has-been-updated-to-use-maven-some-parts-of-this-document-need-to-be-updated-to-reflect-that-change">Note: The UGS Platform has been updated to use maven. Some parts of this document need to be updated to reflect that change.</h1>
 <p><br/>
@@ -174,8 +204,8 @@ guide.</p>
 <p>In this tutorial we're going to build a window to help manage jobs that use
 multiple tools which are split into multiple files. The rough design idea will
 have a central table with four columns containing:
-<em> File name
-</em> Tool name (editable)
+* File name
+* Tool name (editable)
 * Finished flag</p>
 <p>There will be a pair of buttons to add and remove files from the table, and
 we will also hook up a UGS event listener to detect when files are opened from
@@ -281,7 +311,7 @@ things along.</p>
 <li>First there are a few class state object we'll need and two Listeners we'll
   be implementing.</li>
 </ul>
-<pre><code class="java">/**
+<pre><code class="language-java">/**
  * UGSEventListener - this is how a plugin can listen to UGS lifecycle events.
  * ListSelectionListener - listen for table selections.
  */
@@ -299,13 +329,12 @@ public final class WorkflowWindowTutorialTopComponent
     // This is used in most methods, so cache it here.
     DefaultTableModel model;
 </code></pre>
-
 <h3 id="constructor">Constructor</h3>
 <ul>
 <li>In the constructor we register the class with the UGS backend and also set
   the class as a listener to table selection events.</li>
 </ul>
-<pre><code class="java">    public WorkflowWindowTopComponent() {
+<pre><code class="language-java">    public WorkflowWindowTopComponent() {
         initComponents();
         setName(Bundle.CTL_WorkflowWindowTopComponent());
         setToolTipText(Bundle.HINT_WorkflowWindowTopComponent());
@@ -328,7 +357,6 @@ public final class WorkflowWindowTutorialTopComponent
         model = (DefaultTableModel)this.fileTable.getModel();
     }
 </code></pre>
-
 <h3 id="ugs-event-listener">UGS Event Listener</h3>
 <ul>
 <li>This is the event sent from the UGS Backend, when a file is loaded or the
@@ -337,7 +365,7 @@ public final class WorkflowWindowTutorialTopComponent
   <code>completeFile</code> method.</li>
 <li>If a file is loaded, we add it to the table.</li>
 </ul>
-<pre><code class="java">    @Override
+<pre><code class="language-java">    @Override
     public void UGSEvent(UGSEvent cse) {
         if (cse.isStateChangeEvent()) {
             if (wasSending &amp;&amp; cse.getControlState() == ControlState.COMM_IDLE)
@@ -350,7 +378,6 @@ public final class WorkflowWindowTutorialTopComponent
 
     }
 </code></pre>
-
 <h3 id="file-complete-handler">File Complete Handler</h3>
 <ul>
 <li>When a command is complete we'll update the JTable, select the next file that
@@ -358,7 +385,7 @@ public final class WorkflowWindowTutorialTopComponent
   do next. The selection event will be sent and handled in the selection
   handler.</li>
 </ul>
-<pre><code class="java">    public void completeFile(File gcodeFile) {
+<pre><code class="language-java">    public void completeFile(File gcodeFile) {
         if (gcodeFile == null) return;
 
         // Make sure the file is loaded in the table.
@@ -397,12 +424,11 @@ public final class WorkflowWindowTutorialTopComponent
         });
     }
 </code></pre>
-
 <h3 id="jtable-selection-listener">JTable Selection Listener</h3>
 <ul>
 <li>This is the selection listener, when a file is selected load it in the backend.</li>
 </ul>
-<pre><code class="java">    @Override
+<pre><code class="language-java">    @Override
     public void valueChanged(ListSelectionEvent e) {
         int[] selectedRow = fileTable.getSelectedRows();
         // Only load files when there is a single selection.
@@ -417,13 +443,12 @@ public final class WorkflowWindowTutorialTopComponent
         }
     }
 </code></pre>
-
 <h3 id="jtable-helper">JTable Helper</h3>
 <ul>
 <li>Helper method to add a file to the JTable, first making sure that it isn't
   already in the table.</li>
 </ul>
-<pre><code class="java">    public void addFileToWorkflow(File gcodeFile) {
+<pre><code class="language-java">    public void addFileToWorkflow(File gcodeFile) {
         if (gcodeFile == null) {
             return;
         }
@@ -445,7 +470,6 @@ public final class WorkflowWindowTutorialTopComponent
         fileTable.setRowSelectionInterval(lastRow, lastRow);
     }
 </code></pre>
-
 <h3 id="addremove-button-action-handlers">Add/Remove Button Action Handlers</h3>
 <ul>
 <li>Now we implement the button event methods. They are generated by double
@@ -458,7 +482,7 @@ public final class WorkflowWindowTutorialTopComponent
   rows are removed starting from the end to avoid having the index of later
   selections change while deleting rows one at a time.</li>
 </ul>
-<pre><code class="java">    private void addButtonActionPerformed(ActionEvent evt) {                                          
+<pre><code class="language-java">    private void addButtonActionPerformed(ActionEvent evt) {                                          
         // Open a file chooser pointing at the last opened directory.
         JFileChooser fileChooser = GcodeFileTypeFilter.getGcodeFileChooser(
             settings.getLastOpenedFilename());
@@ -486,7 +510,6 @@ public final class WorkflowWindowTutorialTopComponent
         }
     }                                            
 </code></pre>
-
 <h3 id="up-down-button-action-handlers">Up / Down Button Action Handlers</h3>
 <ul>
 <li>The up and down action buttons are pure java code. They don't do anything
@@ -495,7 +518,7 @@ public final class WorkflowWindowTutorialTopComponent
   relevant to UGS, they are included because the feature wouldn't be complete
   without them.</li>
 </ul>
-<pre><code class="java">    private void upButtonActionPerformed(ActionEvent evt) {                                         
+<pre><code class="language-java">    private void upButtonActionPerformed(ActionEvent evt) {                                         
         int[] selectedRows = fileTable.getSelectedRows();
 
         // Exit early if nothing is selected.
@@ -536,7 +559,6 @@ public final class WorkflowWindowTutorialTopComponent
         fileTable.setRowSelectionInterval(first, last);
     } 
 </code></pre>
-
 <h3 id="netbeans-platform-component-lifecycle-code">NetBeans Platform Component Lifecycle Code</h3>
 <ul>
 <li>Of the automatically generated methods, <code>componentOpened</code> is the only one
@@ -544,7 +566,7 @@ public final class WorkflowWindowTutorialTopComponent
   or wasn't loaded until after a file stream started, grab the <code>wasSending</code>
   state and save it for later.</li>
 </ul>
-<pre><code class="java">    @Override
+<pre><code class="language-java">    @Override
     public void componentOpened() {
         this.wasSending = backend.isSending();
     }
@@ -568,12 +590,11 @@ public final class WorkflowWindowTutorialTopComponent
         // We could load previously loaded files here
     }
 </code></pre>
-
 <h3 id="helper-methods">Helper Methods</h3>
 <ul>
 <li>Finally, here are the helper methods used above.</li>
 </ul>
-<pre><code class="java">    /**
+<pre><code class="language-java">    /**
      * Look for the provided file in the file table.
      */
     private int findFileIndex(File gcodeFile) {
@@ -603,10 +624,10 @@ public final class WorkflowWindowTutorialTopComponent
         return dest;
     }
 </code></pre>
-
 <h2 id="conclusion">Conclusion</h2>
 <p>Here is a quick screencast of what this plugin does for us. In the GUI builder I swapped in some up/down arrows compared to the tutorial.</p>
 <p><center><img src="../../img/tutorials/workflow_plugin/07.Demo.gif" width="90%" /></center></p></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -615,26 +636,26 @@ public final class WorkflowWindowTutorialTopComponent
         </footer>
         <script>
             var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
                 <p>
                     From here you can search these documents. Enter
                     your search terms below.
                 </p>
-                <form role="form">
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
@@ -643,12 +664,12 @@ public final class WorkflowWindowTutorialTopComponent
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
