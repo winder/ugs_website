@@ -24,10 +24,9 @@ GUI is used as a library, so core features benefit both interfaces.<br/><br/>
 
 ## How to run
 
-1. Download and install the version of Java listed on the download page, [or a later version.][java_download_link]
-2. [Download and extract the UGS Platform build from the downloads page.](../download.md)
-3. Go to the `ugsplatform/bin` directory.
-4. On Windows run `ugsplatform.exe` or `ugsplatform64.exe`.<br/>On Linux or Mac OSX run `ugsplatform`. <br/><img src="../../img/guide/platform/run.png" alt="Run ugsplatform executable"/>
+1. [Download and extract the UGS Platform build from the downloads page.](../download.md)
+2. Go to the `ugsplatform/bin` directory.
+3. On Windows run `ugsplatform.exe` or `ugsplatform64.exe`.<br/>On Linux or Mac OSX run `ugsplatform`. <br/><img src="../../img/guide/platform/run.png" alt="Run ugsplatform executable"/>
 
 [java_download_link]: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwi05PP5z6_LAhXDvIMKHRyyB5UQFggoMAE&url=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjre8-downloads-2133155.html&usg=AFQjCNH7hWo8nDItPkEtYqoPreE_9QPZkw&cad=rja
 
