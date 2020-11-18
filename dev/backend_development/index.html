@@ -9,19 +9,14 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Backend - UGS</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
         <link href="../../css/style.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <script>
@@ -36,105 +31,97 @@
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">UGS</a>
-                </div>
+                <a class="navbar-brand" href="../..">UGS</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../..">Home</a>
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
-                            <li >
-                                <a href="../../download/">Download</a>
+                            <li class="navitem">
+                                <a href="../../download/" class="nav-link">Download</a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../guide/languages/">Languages</a>
+<li>
+    <a href="../../guide/languages/" class="dropdown-item">Languages</a>
 </li>
                                     
-<li >
-    <a href="../../guide/common/">Common Features</a>
+<li>
+    <a href="../../guide/common/" class="dropdown-item">Common Features</a>
 </li>
                                     
-<li >
-    <a href="../../guide/classic/">Classic</a>
+<li>
+    <a href="../../guide/classic/" class="dropdown-item">Classic</a>
 </li>
                                     
-<li >
-    <a href="../../guide/platform/">Platform</a>
+<li>
+    <a href="../../guide/platform/" class="dropdown-item">Platform</a>
 </li>
                                     
-<li >
-    <a href="../../guide/troubleshooting/">Help</a>
+<li>
+    <a href="../../guide/troubleshooting/" class="dropdown-item">Help</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../getting_started/">Getting Started</a>
+<li>
+    <a href="../getting_started/" class="dropdown-item">Getting Started</a>
 </li>
                                     
-<li class="active">
-    <a href="./">Backend</a>
+<li>
+    <a href="./" class="dropdown-item active">Backend</a>
 </li>
                                     
-<li >
-    <a href="../frontend_development/">Frontend</a>
+<li>
+    <a href="../frontend_development/" class="dropdown-item">Frontend</a>
 </li>
                                     
-<li >
-    <a href="../plugin/">Plugin</a>
+<li>
+    <a href="../plugin/" class="dropdown-item">Plugin</a>
 </li>
                                     
-<li >
-    <a href="../gcode_processor/">Gcode Processors</a>
+<li>
+    <a href="../gcode_processor/" class="dropdown-item">Gcode Processors</a>
 </li>
                                 </ul>
                             </li>
-                            <li >
-                                <a href="../../contributing/">Contributing</a>
+                            <li class="navitem">
+                                <a href="../../contributing/" class="nav-link">Contributing</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../getting_started/">
+                            <li class="nav-item">
+                                <a rel="prev" href="../getting_started/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../frontend_development/">
+                            <li class="nav-item">
+                                <a rel="next" href="../frontend_development/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
-                            <li>
-                                <a href="https://github.com/winder/ugs_website/edit/master/docs/dev/backend_development.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            <li class="nav-item">
+                                <a href="https://github.com/winder/ugs_website/edit/master/docs/dev/backend_development.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -142,16 +129,43 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#backend-architecture">Backend architecture</a></li>
-            <li><a href="#controller">Controller</a></li>
-            <li><a href="#communicator">Communicator</a></li>
-            <li><a href="#connection">Connection</a></li>
-        <li class="main "><a href="#streaming-strategy">Streaming strategy</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#backend-architecture" class="nav-link">Backend architecture</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#controller" class="nav-link">Controller</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#communicator" class="nav-link">Communicator</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#connection" class="nav-link">Connection</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#streaming-strategy" class="nav-link">Streaming strategy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="backend-architecture">Backend architecture</h1>
 <p>Similar to the front-end there are more layers on the backend to help with
@@ -179,7 +193,7 @@ provide real time status.</p>
 <p>Finally, the <strong>AbstractController</strong> defines a number of abstract methods which
 can be used by device specific controllers as needed to hook into important
 lifecycle events:</p>
-<pre><code class="java">    abstract protected void closeCommBeforeEvent();
+<pre><code class="language-java">    abstract protected void closeCommBeforeEvent();
     abstract protected void closeCommAfterEvent();
     protected void openCommAfterEvent() throws Exception {}
     abstract protected void cancelSendBeforeEvent();
@@ -196,9 +210,8 @@ lifecycle events:</p>
     // `commandComplete` to push the stream lifecycle along.
     abstract protected void rawResponseHandler(String response);
 </code></pre>
-
 <p>Here is the public interface which controlles conform to:</p>
-<pre><code class="java">public interface IController {
+<pre><code class="language-java">public interface IController {
     /*
     Observable
     */
@@ -266,7 +279,6 @@ lifecycle events:</p>
     public void queueRawStream(Reader r);
 }
 </code></pre>
-
 <h2 id="communicator">Communicator</h2>
 <p>A communicator handles all levels of sending data to the device. Raw responses
 are returned to any listeners via the <code>SerialCommunicatorListener</code>.</p>
@@ -283,13 +295,12 @@ whether a raw response indicates a command has completed. This notifies the
 the <strong>BufferedCommunicator</strong>.</p>
 <h2 id="connection">Connection</h2>
 <p>This is a very thin layer which provides a way to write and receive data:</p>
-<pre><code class="java">    abstract public boolean openPort(String name, int baud) throws Exception;
+<pre><code class="language-java">    abstract public boolean openPort(String name, int baud) throws Exception;
     abstract public void closePort() throws Exception;
     abstract public boolean isOpen();
     abstract public void sendByteImmediately(byte b) throws Exception;
     abstract public void sendStringToComm(String command) throws Exception;
 </code></pre>
-
 <h1 id="streaming-strategy">Streaming strategy</h1>
 <p>UGS attempts to use a fixed amount of memory when streaming a file. In this way
 it can send gcode files of any size. Files are preprocessed at the <code>BackendAPI</code>
@@ -298,6 +309,7 @@ metadata into a file. Later on that file can be opened with the
 <code>GcodeStreamReader</code> class, the <strong>Controller</strong> and <strong>Communicator</strong> classes use
 this. Using the reader, the <strong>Communicator</strong> class can pull out commands one at
 a time and send them to the <strong>Connection</strong>.</p></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -306,26 +318,26 @@ a time and send them to the <strong>Connection</strong>.</p></div>
         </footer>
         <script>
             var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
                 <p>
                     From here you can search these documents. Enter
                     your search terms below.
                 </p>
-                <form role="form">
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
@@ -334,12 +346,12 @@ a time and send them to the <strong>Connection</strong>.</p></div>
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">

@@ -9,19 +9,14 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Platform - UGS</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
         <link href="../../css/style.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <script>
@@ -36,105 +31,97 @@
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">UGS</a>
-                </div>
+                <a class="navbar-brand" href="../..">UGS</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../..">Home</a>
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
-                            <li >
-                                <a href="../../download/">Download</a>
+                            <li class="navitem">
+                                <a href="../../download/" class="nav-link">Download</a>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../languages/">Languages</a>
+<li>
+    <a href="../languages/" class="dropdown-item">Languages</a>
 </li>
                                     
-<li >
-    <a href="../common/">Common Features</a>
+<li>
+    <a href="../common/" class="dropdown-item">Common Features</a>
 </li>
                                     
-<li >
-    <a href="../classic/">Classic</a>
+<li>
+    <a href="../classic/" class="dropdown-item">Classic</a>
 </li>
                                     
-<li class="active">
-    <a href="./">Platform</a>
+<li>
+    <a href="./" class="dropdown-item active">Platform</a>
 </li>
                                     
-<li >
-    <a href="../troubleshooting/">Help</a>
+<li>
+    <a href="../troubleshooting/" class="dropdown-item">Help</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../dev/getting_started/">Getting Started</a>
+<li>
+    <a href="../../dev/getting_started/" class="dropdown-item">Getting Started</a>
 </li>
                                     
-<li >
-    <a href="../../dev/backend_development/">Backend</a>
+<li>
+    <a href="../../dev/backend_development/" class="dropdown-item">Backend</a>
 </li>
                                     
-<li >
-    <a href="../../dev/frontend_development/">Frontend</a>
+<li>
+    <a href="../../dev/frontend_development/" class="dropdown-item">Frontend</a>
 </li>
                                     
-<li >
-    <a href="../../dev/plugin/">Plugin</a>
+<li>
+    <a href="../../dev/plugin/" class="dropdown-item">Plugin</a>
 </li>
                                     
-<li >
-    <a href="../../dev/gcode_processor/">Gcode Processors</a>
+<li>
+    <a href="../../dev/gcode_processor/" class="dropdown-item">Gcode Processors</a>
 </li>
                                 </ul>
                             </li>
-                            <li >
-                                <a href="../../contributing/">Contributing</a>
+                            <li class="navitem">
+                                <a href="../../contributing/" class="nav-link">Contributing</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../classic/">
+                            <li class="nav-item">
+                                <a rel="prev" href="../classic/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../troubleshooting/">
+                            <li class="nav-item">
+                                <a rel="next" href="../troubleshooting/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
-                            <li>
-                                <a href="https://github.com/winder/ugs_website/edit/master/docs/guide/platform.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            <li class="nav-item">
+                                <a href="https://github.com/winder/ugs_website/edit/master/docs/guide/platform.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -142,19 +129,55 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#ugs-platform">UGS Platform</a></li>
-            <li><a href="#platform-benefits">Platform Benefits</a></li>
-        <li class="main "><a href="#usage">Usage</a></li>
-            <li><a href="#how-to-run">How to run</a></li>
-            <li><a href="#connecting-to-the-controller">Connecting to the controller</a></li>
-            <li><a href="#setup-wizard">Setup wizard</a></li>
-            <li><a href="#digital-read-out">Digital read-out</a></li>
-            <li><a href="#overrides">Overrides</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#ugs-platform" class="nav-link">UGS Platform</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#platform-benefits" class="nav-link">Platform Benefits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#usage" class="nav-link">Usage</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#how-to-run" class="nav-link">How to run</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#connecting-to-the-controller" class="nav-link">Connecting to the controller</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#setup-wizard" class="nav-link">Setup wizard</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#digital-read-out" class="nav-link">Digital read-out</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#overrides" class="nav-link">Overrides</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="ugs-platform">UGS Platform</h1>
 <p>The UGS Platform is the next generation of Universal Gcode Sender. It is built
@@ -177,7 +200,6 @@ GUI is used as a library, so core features benefit both interfaces.<br/><br/></p
 
 <h2 id="how-to-run">How to run</h2>
 <ol>
-<li>Download and install the version of Java listed on the download page, <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0ahUKEwi05PP5z6_LAhXDvIMKHRyyB5UQFggoMAE&amp;url=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjre8-downloads-2133155.html&amp;usg=AFQjCNH7hWo8nDItPkEtYqoPreE_9QPZkw&amp;cad=rja">or a later version.</a></li>
 <li><a href="../../download/">Download and extract the UGS Platform build from the downloads page.</a></li>
 <li>Go to the <code>ugsplatform/bin</code> directory.</li>
 <li>On Windows run <code>ugsplatform.exe</code> or <code>ugsplatform64.exe</code>.<br/>On Linux or Mac OSX run <code>ugsplatform</code>. <br/><img src="../../img/guide/platform/run.png" alt="Run ugsplatform executable"/></li>
@@ -226,6 +248,7 @@ GUI is used as a library, so core features benefit both interfaces.<br/><br/></p
 <h2 id="overrides">Overrides</h2>
 <p>With the overrides plugin you can tweak the running session of a gcode program in real time. You can speed up/down the feed rate, spindle and the fast movement. To use, open the menu <code>Window -&gt; Overrides</code>.<br/><br/>
 <img src="../../img/guide/platform/overrides_window.png" alt="Overrides window" width="500"/></p></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -234,26 +257,26 @@ GUI is used as a library, so core features benefit both interfaces.<br/><br/></p
         </footer>
         <script>
             var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
                 <p>
                     From here you can search these documents. Enter
                     your search terms below.
                 </p>
-                <form role="form">
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
@@ -262,12 +285,12 @@ GUI is used as a library, so core features benefit both interfaces.<br/><br/></p
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">

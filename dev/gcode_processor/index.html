@@ -9,19 +9,14 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Gcode Processors - UGS</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
         <link href="../../css/style.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <script>
@@ -36,105 +31,97 @@
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">UGS</a>
-                </div>
+                <a class="navbar-brand" href="../..">UGS</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../..">Home</a>
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
-                            <li >
-                                <a href="../../download/">Download</a>
+                            <li class="navitem">
+                                <a href="../../download/" class="nav-link">Download</a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../guide/languages/">Languages</a>
+<li>
+    <a href="../../guide/languages/" class="dropdown-item">Languages</a>
 </li>
                                     
-<li >
-    <a href="../../guide/common/">Common Features</a>
+<li>
+    <a href="../../guide/common/" class="dropdown-item">Common Features</a>
 </li>
                                     
-<li >
-    <a href="../../guide/classic/">Classic</a>
+<li>
+    <a href="../../guide/classic/" class="dropdown-item">Classic</a>
 </li>
                                     
-<li >
-    <a href="../../guide/platform/">Platform</a>
+<li>
+    <a href="../../guide/platform/" class="dropdown-item">Platform</a>
 </li>
                                     
-<li >
-    <a href="../../guide/troubleshooting/">Help</a>
+<li>
+    <a href="../../guide/troubleshooting/" class="dropdown-item">Help</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../getting_started/">Getting Started</a>
+<li>
+    <a href="../getting_started/" class="dropdown-item">Getting Started</a>
 </li>
                                     
-<li >
-    <a href="../backend_development/">Backend</a>
+<li>
+    <a href="../backend_development/" class="dropdown-item">Backend</a>
 </li>
                                     
-<li >
-    <a href="../frontend_development/">Frontend</a>
+<li>
+    <a href="../frontend_development/" class="dropdown-item">Frontend</a>
 </li>
                                     
-<li >
-    <a href="../plugin/">Plugin</a>
+<li>
+    <a href="../plugin/" class="dropdown-item">Plugin</a>
 </li>
                                     
-<li class="active">
-    <a href="./">Gcode Processors</a>
+<li>
+    <a href="./" class="dropdown-item active">Gcode Processors</a>
 </li>
                                 </ul>
                             </li>
-                            <li >
-                                <a href="../../contributing/">Contributing</a>
+                            <li class="navitem">
+                                <a href="../../contributing/" class="nav-link">Contributing</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../plugin/">
+                            <li class="nav-item">
+                                <a rel="prev" href="../plugin/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../../contributing/">
+                            <li class="nav-item">
+                                <a rel="next" href="../../contributing/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
-                            <li>
-                                <a href="https://github.com/winder/ugs_website/edit/master/docs/dev/gcode_processor.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            <li class="nav-item">
+                                <a href="https://github.com/winder/ugs_website/edit/master/docs/dev/gcode_processor.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -142,16 +129,42 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#gcode-processor-development">Gcode Processor Development</a></li>
-            <li><a href="#anatomy-of-a-commandprocessor">Anatomy of a CommandProcessor</a></li>
-            <li><a href="#simple-example">Simple Example</a></li>
-            <li><a href="#more-complex-examples">More Complex Examples</a></li>
-            <li><a href="#tutorial-creating-a-new-commandprocessor">Tutorial: Creating a New CommandProcessor</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#gcode-processor-development" class="nav-link">Gcode Processor Development</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#anatomy-of-a-commandprocessor" class="nav-link">Anatomy of a CommandProcessor</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#simple-example" class="nav-link">Simple Example</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#more-complex-examples" class="nav-link">More Complex Examples</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tutorial-creating-a-new-commandprocessor" class="nav-link">Tutorial: Creating a New CommandProcessor</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="gcode-processor-development">Gcode Processor Development</h1>
 <p>The UGS core library has a flexible gcode processor plugin system. It is designed
@@ -171,7 +184,7 @@ Configuration</strong> menu.</p>
 and a list of output commands come out. A CommandProcessor might discover invalid
 input, in which case a GcodeParserException can be thrown for the GcodeParser to
 handle.</p>
-<pre><code class="java">public interface CommandProcessor {
+<pre><code class="language-java">public interface CommandProcessor {
     /**
      * Given a command and the current state of a program returns a replacement
      * list of commands.
@@ -188,13 +201,12 @@ handle.</p>
     public String getHelp();
 }
 </code></pre>
-
 <h2 id="simple-example">Simple Example</h2>
 <p>The <strong>CommandLengthProcessor</strong> is one of the simplest examples of a
 CommandProcessor.  One thing of interest is that it accepts a length parameter
 during configuration. By adding a CommandLengthProcessor to the GcodeParser,
 you can ensure the maximum length of commands.</p>
-<pre><code class="java">public class CommandLengthProcessor implements CommandProcessor {
+<pre><code class="language-java">public class CommandLengthProcessor implements CommandProcessor {
     final private int length;
     public CommandLengthProcessor(int length) {
         this.length = length;
@@ -217,7 +229,6 @@ you can ensure the maximum length of commands.</p>
     }
 }
 </code></pre>
-
 <h2 id="more-complex-examples">More Complex Examples</h2>
 <p>The following examples can be found in GitHub, they wont have the full code
 included.</p>
@@ -254,23 +265,21 @@ Configuration</strong> menu.</p>
 <p>First you'll notice that the constructor initializes the command which should
 be added after our spindle start <strong>M3</strong> command. The locale is set to make sure
 comma is not used as a decimal separator:</p>
-<pre><code class="java">    private final String dwellCommand;
+<pre><code class="language-java">    private final String dwellCommand;
 
     public M3Dweller(double dwellDuration) {
         this.dwellCommand = String.format(Locale.ROOT, &quot;G4P%.2f&quot;, dwellDuration);
     }
 </code></pre>
-
 <p>The help method simply adds some comments for the settings GUI:</p>
-<pre><code class="java">    @Override
+<pre><code class="language-java">    @Override
     public String getHelp() {
         return &quot;Add a delay after enabling the spindle with \&quot;M3\&quot; commands. \&quot;M3\&quot; must be the only command on the line.&quot;;
     }
 </code></pre>
-
 <p>Everything is then pulled together in the <strong>processCommand</strong> method to return an
 extra dwell command when <strong>M3</strong> is detected:</p>
-<pre><code class="java">    // Contains an M3 not followed by another digit (i.e. M30)
+<pre><code class="language-java">    // Contains an M3 not followed by another digit (i.e. M30)
     Pattern m3Pattern = Pattern.compile(&quot;.*[mM]3(?!\\d)(\\D.*)?&quot;);
 
     @Override
@@ -281,9 +290,8 @@ extra dwell command when <strong>M3</strong> is detected:</p>
         return Collections.singletonList(command);
     }
 </code></pre>
-
 <p>All at once now:</p>
-<pre><code class="java">public class M3Dweller implements CommandProcessor {
+<pre><code class="language-java">public class M3Dweller implements CommandProcessor {
     private final String dwellCommand;
 
     // Contains an M3 not followed by another digit (i.e. M30)
@@ -308,12 +316,11 @@ extra dwell command when <strong>M3</strong> is detected:</p>
     }
 }
 </code></pre>
-
 <h3 id="hooking-up-the-json">Hooking up the JSON</h3>
 <p>The json files are stored in <code>ugs-core/src/resources/firmware_config</code>, each of
 these will be updated to include our new processor. Notice that we have an
 argument named duration, and that it is disabled by default:</p>
-<pre><code class="json">                &quot;name&quot;: &quot;M3Dweller&quot;,
+<pre><code class="language-json">                &quot;name&quot;: &quot;M3Dweller&quot;,
                 &quot;enabled&quot;: false,
                 &quot;optional&quot;: true,
                 &quot;args&quot;: {
@@ -321,26 +328,23 @@ argument named duration, and that it is disabled by default:</p>
                 }
             },{
 </code></pre>
-
 <p>We also increment the version string, which will prompt users that there is a
 new configuration file available and they may need to revisit their settings:</p>
-<pre><code class="diff">-    &quot;Version&quot;: 3,
+<pre><code class="language-diff">-    &quot;Version&quot;: 3,
 +    &quot;Version&quot;: 4,
 </code></pre>
-
 <h3 id="json-loader">JSON Loader</h3>
 <p>The last step is to update the <strong>CommandProcessorLoader</strong> to include logic that
 creates the new M3Dweller when needed. I used one of the other processors as an
 example and made sure to make a corresponding entry for the <strong>M3Dweller</strong> in each
 of the corresponding code and comment locations:</p>
-<pre><code class="java">                case &quot;M3Dweller&quot;:
+<pre><code class="language-java">                case &quot;M3Dweller&quot;:
                     double duration = pc.args.get(&quot;duration&quot;).getAsDouble();
                     p = new M3Dweller(duration);
                     break;
 </code></pre>
-
 <p>There is also a test which should be updated to make sure everything is working:</p>
-<pre><code class="diff">+        args = new JsonObject();
+<pre><code class="language-diff">+        args = new JsonObject();
 +        args.addProperty(&quot;duration&quot;, 2.5);
 +        object = new JsonObject();
 +        object.addProperty(&quot;name&quot;, &quot;M3Dweller&quot;);
@@ -362,11 +366,10 @@ of the corresponding code and comment locations:</p>
          assertEquals(WhitespaceProcessor.class, processors.get(7).getClass());
 +        assertEquals(M3Dweller.class, processors.get(8).getClass());
 </code></pre>
-
 <h3 id="testing">Testing</h3>
 <p>The command processors lend themselves to thorough testing, so we create a new
 <code>M3DwellerTest.java</code> file in the associated test package and write some tests:</p>
-<pre><code class="java">    @Test
+<pre><code class="language-java">    @Test
     public void testReplaces() throws Exception {
         M3Dweller dweller = new M3Dweller(2.5);
         String command;
@@ -401,18 +404,16 @@ of the corresponding code and comment locations:</p>
         Assertions.assertThat(dweller.processCommand(command, null)).containsExactly(command);
     }
 </code></pre>
-
 <h3 id="localizing">Localizing</h3>
 <p>In addition to the help message which may use the global <strong>Localization</strong> helper,
 the settings menu will attempt to find something with the same name as in the
 JSON file. So we add an entry to 
 <code>./ugs-core/src/resources/MessagesBundle_en_US.properties</code>, which will later be
 pulled into a separate localization service to be localized in other languages.</p>
-<pre><code class="diff"> WhitespaceProcessor = Whitespace Remover
+<pre><code class="language-diff"> WhitespaceProcessor = Whitespace Remover
 +M3Dweller = Spindle start delay
  controller.exception.smoothie.booting = Smoothie has not finished booting.
 </code></pre>
-
 <h3 id="conclusion">Conclusion</h3>
 <p>We have now fully integrated our <strong>M3Dweller</strong> processor into the UGS framework
 and users of UGS and UGP can both make use of it.</p>
@@ -420,6 +421,7 @@ and users of UGS and UGP can both make use of it.</p>
 <center><img src = "../../img/tutorials/gcode_processor_plugin/1.update.png" width="90%" /></center>
 <center><img src = "../../img/tutorials/gcode_processor_plugin/2.settings.png" width="90%" /></center>
 <center><img src = "../../img/tutorials/gcode_processor_plugin/3.edit.png" width="90%" /></center></p></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -428,26 +430,26 @@ and users of UGS and UGP can both make use of it.</p>
         </footer>
         <script>
             var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
                 <p>
                     From here you can search these documents. Enter
                     your search terms below.
                 </p>
-                <form role="form">
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
@@ -456,12 +458,12 @@ and users of UGS and UGP can both make use of it.</p>
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
