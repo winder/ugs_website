@@ -7,11 +7,11 @@ The next generation platform-based interface.
 
 | Version | Operating system | Description |
 | ------- | ---------------- | ----------- |
-| 2.0.6   | [![Windows](../img/common/os_windows.png) Windows](https://ugs.jfrog.io/ugs/UGS/v2.0.6/ugs-platform-app-win.zip) | Windows version with bundled Java |
-| 2.0.6   | [![MacOSX](../img/common/os_mac.png) MacOSX](https://ugs.jfrog.io/ugs/UGS/v2.0.6/ugs-platform-app-ios.dmg) | MacOSX version with bundled Java |
-| 2.0.6   | [![Linux](../img/common/os_linux.png) Linux](https://ugs.jfrog.io/ugs/UGS/v2.0.6/ugs-platform-app-linux.tar.gz) | Linux version with bundled Java |
-| 2.0.6   | [![Linux ARM](../img/common/os_linux_arm.png) Linux ARM](https://ugs.jfrog.io/ugs/UGS/v2.0.6/ugs-platform-app-pi.tar.gz) | Linux ARM version with bundled Java. Can be used with RaspberryPi |
-| 2.0.6   | [![All platforms](../img/common/zip.png) All platforms](https://ugs.jfrog.io/ugs/UGS/v2.0.6/ugs-platform-app.zip) | A generic package without [Java][java_link] which needs to be installed separately |
+| 2.0.7   | [![Windows](../img/common/os_windows.png) Windows](https://ugs.jfrog.io/ugs/UGS/v2.0.7/ugs-platform-app-win.zip) | Windows version with bundled Java |
+| 2.0.7   | [![MacOSX](../img/common/os_mac.png) MacOSX](https://ugs.jfrog.io/ugs/UGS/v2.0.7/ugs-platform-app-ios.dmg) | MacOSX version with bundled Java |
+| 2.0.7   | [![Linux](../img/common/os_linux.png) Linux](https://ugs.jfrog.io/ugs/UGS/v2.0.7/ugs-platform-app-linux.tar.gz) | Linux version with bundled Java |
+| 2.0.7   | [![Linux ARM](../img/common/os_linux_arm.png) Linux ARM](https://ugs.jfrog.io/ugs/UGS/v2.0.7/ugs-platform-app-pi.tar.gz) | Linux ARM version with bundled Java. Can be used with RaspberryPi |
+| 2.0.7   | [![All platforms](../img/common/zip.png) All platforms](https://ugs.jfrog.io/ugs/UGS/v2.0.7/ugs-platform-app.zip) | A generic package without [Java][java_link] which needs to be installed separately |
 
 <hr/>
 
@@ -20,7 +20,7 @@ The classic UGS interface with slightly less features but with the same robust b
 
 | Version | Operating system | Description |
 | ------- | ----------------- | ----------- |
-| 2.0.6   | [![All platforms](../img/common/zip.png) All platforms](https://ugs.jfrog.io/ugs/UGS/v2.0.6/UniversalGcodeSender.zip) | A generic package without [Java][java_link] which needs to be installed separately |
+| 2.0.7   | [![All platforms](../img/common/zip.png) All platforms](https://ugs.jfrog.io/ugs/UGS/v2.0.7/UniversalGcodeSender.zip) | A generic package without [Java][java_link] which needs to be installed separately |
 
 <hr/>
 
