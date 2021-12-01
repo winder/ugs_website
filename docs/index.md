@@ -192,4 +192,4 @@ Universal Gcode Sender is free software developed and maintained in my free time
 [github_img]: https://img.shields.io/badge/Star-123-green.svg?style=social
 [github_link]: https://github.com/winder/Universal-G-Code-Sender
 [release_img]: https://img.shields.io/github/release/winder/Universal-G-Code-Sender
-[release_link]: /download/
+[release_link]: download/
