@@ -10,7 +10,7 @@ google_analytics: ['UA-73554112-1', 'auto']
 extra_css:
     - css/style.css
 
-pages:
+nav:
 - 'Home': 'index.md'
 - 'Download': 'download.md'
 - 'User Guide':
