@@ -12,20 +12,17 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/purebasic.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/purebasic.min.css">
         <link href="css/style.css" rel="stylesheet">
-
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-            ga('create', 'UA-73554112-1', 'auto');
+            ga('create', "UA-73554112-1", "auto");
             ga('send', 'pageview');
         </script> 
     </head>
@@ -49,55 +46,11 @@
                             <li class="navitem">
                                 <a href="download/" class="nav-link">Download</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="guide/languages/" class="dropdown-item">Languages</a>
-</li>
-                                    
-<li>
-    <a href="guide/common/" class="dropdown-item">Common Features</a>
-</li>
-                                    
-<li>
-    <a href="guide/classic/" class="dropdown-item">Classic</a>
-</li>
-                                    
-<li>
-    <a href="guide/platform/" class="dropdown-item">Platform</a>
-</li>
-                                    
-<li>
-    <a href="guide/troubleshooting/" class="dropdown-item">Help</a>
-</li>
-                                </ul>
+                            <li class="navitem">
+                                <a href="installing/" class="nav-link">Installing</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="dev/getting_started/" class="dropdown-item">Getting Started</a>
-</li>
-                                    
-<li>
-    <a href="dev/backend_development/" class="dropdown-item">Backend</a>
-</li>
-                                    
-<li>
-    <a href="dev/frontend_development/" class="dropdown-item">Frontend</a>
-</li>
-                                    
-<li>
-    <a href="dev/plugin/" class="dropdown-item">Plugin</a>
-</li>
-                                    
-<li>
-    <a href="dev/gcode_processor/" class="dropdown-item">Gcode Processors</a>
-</li>
-                                </ul>
+                            <li class="navitem">
+                                <a href="usage/" class="nav-link">Usage</a>
                             </li>
                             <li class="navitem">
                                 <a href="contributing/" class="nav-link">Contributing</a>
@@ -120,9 +73,6 @@
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="https://github.com/winder/ugs_website/edit/master/docs/index.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -141,11 +91,6 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#universal-gcode-sender" class="nav-link">Universal Gcode Sender</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
             <li class="nav-item" data-level="2"><a href="#features" class="nav-link">Features</a>
               <ul class="nav flex-column">
               </ul>
@@ -153,14 +98,6 @@
             
             <li class="nav-item" data-level="1"><a href="#screenshots" class="nav-link">Screenshots</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#platform" class="nav-link">Platform</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#classic" class="nav-link">Classic</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
             
@@ -179,11 +116,9 @@
                     <div class="col-md-9" role="main">
 
 <p><center>
-<img src="img/platform/screenshot.png" alt="Screenshot" width="90%"/></p>
-<h2 id="universal-gcode-sender">Universal Gcode Sender</h2>
-<hr />
-<p></center></p>
-<p>A full featured gcode platform used for interfacing with advanced CNC controllers like <a href="https://github.com/grbl/grbl">GRBL</a>
+<img src="img/ugs.svg" alt="Universal Gcode Sender" width="90%"/>
+</center></p>
+<p>A free and full featured gcode platform used for interfacing with advanced CNC controllers like <a href="https://github.com/grbl/grbl">GRBL</a>
 , <a href="https://github.com/synthetos/TinyG">TinyG</a>, <a href="https://github.com/synthetos/g2">g2core</a> and <a href="http://smoothieware.org/">Smoothieware</a>.
 Universal Gcode Sender is a self-contained Java application which includes all external dependencies and can be used on most computers running Windows, MacOSX or Linux. 
 <br/></p>
@@ -203,11 +138,13 @@ Universal Gcode Sender is a self-contained Java application which includes all e
 <hr />
 <h2 id="features">Features</h2>
 <ul>
-<li>Cross platform, tested on Windows, OSX, Linux, and Raspberry Pi.</li>
+<li>Cross platform, can run on Windows, MacOSX, Linux, and Raspberry Pi.</li>
 <li>3D Gcode Visualizer with color coded line segments and real time tool position feedback.</li>
 <li>Duration estimates.</li>
 <li>Support for Gamepads and Joysticks</li>
-<li>Web pendant interface </li>
+<li>Web pendant interface</li>
+<li>Possible to connect a Gamepad</li>
+<li>Tool for drawing and generate gcode</li>
 <li>Over 3000 lines of unit test code, and another 1000 lines of comments documenting the tests.</li>
 <li>Configuratble gcode optimization:<ul>
 <li>Remove comments</li>
@@ -217,53 +154,7 @@ Universal Gcode Sender is a self-contained Java application which includes all e
 </ul>
 </li>
 </ul>
-<hr />
-<h3 id="grbl-11-features">GRBL 1.1 Features</h3>
-<ol>
-<li>
-<p>Overrides and Toggles <br/><br/>
-    Platform version only. Easily control the real time feed and speed overrides by
-    enabling the Overrides widget in the Window menu.
-<center>
-<img src="img/platform/Overrides_window.png" alt="Overrides" width="60%"/>
-</center></p>
-</li>
-<li>
-<p>Jog Mode <br/><br/>
-    With older versions of GRBL UGS is pretty reliable when it comes to jogging, but
-    there are limitations. With GRBL 1.1 this is no longer the case when using the
-    new JOG MODE syntax. This first-class jog mode guarantees the GCODE state will
-    be unaltered, and also allows you to stop a jog while it is in progress. UGS
-    uses this new syntax automatically when it detects a version of GRBL which
-    supports it. During a jog use the STOP action to stop an in-progress jog:</p>
-<pre><code>&gt;&gt; $J=G21G91X0.7F11
-ok
-&gt;&gt; $J=G21G91Y0.7F11
-ok
-&gt;&gt; $J=G21G91Z-0.7F11
-ok
-</code></pre>
-</li>
-<li>
-<p>Pin State Reporting <br/><br/>
-    Platform version only. New flags have been added to the controller state window
-    to indicate when various external switches are enabled.
-<center>
-<img src="img/platform/Digital_readout.png" alt="Digital readout" width="40%"/>
-</center></p>
-</li>
-<li>
-<p>Message resolution
-    GRBL removed most help and error messages to make room for new features on the
-    micro controller, they are now provided as data files in the grbl source code.
-    UGS uses these data files to resolve all error codes and setting strings.</p>
-</li>
-</ol>
-<hr />
 <h1 id="screenshots">Screenshots</h1>
-<h2 id="platform">Platform</h2>
-<p>The next generation of UGS. Fully modular front end powered by the same robust
-library created for the Classic GUI.</p>
 <p><em>Fully modular GUI, reconfigure windows to suite your needs.</em>
 <img src="img/platform/screenshot.png" alt="Screenshot" width="90%"/></p>
 <p><em>Built in gcode editor with line highlighter.</em></p>
@@ -274,28 +165,12 @@ library created for the Classic GUI.</p>
 <p><img src="img/platform/zoom_to_region.png" alt="Zoom" width="90%"/></p>
 <p><em>Right click in the visualizer to jog to a specific XY location.</em></p>
 <p><img src="img/platform/click_to_jog.png" alt="Click to jog" width="90%"/></p>
-<h2 id="classic">Classic</h2>
-<p>The classic GUI has everything you need to get started.</p>
-<p><em>3D visualizer.</em></p>
-<p><img src="img/screenshots/visualizer.png" alt="Screenshot" width="90%"/></p>
-<p><em>Job complete dialog.</em></p>
-<p><img src="img/screenshots/finished.png" alt="Screenshot" width="90%"/></p>
-<p><em>Machine control.</em></p>
-<p><img src="img/screenshots/advanced_machine_control.png" alt="Screenshot" width="90%"/></p>
 <hr />
 <h1 id="sponsors">Sponsors</h1>
 <p><center>
 <a href="https://www.bobscnc.com/">
 <img src="img/sponsors/bobs_cnc.jpg" alt="Bob's CNC" width="40%"/>
 </a></p>
-<p><a href="https://jfrog.com/">
-<img src="img/sponsors/artifactory.png" alt="JFrog Artifactory" width="40%"/>
-</a>
-<br/></p>
-<p><a href="https://cloudbees.com/">
-<img src="img/sponsors/cloudbees.png" alt="Cloudbees" width="40%"/>
-</a>
-<br/></p>
 <p><a href="https://poeditor.com/">
 <img src="img/sponsors/poeditor.png" alt="POEditor" width="40%"/>
 </a>
@@ -343,12 +218,14 @@ library created for the Classic GUI.</p>
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script>
             var base_url = ".",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -415,6 +292,6 @@ library created for the Classic GUI.</p>
 </html>
 
 <!--
-MkDocs version : 1.4.2
-Build Date UTC : 2023-11-14 09:59:57.384643+00:00
+MkDocs version : 1.5.3
+Build Date UTC : 2023-12-02 10:10:04.408816+00:00
 -->

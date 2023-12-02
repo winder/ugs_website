@@ -8,24 +8,21 @@
         <meta name="author" content="Will Winder">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Plugin - UGS</title>
+        <title>Note: The UGS Platform has been updated to use maven. Some parts of this document need to be updated to reflect that change. - UGS</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/purebasic.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/purebasic.min.css">
         <link href="../../css/style.css" rel="stylesheet">
-
-        <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-            ga('create', 'UA-73554112-1', 'auto');
+            ga('create', "UA-73554112-1", "auto");
             ga('send', 'pageview');
         </script> 
     </head>
@@ -49,55 +46,11 @@
                             <li class="navitem">
                                 <a href="../../download/" class="nav-link">Download</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../guide/languages/" class="dropdown-item">Languages</a>
-</li>
-                                    
-<li>
-    <a href="../../guide/common/" class="dropdown-item">Common Features</a>
-</li>
-                                    
-<li>
-    <a href="../../guide/classic/" class="dropdown-item">Classic</a>
-</li>
-                                    
-<li>
-    <a href="../../guide/platform/" class="dropdown-item">Platform</a>
-</li>
-                                    
-<li>
-    <a href="../../guide/troubleshooting/" class="dropdown-item">Help</a>
-</li>
-                                </ul>
+                            <li class="navitem">
+                                <a href="../../installing/" class="nav-link">Installing</a>
                             </li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../getting_started/" class="dropdown-item">Getting Started</a>
-</li>
-                                    
-<li>
-    <a href="../backend_development/" class="dropdown-item">Backend</a>
-</li>
-                                    
-<li>
-    <a href="../frontend_development/" class="dropdown-item">Frontend</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active">Plugin</a>
-</li>
-                                    
-<li>
-    <a href="../gcode_processor/" class="dropdown-item">Gcode Processors</a>
-</li>
-                                </ul>
+                            <li class="navitem">
+                                <a href="../../usage/" class="nav-link">Usage</a>
                             </li>
                             <li class="navitem">
                                 <a href="../../contributing/" class="nav-link">Contributing</a>
@@ -110,19 +63,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../frontend_development/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../gcode_processor/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://github.com/winder/ugs_website/edit/master/docs/dev/plugin.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -634,12 +574,14 @@ public final class WorkflowWindowTutorialTopComponent
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
         <script>
             var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
