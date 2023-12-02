@@ -1,11 +1,9 @@
 
 <center>
-<img src="img/platform/screenshot.png" alt="Screenshot" width="90%"/>
-## Universal Gcode Sender
--------------
+<img src="img/ugs.svg" alt="Universal Gcode Sender" width="90%"/>
 </center>
 
-A full featured gcode platform used for interfacing with advanced CNC controllers like [GRBL](https://github.com/grbl/grbl)
+A free and full featured gcode platform used for interfacing with advanced CNC controllers like [GRBL](https://github.com/grbl/grbl)
 , [TinyG](https://github.com/synthetos/TinyG), [g2core](https://github.com/synthetos/g2) and [Smoothieware](http://smoothieware.org/).
 Universal Gcode Sender is a self-contained Java application which includes all external dependencies and can be used on most computers running Windows, MacOSX or Linux. 
 <br/>
@@ -27,11 +25,13 @@ Universal Gcode Sender is a self-contained Java application which includes all e
 -------------
 
 ## Features
-* Cross platform, tested on Windows, OSX, Linux, and Raspberry Pi.
+* Cross platform, can run on Windows, MacOSX, Linux, and Raspberry Pi.
 * 3D Gcode Visualizer with color coded line segments and real time tool position feedback.
 * Duration estimates.
 * Support for Gamepads and Joysticks
-* Web pendant interface 
+* Web pendant interface
+* Possible to connect a Gamepad
+* Tool for drawing and generate gcode
 * Over 3000 lines of unit test code, and another 1000 lines of comments documenting the tests.
 * Configuratble gcode optimization:
     * Remove comments
@@ -39,52 +39,8 @@ Universal Gcode Sender is a self-contained Java application which includes all e
     * Convert arcs (G2/G3) to line segments
     * Remove whitespace
 
--------------
-
-### GRBL 1.1 Features
-
-1. Overrides and Toggles <br/><br/>
-    Platform version only. Easily control the real time feed and speed overrides by
-    enabling the Overrides widget in the Window menu.
-<center>
-<img src="img/platform/Overrides_window.png" alt="Overrides" width="60%"/>
-</center>
-
-2. Jog Mode <br/><br/>
-    With older versions of GRBL UGS is pretty reliable when it comes to jogging, but
-    there are limitations. With GRBL 1.1 this is no longer the case when using the
-    new JOG MODE syntax. This first-class jog mode guarantees the GCODE state will
-    be unaltered, and also allows you to stop a jog while it is in progress. UGS
-    uses this new syntax automatically when it detects a version of GRBL which
-    supports it. During a jog use the STOP action to stop an in-progress jog:
-
-        >> $J=G21G91X0.7F11
-        ok
-        >> $J=G21G91Y0.7F11
-        ok
-        >> $J=G21G91Z-0.7F11
-        ok
-
-3. Pin State Reporting <br/><br/>
-    Platform version only. New flags have been added to the controller state window
-    to indicate when various external switches are enabled.
-<center>
-<img src="img/platform/Digital_readout.png" alt="Digital readout" width="40%"/>
-</center>
-
-4. Message resolution
-    GRBL removed most help and error messages to make room for new features on the
-    micro controller, they are now provided as data files in the grbl source code.
-    UGS uses these data files to resolve all error codes and setting strings.
-
--------------
 
 # Screenshots
-
-## Platform
-The next generation of UGS. Fully modular front end powered by the same robust
-library created for the Classic GUI.
-
 *Fully modular GUI, reconfigure windows to suite your needs.*
 <img src="img/platform/screenshot.png" alt="Screenshot" width="90%"/>
 
@@ -104,21 +60,6 @@ library created for the Classic GUI.
 
 <img src="img/platform/click_to_jog.png" alt="Click to jog" width="90%"/>
 
-## Classic
-The classic GUI has everything you need to get started.
-
-*3D visualizer.*
-
-<img src="img/screenshots/visualizer.png" alt="Screenshot" width="90%"/>
-
-*Job complete dialog.*
-
-<img src="img/screenshots/finished.png" alt="Screenshot" width="90%"/>
-
-*Machine control.*
-
-<img src="img/screenshots/advanced_machine_control.png" alt="Screenshot" width="90%"/>
-
 -------------
 
 # Sponsors
@@ -127,16 +68,6 @@ The classic GUI has everything you need to get started.
 <a href="https://www.bobscnc.com/">
 <img src="img/sponsors/bobs_cnc.jpg" alt="Bob's CNC" width="40%"/>
 </a>
-
-<a href="https://jfrog.com/">
-<img src="img/sponsors/artifactory.png" alt="JFrog Artifactory" width="40%"/>
-</a>
-<br/>
-
-<a href="https://cloudbees.com/">
-<img src="img/sponsors/cloudbees.png" alt="Cloudbees" width="40%"/>
-</a>
-<br/>
 
 <a href="https://poeditor.com/">
 <img src="img/sponsors/poeditor.png" alt="POEditor" width="40%"/>

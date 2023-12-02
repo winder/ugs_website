@@ -1,29 +1,18 @@
 site_name: UGS
 theme:
+    logo: assets/icon.png
     name: cosmo
     nav_style: dark
 
-repo_url: https://github.com/winder/ugs_website
 site_author: Will Winder
 site_description: "Cross platform G-Code sender with advanced features for GRBL based CNC machines."
 google_analytics: ['UA-73554112-1', 'auto']
 extra_css:
     - css/style.css
-
 nav:
 - 'Home': 'index.md'
 - 'Download': 'download.md'
-- 'User Guide':
-    - "Languages": 'guide/languages.md'
-    - "Common Features": 'guide/common.md'
-    - "Classic": 'guide/classic.md'
-    - "Platform": 'guide/platform.md'
-    - "Help": 'guide/troubleshooting.md'
-- 'Developer Guide':
-    - "Getting Started": 'dev/getting_started.md'
-    - "Backend": 'dev/backend_development.md'
-    - "Frontend": 'dev/frontend_development.md'
-    - "Plugin": 'dev/plugin.md'
-    - "Gcode Processors": 'dev/gcode_processor.md'
+- 'Installing': 'installing.md'
+- 'Usage': 'usage.md'
 - 'Contributing': 'contributing.md'
 
