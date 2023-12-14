@@ -5,16 +5,16 @@ This is the latest release of UGS. For source code, nightly builds or older rele
 ### UGS Platform
 The next generation platform-based interface.
 
-| Version 2.1.2                                                                                                                                                                        | Description                                                                       |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| [![Windows x64](../img/common/os_windows.png) Windows 64-bit](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.2/win64-ugs-platform-app-2.1.2.zip)           | Windows 64-bit version with bundled Java                                          |
-| [![Windows x86](../img/common/os_windows.png) Windows 32-bit](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.2/win-ugs-platform-app-2.1.2.zip)             | Windows 32-bit version with bundled Java                                          |
-| [![MacOSX x64](../img/common/os_mac.png) MacOSX (Intel)](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.2/macosx-x64-ugs-platform-app-2.1.2.dmg)           | MacOSX version with bundled Java                                                  |
-| [![MacOSX ARM64](../img/common/os_mac.png) MacOSX (Silicon)](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.2/macosx-aarch64-ugs-platform-app-2.1.2.dmg)   | MacOSX ARM64 version (for Apple Silicon M1/M2) with bundled Java                  |
-| [![Linux x64](../img/common/os_linux.png) Linux](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.2/linux-x64-ugs-platform-app-2.1.2.tar.gz)                 | Linux version with bundled Java                                                   |
-| [![Linux ARM](../img/common/os_linux_arm.png) Linux ARM](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.2/linux-arm-ugs-platform-app-2.1.2.tar.gz)         | Linux ARM version with bundled Java. Can be used with Raspberry Pi OS 32-bit      |
-| [![Linux ARM64](../img/common/os_linux_arm.png) Linux ARM64](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.2/linux-aarch64-ugs-platform-app-2.1.2.tar.gz) | Linux ARM64 version with bundled Java. Can be used with Raspberry Pi OS 64-bit    |
-| [![All platforms](../img/common/zip.png) All platforms](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.2/ugs-platform-app-2.1.2.zip)                       | A generic package without [Java][java_link] which needs to be installed separately |
+| Version 2.1.3                                                                                                                                                                        | Description                                                                         |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| [![Windows x64](../img/common/os_windows.png) Windows 64-bit](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.3/win64-ugs-platform-app-2.1.3.zip)           | Windows 64-bit version with bundled Java                                            |
+| [![Windows x86](../img/common/os_windows.png) Windows 32-bit](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.3/win-ugs-platform-app-2.1.3.zip)             | Windows 32-bit version with bundled Java                                            |
+| [![MacOSX x64](../img/common/os_mac.png) MacOSX (Intel)](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.3/macosx-x64-ugs-platform-app-2.1.3.dmg)           | MacOSX version with bundled Java                                                    |
+| [![MacOSX ARM64](../img/common/os_mac.png) MacOSX (Silicon)](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.3/macosx-aarch64-ugs-platform-app-2.1.3.dmg)   | MacOSX ARM64 version (for Apple Silicon M1/M2) with bundled Java                    |
+| [![Linux x64](../img/common/os_linux.png) Linux](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.3/linux-x64-ugs-platform-app-2.1.3.tar.gz)                 | Linux version with bundled Java                                                     |
+| [![Linux ARM](../img/common/os_linux_arm.png) Linux ARM](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.3/linux-arm-ugs-platform-app-2.1.3.tar.gz)         | Linux ARM version with bundled Java. Can be used with Raspberry Pi OS 32-bit        |
+| [![Linux ARM64](../img/common/os_linux_arm.png) Linux ARM64](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.3/linux-aarch64-ugs-platform-app-2.1.3.tar.gz) | Linux ARM64 version with bundled Java. Can be used with Raspberry Pi OS 64-bit      |
+| [![All platforms](../img/common/zip.png) All platforms](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.3/ugs-platform-app-2.1.3.zip)                       | A generic package without [Java][java_link] which needs to be installed separately  |
 
 <hr/>
 
@@ -23,7 +23,7 @@ The classic UGS interface with slightly less features but with the same robust b
 
 | Download                                                                                                                                                     | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------- |
-| [![All platforms](../img/common/zip.png) All platforms](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.2/UniversalGcodeSender.zip) | A generic package without [Java][java_link] which needs to be installed separately |
+| [![All platforms](../img/common/zip.png) All platforms](https://github.com/winder/Universal-G-Code-Sender/releases/download/v2.1.3/UniversalGcodeSender.zip) | A generic package without [Java][java_link] which needs to be installed separately |
 
 <hr/>
 
