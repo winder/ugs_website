@@ -4,6 +4,10 @@ h1, h2, h3, h4 {
     padding: 0;
 }
 
+.ms-md-auto, .mx-auto {
+    margin-left: auto !important;
+}
+
 .bs-sidebar .nav > .active > a,
 .bs-sidebar .nav > .active:hover > a,
 .bs-sidebar .nav > .active:focus > a {

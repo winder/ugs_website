@@ -4,7 +4,7 @@
 </center>
 
 A free and full featured gcode platform used for interfacing with advanced CNC controllers like [GRBL](https://github.com/grbl/grbl)
-, [TinyG](https://github.com/synthetos/TinyG), [g2core](https://github.com/synthetos/g2) and [Smoothieware](http://smoothieware.org/).
+, [FluidNC](http://wiki.fluidnc.com/), [TinyG](https://github.com/synthetos/TinyG), [g2core](https://github.com/synthetos/g2) and [Smoothieware](http://smoothieware.org/).
 Universal Gcode Sender is a self-contained Java application which includes all external dependencies and can be used on most computers running Windows, MacOSX or Linux. 
 <br/>
 
@@ -25,28 +25,31 @@ Universal Gcode Sender is a self-contained Java application which includes all e
 -------------
 
 ## Features
-* Cross platform, can run on Windows, MacOSX, Linux, and Raspberry Pi.
-* 3D Gcode Visualizer with color coded line segments and real time tool position feedback.
-* Duration estimates.
-* Support for Gamepads and Joysticks
-* Web pendant interface
-* Possible to connect a Gamepad
-* Tool for drawing and generate gcode
-* Over 3000 lines of unit test code, and another 1000 lines of comments documenting the tests.
+* Cross platform, can run on Windows, MacOSX, Linux, and Raspberry Pi
+* Configurable user interface
+* 3D Gcode Visualizer with color coded line segments and real time tool position feedback
+* Real time overrides
+* G-code editor
+* Designer editor (with laser engraver support)
 * Configuratble gcode optimization:
     * Remove comments
     * Truncate decimal precision to configurable amount
     * Convert arcs (G2/G3) to line segments
     * Remove whitespace
-
+* Support for Gamepads and Joysticks
+* Web pendant interface
 
 # Screenshots
 *Fully modular GUI, reconfigure windows to suite your needs.*
 <img src="img/platform/screenshot.png" alt="Screenshot" width="90%"/>
 
-*Built in gcode editor with line highlighter.*
+*Built in gcode editor with line highlighter and syntax highlighting*
 
 <img src="img/platform/editor.png" alt="Gcode editor" width="90%"/>
+
+*Built in designer with support for importing SVG/DXF/PNG/JPG*
+
+<img src="img/screenshots/designer.png" alt="Designer tool" width="90%"/>
 
 *Customizable keybindings.*
 
