@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +10,13 @@
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Note: The UGS Platform has been updated to use maven. Some parts of this document need to be updated to reflect that change. - UGS</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/purebasic.min.css">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/purebasic.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <link href="../../css/style.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
@@ -32,7 +36,7 @@
             <div class="container">
                 <a class="navbar-brand" href="../..">UGS</a>
                 <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -40,26 +44,26 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
+                            <li class="nav-item">
                                 <a href="../.." class="nav-link">Home</a>
                             </li>
-                            <li class="navitem">
+                            <li class="nav-item">
                                 <a href="../../download/" class="nav-link">Download</a>
                             </li>
-                            <li class="navitem">
+                            <li class="nav-item">
                                 <a href="../../installing/" class="nav-link">Installing</a>
                             </li>
-                            <li class="navitem">
+                            <li class="nav-item">
                                 <a href="../../usage/" class="nav-link">Usage</a>
                             </li>
-                            <li class="navitem">
+                            <li class="nav-item">
                                 <a href="../../contributing/" class="nav-link">Contributing</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav ml-auto">
+                    <ul class="nav navbar-nav ms-md-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
@@ -70,54 +74,54 @@
 
         <div class="container">
             <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#note-the-ugs-platform-has-been-updated-to-use-maven-some-parts-of-this-document-need-to-be-updated-to-reflect-that-change" class="nav-link">Note: The UGS Platform has been updated to use maven. Some parts of this document need to be updated to reflect that change.</a>
+            <li class="nav-item" data-bs-level="1"><a href="#note-the-ugs-platform-has-been-updated-to-use-maven-some-parts-of-this-document-need-to-be-updated-to-reflect-that-change" class="nav-link">Note: The UGS Platform has been updated to use maven. Some parts of this document need to be updated to reflect that change.</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#plugin-development" class="nav-link">Plugin development</a>
+            <li class="nav-item" data-bs-level="1"><a href="#plugin-development" class="nav-link">Plugin development</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#workflow-plugin-tutorial" class="nav-link">Workflow Plugin Tutorial</a>
+            <li class="nav-item" data-bs-level="1"><a href="#workflow-plugin-tutorial" class="nav-link">Workflow Plugin Tutorial</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#create-and-configure-project" class="nav-link">Create and configure project</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#add-ugs-dependencies" class="nav-link">Add UGS dependencies</a>
+            <li class="nav-item" data-bs-level="2"><a href="#create-and-configure-project" class="nav-link">Create and configure project</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#create-window-class" class="nav-link">Create window class</a>
+            <li class="nav-item" data-bs-level="2"><a href="#add-ugs-dependencies" class="nav-link">Add UGS dependencies</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#build-the-gui" class="nav-link">Build the GUI</a>
+            <li class="nav-item" data-bs-level="2"><a href="#create-window-class" class="nav-link">Create window class</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#autogenerated-code" class="nav-link">Autogenerated code</a>
+            <li class="nav-item" data-bs-level="2"><a href="#build-the-gui" class="nav-link">Build the GUI</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#annotated-code" class="nav-link">Annotated code</a>
+            <li class="nav-item" data-bs-level="2"><a href="#autogenerated-code" class="nav-link">Autogenerated code</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#conclusion" class="nav-link">Conclusion</a>
+            <li class="nav-item" data-bs-level="2"><a href="#annotated-code" class="nav-link">Annotated code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conclusion" class="nav-link">Conclusion</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -574,8 +578,7 @@ public final class WorkflowWindowTutorialTopComponent
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="../../js/jquery-3.6.0.min.js"></script>
-        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
         <script>
             var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
@@ -588,7 +591,7 @@ public final class WorkflowWindowTutorialTopComponent
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>From here you can search these documents. Enter your search terms below.</p>
@@ -608,7 +611,7 @@ public final class WorkflowWindowTutorialTopComponent
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <table class="table">
