@@ -4,15 +4,18 @@ theme:
     name: cosmo
     nav_style: dark
 
+markdown_extensions:
+    - admonition
+
 site_author: Will Winder
 site_description: "Cross platform G-Code sender with advanced features for GRBL based CNC machines."
 google_analytics: ['UA-73554112-1', 'auto']
 extra_css:
     - css/style.css
 nav:
-- 'Home': 'index.md'
-- 'Download': 'download.md'
-- 'Installing': 'installing.md'
-- 'Usage': 'usage.md'
-- 'Contributing': 'contributing.md'
+    - 'Home': 'index.md'
+    - 'Download': 'download.md'
+    - 'Installing': 'installing.md'
+    - 'Usage': 'usage.md'
+    - 'Contributing': 'contributing.md'
 

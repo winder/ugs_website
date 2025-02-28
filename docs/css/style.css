@@ -34,3 +34,29 @@ li > img {
     margin-top: 0.8em;
     margin-bottom: 0.8em;
 }
+
+.admonition, details {
+    /*padding: 15px;
+    margin-bottom: 20px;*/
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.admonition.note, .admonition.note > .admonition-title {
+    border-color: #1a6dca;
+    padding-bottom: 0;
+}
+
+.admonition.note > .admonition-title {
+    background-color: transparent;
+    border-bottom: none;
+    color: #2e6b89;
+    font-weight: bold;
+}
+
+.admonition.note, details.note {
+    color: #2e6b89;
+    background-color: #e2f0f7;
+    border-color: #bce8f1;
+}
