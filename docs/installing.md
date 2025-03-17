@@ -3,8 +3,8 @@ To install Universal G-Code Sender, download the correct package for your operat
 
 !!! note
     If you have recently upgraded UGS and it is not working properly, you may need to remove cached files. The Cache is kept in a user directory called ugsplatform and deleting this directory will force UGS to recreate it. The location of the directory is as the following:
-    
-    * Windows: `C:/Users/[your username>]/AppData/Roaming/ugsplatform`
+
+    * Windows: `C:\Users\[your username>]\AppData\Local\ugsplatform\Cache`
     * Linux: `~/.cache/ugsplatform`
     * MacOSX: `~/Library/Application Support/ugsplatform`
 
